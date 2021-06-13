@@ -157,3 +157,26 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 ## 🌈 Extras
 
 Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](extras/). To use them, refer to their respective documentation.
+
+## Credit
+
+- [onedark.nvim](https://github.com/monsonjeremy/onedark.nvim)
+- [OneDark-Pro VSCode Theme](https://github.com/Binaryify/OneDark-Pro)
+- [gruvbox-flat.nvim](https://github.com/eddyekofo94/gruvbox-flat.nvim)
+
+<!-- Support -->
+
+## Support
+
+<a href="https://www.buymeacoffee.com/Nt7Wg4V" >
+  <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" >
+</a>
+
+<!-- Ninja  -->
+
+<p align="center">
+  <h1 align="center">(◣_◢)</h1>
+</p>
+<p align="center">
+  <sub>Stop <strong>scrolling</strong>, It's <strong>hurt</strong> me</sub>
+</p>
