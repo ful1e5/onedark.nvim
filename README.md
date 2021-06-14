@@ -3,27 +3,11 @@
 </p>
 
 <p align="center">
-    <b>Atom's iconic One Dark theme for Neovim, written in Lua</b>
+    Atom's iconic One Dark theme for Neovim, written in Lua
 </p>
 
----
-
-## 📺 Screenshot
-
 <p align="center">
-    <img src="https://imgur.com/Vm6wfB3.png" alt="onedark.nvim" />
-</p>
-
-### normal
-
-<p align="center">
-    <img src="https://imgur.com/nEVfxVu.png" alt="onedark.nvim" />
-</p>
-
-### italic
-
-<p align="center">
-    <img src="https://imgur.com/8rz9b2b.png" alt="onedark.nvim" />
+    De-attach fork of <b><a href="https://github.com/monsonjeremy/onedark.nvim">monsonjeremy/onedark.nvim</a></b>
 </p>
 
 ## ✨ Features
@@ -92,7 +76,10 @@ To enable the `onedark` theme for `Lualine`, simply specify it in your lualine s
 ```lua
 require('lualine').setup {
   options = {
-    theme = 'onedark'
+    theme = 'onedark',
+    -- For round icons (require Nerd-Font)
+    -- section_separators = {"", ""},
+    -- component_separators = {"", ""},
     -- ... your lualine config
   }
 }
@@ -156,13 +143,59 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 ## 🌈 Extras
 
+> To generate the configs `:luafile /lua/onedark/extra/init.lua`
+
 Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](extras/). To use them, refer to their respective documentation.
 
 ## Credit
 
-- [onedark.nvim](https://github.com/monsonjeremy/onedark.nvim)
+- [onedark.nvim](https://github.com/monsonjeremy/onedark.nvim) ⚡
 - [OneDark-Pro VSCode Theme](https://github.com/Binaryify/OneDark-Pro)
 - [gruvbox-flat.nvim](https://github.com/eddyekofo94/gruvbox-flat.nvim)
+
+## 📺 Screenshot
+
+<p align="center">
+    <img src="https://imgur.com/Vm6wfB3.png" alt="onedark.nvim" />
+</p>
+
+### Normal
+
+```
+vim.g.onedark_italic_comments = false
+vim.g.onedark_italic_keywords = false
+vim.g.onedark_italic_functions = false
+vim.g.onedark_italic_variables = false
+```
+
+<p align="center">
+    <img src="https://imgur.com/nEVfxVu.png" alt="Normal fonts" />
+</p>
+
+### Italic
+
+```
+vim.g.onedark_italic_comments = true
+vim.g.onedark_italic_keywords = true
+vim.g.onedark_italic_functions = true
+vim.g.onedark_italic_variables = true
+```
+
+<p align="center">
+    <img src="https://imgur.com/8rz9b2b.png" alt="Italic fonts" />
+</p>
+
+### Telescope
+
+<p align="center">
+    <img src="https://imgur.com/eLs5Og5.png" alt="Telescope plugin" />
+</p>
+
+## Useful Links
+
+- [SF Mono Nerd-Font](https://github.com/epk/SF-Mono-Nerd-Font)
+- [Wallpaper](https://hdqwalls.com/big-sur-4k-wallpaper)
+- [dotfiles](https://github.com/ful1e5/dotfiles)
 
 <!-- Support -->
 
@@ -177,6 +210,7 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 <p align="center">
   <h1 align="center">(◣_◢)</h1>
 </p>
+
 <p align="center">
-  <sub>Stop <strong>scrolling</strong>, It's <strong>hurt</strong> me</sub>
+  <sub>Stop <strong>scrolling</strong>, It's <strong>hurts</strong> me</sub>
 </p>
