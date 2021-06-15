@@ -7,9 +7,7 @@ function M.kitty(config)
   config.transform_colors = true
   local colors = require("onedark.colors").setup(config)
 
-  local kitty =
-    util.template(
-    [[
+  local kitty = util.template([[
   # onedark colors for Kitty
   
   background ${bg}
@@ -49,9 +47,7 @@ function M.kitty(config)
   # extended colors
   color16 ${orange}
   color17 ${red1}
-  ]],
-    colors
-  )
+  ]], colors)
   return kitty
 end
 
