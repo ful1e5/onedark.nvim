@@ -2,8 +2,12 @@ name: Linting
 
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
   pull_request:
+    paths-ignore:
+      - "**.md"
+      - LICENSE
+    branches: [main]
 
 jobs:
   build:
@@ -11,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       - name: Install linter
         run: |
           sudo apt-get update
