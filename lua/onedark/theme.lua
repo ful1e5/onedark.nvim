@@ -32,7 +32,7 @@ function M.setup(config)
     -- TermCursor  = { }, -- cursor in a focused terminal
     -- TermCursorNC= { }, -- cursor in an unfocused terminal
     ErrorMsg = {fg = c.error}, -- error messages on the command line
-    VertSplit = {fg = c.bg}, -- the column separating vertically split windows
+    VertSplit = {fg = c.bg_visual}, -- the column separating vertically split windows
     Folded = {fg = c.blue, bg = c.fg_gutter}, -- line used for closed folds
     FoldColumn = {bg = c.bg, fg = c.fg_gutter}, -- 'foldcolumn'
     SignColumn = {bg = config.transparent and c.none or c.bg, fg = c.fg_gutter}, -- column where |signs| are displayed
@@ -319,7 +319,7 @@ function M.setup(config)
   }
 
   if config.hideInactiveStatusline then
-    local inactive = {style = "underline", bg = c.bg, fg = c.bg, sp = c.border}
+    local inactive = {style = "underline", bg = c.bg, fg = c.bg, sp = c.bg_visual}
 
     -- StatusLineNC
     theme.base.StatusLineNC = inactive
