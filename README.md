@@ -156,7 +156,13 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 ## 📺 Screenshot
 
 <p align="center">
-    <img src="https://imgur.com/Vm6wfB3.png" alt="onedark.nvim" />
+    <img src="https://imgur.com/tptzxgH.png" alt="onedark.nvim" />
+</p>
+
+### Default
+
+<p align="center">
+    <img src="https://imgur.com/8KbGV7r.png" alt="Default fonts" />
 </p>
 
 ### Normal
@@ -169,7 +175,7 @@ vim.g.onedark_italic_variables = false
 ```
 
 <p align="center">
-    <img src="https://imgur.com/nEVfxVu.png" alt="Normal fonts" />
+    <img src="https://imgur.com/QZ0R0qC.png" alt="Normal fonts" />
 </p>
 
 ### Italic
@@ -182,18 +188,19 @@ vim.g.onedark_italic_variables = true
 ```
 
 <p align="center">
-    <img src="https://imgur.com/8rz9b2b.png" alt="Italic fonts" />
+    <img src="https://imgur.com/oA5PjUb.png" alt="Italic fonts" />
 </p>
 
 ### Telescope
 
 <p align="center">
-    <img src="https://imgur.com/eLs5Og5.png" alt="Telescope plugin" />
+    <img src="https://imgur.com/vgR9HRe.png" alt="Telescope plugin" />
 </p>
 
 ## Useful Links
 
-- [SF Mono Nerd-Font](https://github.com/epk/SF-Mono-Nerd-Font)
+- [Kitty](https://sw.kovidgoyal.net/kitty)
+- ~[SF Mono Nerd-Font](https://github.com/epk/SF-Mono-Nerd-Font)~ [Ubuntu Mono](https://design.ubuntu.com/font/)
 - [Wallpaper](https://hdqwalls.com/big-sur-4k-wallpaper)
 - [dotfiles](https://github.com/ful1e5/dotfiles)
 
@@ -204,6 +211,10 @@ vim.g.onedark_italic_variables = true
 <a href="https://www.buymeacoffee.com/Nt7Wg4V" >
   <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" >
 </a>
+
+## Self Promotion
+
+Follow me on **[Twitter](https://twitter.com/ful1e5)**
 
 <!-- Ninja  -->
 
