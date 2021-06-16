@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### Added
+
+- `Linting` Github Action init
+- `Makefile, .lua-format, .luacheckrc` init
+- format .lua code with (lua-format)[https://github.com/Koihik/LuaFormatter]
+- `kitty` tabs color changed
+
+### Changed
+
+- **VertSplit** & **Inactive StatusLine** `fg` color changed to `bg_visual`
+
 ## [v0.0.1] - 14 June 2021
 
 ### Added
