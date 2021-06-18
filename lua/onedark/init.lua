@@ -1,10 +1,17 @@
 local util = require("onedark.util")
 local theme = require("onedark.theme")
+local configModule = require("onedark.config")
 
-local M = {}
-
-function M.colorscheme()
-  util.load(theme.setup())
+local function setup(userConfig)
+  if userConfig then
+    configModule.applyConfiguration(userConfig)
+  elseif configModule.isGlobals() then
+    vim.schedule(function()
+      vim.api.nvim_err_writeln(
+          [[ful1e5/onedark: onedark will stop supporting vimscript soon, change your config to lua or wrap it around lua << EOF ... EOF]]) -- luacheck: ignore
+    end)
+  end
+  util.load(theme.setup(configModule.config))
 end
 
-return M
+return {setup = setup}

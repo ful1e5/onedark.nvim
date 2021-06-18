@@ -1,11 +1,12 @@
 local util = require("onedark.util")
+local configModule = require("onedark.config")
 
 local M = {}
 
 ---@param config Config
 ---@return ColorScheme
 function M.setup(config)
-  config = config or require("onedark.config")
+  config = config or configModule.config
 
   -- Color Palette
   ---@class ColorScheme
