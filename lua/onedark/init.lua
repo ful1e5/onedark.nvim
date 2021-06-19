@@ -5,7 +5,7 @@ local configModule = require("onedark.config")
 local function setup(userConfig)
   if userConfig then
     configModule.applyConfiguration(userConfig)
-  elseif configModule.isGlobals() then
+  elseif configModule.vimConfig then
     vim.schedule(function()
       vim.api.nvim_err_writeln(
           [[ful1e5/onedark: onedark will stop supporting vimscript soon, change your config to lua or wrap it around lua << EOF ... EOF]]) -- luacheck: ignore

@@ -101,13 +101,13 @@ vim.g.lightline = {colorscheme = "onedark"}
 
 | Option                 | Default | Description                                                                                                                                                     |
 | ---------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| commentStyle           | `true`  | Make comments italic                                                                                                                                            |
-| keywordStyle           | `true`  | Make keywords italic                                                                                                                                            |
-| functionStyle          | `false` | Make functions italic                                                                                                                                           |
-| variableStyle          | `false` | Make variables and identifiers italic                                                                                                                           |
+| commentStyle           | `NONE`  | Make comments italic **(Options:** `NONE` or `Italic`)                                                                                                          |
+| keywordStyle           | `NONE`  | Make keywords italic **(Options:** `NONE` or `Italic`)                                                                                                          |
+| functionStyle          | `NONE`  | Make functions italic **(Options:** `NONE` or `Italic`)                                                                                                         |
+| variableStyle          | `NONE`  | Make variables and identifiers italic **(Options:** `NONE` or `Italic`)                                                                                         |
 | transparent            | `false` | Enable this to disable setting the background color                                                                                                             |
 | hideInactiveStatusline | `false` | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
-| sidebars               | `{}`    | Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`                                                      |
+| sidebars               | `{}`    | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                      |
 | darkSidebar            | `true`  | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
 | darkFloat              | `true`  | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
 | colors                 | `{}`    | You can override specific color groups to use other groups or a hex color                                                                                       |
@@ -175,10 +175,10 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 
 ```lua
 require("onedark").setup({
-  commentStyle = false,
-  keywordStyle = false,
-  functionStyle = false,
-  variableStyle = false,
+  commentStyle = "NONE",
+  keywordStyle = "NONE",
+  functionStyle = "NONE",
+  variableStyle = "NONE"
   -- ... your onedark config
 })
 ```
@@ -191,10 +191,10 @@ require("onedark").setup({
 
 ```lua
 require("onedark").setup({
-  commentStyle = true,
-  keywordStyle = true,
-  functionStyle = true,
-  variableStyle = true,
+  commentStyle = "Italic",
+  keywordStyle = "Italic",
+  functionStyle = "Italic",
+  variableStyle = "Italic"
   -- ... your onedark config
 })
 ```
