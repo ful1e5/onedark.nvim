@@ -13,10 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Makefile, .lua-format, .luacheckrc` init
 - format .lua code with (lua-format)[https://github.com/Koihik/LuaFormatter]
 - `kitty` tabs color changed
+- onedark setting using `reqiure("onedark.config")` [monsonjeremy/onedark.nvim#5]
 
 ### Changed
 
 - **VertSplit** & **Inactive StatusLine** `fg` color changed to `bg_visual`
+- configuration docs updated inside README.md
 
 ## [v0.0.1] - 14 June 2021
 

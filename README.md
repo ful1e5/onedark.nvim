@@ -101,10 +101,10 @@ vim.g.lightline = {colorscheme = "onedark"}
 
 | Option                 | Default | Description                                                                                                                                                     |
 | ---------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| commentStyle           | `NONE`  | Make comments italic **(Options:** `NONE` or `Italic`)                                                                                                          |
-| keywordStyle           | `NONE`  | Make keywords italic **(Options:** `NONE` or `Italic`)                                                                                                          |
-| functionStyle          | `NONE`  | Make functions italic **(Options:** `NONE` or `Italic`)                                                                                                         |
-| variableStyle          | `NONE`  | Make variables and identifiers italic **(Options:** `NONE` or `Italic`)                                                                                         |
+| commentStyle           | `NONE`  | Make comments italic **(Options:** `NONE` or `italic`)                                                                                                          |
+| keywordStyle           | `NONE`  | Make keywords italic **(Options:** `NONE` or `italic`)                                                                                                          |
+| functionStyle          | `NONE`  | Make functions italic **(Options:** `NONE` or `italic`)                                                                                                         |
+| variableStyle          | `NONE`  | Make variables and identifiers italic **(Options:** `NONE` or `italic`)                                                                                         |
 | transparent            | `false` | Enable this to disable setting the background color                                                                                                             |
 | hideInactiveStatusline | `false` | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
 | sidebars               | `{}`    | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                      |
@@ -115,7 +115,7 @@ vim.g.lightline = {colorscheme = "onedark"}
 ```lua
 -- Example config in Lua
 require("onedark").setup({
-  functionStyle = true,
+  functionStyle = "italic",
   sidebars = {"qf", "vista_kind", "terminal", "packer"},
 
   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
@@ -127,7 +127,7 @@ require("onedark").setup({
 " Example config in VimScript
 lua << EOF
 require("onedark").setup({
-  functionStyle = true,
+  functionStyle = "italic",
   sidebars = {"qf", "vista_kind", "terminal", "packer"},
 
   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
