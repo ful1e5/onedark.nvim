@@ -326,7 +326,7 @@ function M.setup(config)
     theme.base.StatusLineNC = inactive
 
     -- LuaLine
-    for _, section in ipairs({"a", "b", "c"}) do
+    for _, section in pairs({"a", "b", "c"}) do
       theme.plugins["lualine_" .. section .. "_inactive"] = inactive
     end
   end

@@ -32,14 +32,15 @@ config = {
   transform_colors = false
 }
 
+---@param userConfig Config
 local function applyConfiguration(userConfig)
   for key, value in pairs(userConfig) do
-    if config[key] ~= nil then
-      config[key] = value
-    else
-      vim.schedule(function()
-        vim.api.nvim_err_writeln("ful1e5/onedark: Unable to set option '" .. key .. "'") -- luacheck: ignore
-      end)
+    if value ~= nil then
+      if config[key] ~= nil then
+        config[key] = value
+      else
+        error("ful1e5/onedark: Option " .. key .. " does not exist") -- luacheck: ignore
+      end
     end
   end
 end
