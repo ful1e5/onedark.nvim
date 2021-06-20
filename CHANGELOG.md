@@ -9,16 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `Linting` Github Action init
-- `Makefile, .lua-format, .luacheckrc` init
-- format .lua code with (lua-format)[https://github.com/Koihik/LuaFormatter]
-- `kitty` tabs color changed
-- onedark setting using `reqiure("onedark.config")` [monsonjeremy/onedark.nvim#5]
+- **Warning** on `vim.g` configuration
+- Configure plugin in lua using `require('onedark').setup({})` **[fix monsonjeremy/onedark.nvim#5]**
+- Minimal config example added inside [README.md#minimal](./README.md#minimal)
+- Linting Github Action init
+- Format .lua code with [lua-format](https://github.com/Koihik/LuaFormatter)
+- **kitty tab** colors are changed
+- Init: `Makefile, .lua-format, .luacheckrc`
 
 ### Changed
 
+- Removed function `require('onedark').colorscheme()`
+- Colorscheme **autoload removed** from `colors/onedark.vim`
 - **VertSplit** & **Inactive StatusLine** `fg` color changed to `bg_visual`
-- configuration docs updated inside README.md
+- StatusLine bug note inside [README.md#usage](./README.md#-usage)
+- Configuration docs updated inside [README.md#configuration](./README.md#-configuration)
 
 ## [v0.0.1] - 14 June 2021
 

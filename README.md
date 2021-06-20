@@ -1,13 +1,19 @@
+<!-- Branding -->
 <p align="center">
-    <img src="https://i.imgur.com/lNdBu1v.png" alt="onedark.nvim" />
+  <img src="https://i.imgur.com/lNdBu1v.png" alt="onedark.nvim" />
+  <br />
+  Atom's iconic One Dark theme for Neovim, written in Lua
 </p>
 
+<!-- Badges -->
 <p align="center">
-    Atom's iconic One Dark theme for Neovim, written in Lua
-</p>
-
-<p align="center">
-    De-attach fork of <b><a href="https://github.com/monsonjeremy/onedark.nvim">monsonjeremy/onedark.nvim</a></b>
+  <!-- First Row -->
+  <a href="https://github.com/monsonjeremy/onedark.nvim">
+    <img alt="monsonjeremy/onedark.nvim" src="https://img.shields.io/badge/Fork%20of-monsonjeremy%2Fonedark.nvim-blue" />
+  </a>
+  <a href="https://github.com/ful1e5/onedark.nvim/actions">
+    <img alt="GitHub Action Linting" src="https://github.com/ful1e5/onedark.nvim/actions/workflows/lint.yml/badge.svg" width="102" />
+  </a>
 </p>
 
 ## ✨ Features
@@ -151,7 +157,7 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 ## 🌈 Extras
 
-> To generate the configs `:luafile /lua/onedark/extra/init.lua`
+> To generate the configs `make extra`
 
 Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](extras/). To use them, refer to their respective documentation.
 
@@ -205,6 +211,21 @@ require("onedark").setup({
     <img src="https://imgur.com/oA5PjUb.png" alt="Italic fonts" />
 </p>
 
+### Minimal
+
+```lua
+require("onedark").setup({
+  hideInactiveStatusline = true,
+  darkSidebar = false,
+  darkFloat = false
+  -- ... your onedark config
+})
+```
+
+<p align="center">
+    <img src="https://imgur.com/VSTW3Hr.png" alt="Minimal" />
+</p>
+
 ### Telescope
 
 <p align="center">
@@ -218,8 +239,6 @@ require("onedark").setup({
 - [Wallpaper](https://hdqwalls.com/big-sur-4k-wallpaper)
 - [dotfiles](https://github.com/ful1e5/dotfiles)
 
-<!-- Support -->
-
 ## Support
 
 <a href="https://www.buymeacoffee.com/Nt7Wg4V" >
@@ -231,7 +250,6 @@ require("onedark").setup({
 Follow me on **[Twitter](https://twitter.com/ful1e5)**
 
 <!-- Ninja  -->
-
 <p align="center">
   <h1 align="center">(◣_◢)</h1>
 </p>
