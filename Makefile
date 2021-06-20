@@ -10,6 +10,6 @@ format:
 	@for file in `find . -name '*.lua'`;do lua-format $$file -i; done;
 
 lint: $(onedark_path)
-	@luacheck $(onedark_path)
+	@luacheck $(onedark_path) --config .luacheckrc
 
 check: format lint
