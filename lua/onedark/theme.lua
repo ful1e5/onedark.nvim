@@ -15,7 +15,7 @@ function M.setup(config)
   theme.colors = colors.setup(config)
   local c = theme.colors
 
-  theme.base = {
+  theme.base = { -- luacheck: ignore
     Comment = {fg = c.fg_gutter, style = config.commentStyle}, -- any comment
     ColorColumn = {bg = c.bg_visual}, -- used for the columns set with 'colorcolumn'
     Conceal = {fg = c.fg_gutter}, -- placeholder characters substituted for concealed text (see 'conceallevel')
