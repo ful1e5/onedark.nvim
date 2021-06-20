@@ -1,12 +1,13 @@
 local util = require("onedark.util")
 local colors = require("onedark.colors")
+local configModule = require("onedark.config")
 
 local M = {}
 
 ---@param config Config
 ---@return Theme
 function M.setup(config)
-  config = config or require("onedark.config")
+  config = config or configModule.config
 
   ---@class Theme
   local theme = {}
@@ -14,7 +15,7 @@ function M.setup(config)
   theme.colors = colors.setup(config)
   local c = theme.colors
 
-  theme.base = {
+  theme.base = { -- luacheck: ignore
     Comment = {fg = c.fg_gutter, style = config.commentStyle}, -- any comment
     ColorColumn = {bg = c.bg_visual}, -- used for the columns set with 'colorcolumn'
     Conceal = {fg = c.fg_gutter}, -- placeholder characters substituted for concealed text (see 'conceallevel')
@@ -325,7 +326,7 @@ function M.setup(config)
     theme.base.StatusLineNC = inactive
 
     -- LuaLine
-    for _, section in ipairs({"a", "b", "c"}) do
+    for _, section in pairs({"a", "b", "c"}) do
       theme.plugins["lualine_" .. section .. "_inactive"] = inactive
     end
   end

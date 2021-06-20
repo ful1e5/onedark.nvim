@@ -1,13 +1,19 @@
+<!-- Branding -->
 <p align="center">
-    <img src="https://i.imgur.com/lNdBu1v.png" alt="onedark.nvim" />
+  <img src="https://i.imgur.com/lNdBu1v.png" alt="onedark.nvim" />
+  <br />
+  Atom's iconic One Dark theme for Neovim, written in Lua
 </p>
 
+<!-- Badges -->
 <p align="center">
-    Atom's iconic One Dark theme for Neovim, written in Lua
-</p>
-
-<p align="center">
-    De-attach fork of <b><a href="https://github.com/monsonjeremy/onedark.nvim">monsonjeremy/onedark.nvim</a></b>
+  <!-- First Row -->
+  <a href="https://github.com/monsonjeremy/onedark.nvim">
+    <img alt="monsonjeremy/onedark.nvim" src="https://img.shields.io/badge/Fork%20of-monsonjeremy%2Fonedark.nvim-blue" />
+  </a>
+  <a href="https://github.com/ful1e5/onedark.nvim/actions">
+    <img alt="GitHub Action Linting" src="https://github.com/ful1e5/onedark.nvim/actions/workflows/lint.yml/badge.svg" width="102" />
+  </a>
 </p>
 
 ## ✨ Features
@@ -63,15 +69,17 @@ Enable the colorscheme:
 
 ```vim
 " Vim Script
-colorscheme onedark
+lua require('onedark').setup()
 ```
 
 ```lua
 -- Lua
-vim.cmd[[colorscheme onedark]]
+require('onedark').setup()
 ```
 
 To enable the `onedark` theme for `Lualine`, simply specify it in your lualine settings:
+
+> **📝 NOTE:** Set `lualine` configuration **before** `onedark`.
 
 ```lua
 require('lualine').setup {
@@ -92,42 +100,48 @@ To enable the `onedark` colorscheme for `Lightline`:
 let g:lightline = {'colorscheme': 'onedark'}
 ```
 
+```lua
+-- Lua
+vim.g.lightline = {colorscheme = "onedark"}
+```
+
 ## ⚙️ Configuration
 
-> ❗️ configuration needs to be set **BEFORE** loading the color scheme with `colorscheme onedark`
-
-| Option                           | Default | Description                                                                                                                                                     |
-| -------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onedark_italic_comments          | `true`  | Make comments italic                                                                                                                                            |
-| onedark_italic_keywords          | `true`  | Make keywords italic                                                                                                                                            |
-| onedark_italic_functions         | `false` | Make functions italic                                                                                                                                           |
-| onedark_italic_variables         | `false` | Make variables and identifiers italic                                                                                                                           |
-| onedark_transparent              | `false` | Enable this to disable setting the background color                                                                                                             |
-| onedark_hide_inactive_statusline | `false` | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
-| onedark_sidebars                 | `{}`    | Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`                                                      |
-| onedark_dark_sidebar             | `true`  | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
-| onedark_dark_float               | `true`  | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
-| onedark_colors                   | `{}`    | You can override specific color groups to use other groups or a hex color                                                                                       |
+| Option                 | Default  | Description                                                                                                                                                     |
+| ---------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| commentStyle           | `italic` | Highlight style for comments (check `:help highlight-args` for options)                                                                                         |
+| keywordStyle           | `italic` | Highlight style for keywords (check `:help highlight-args` for options)                                                                                         |
+| functionStyle          | `NONE`   | Highlight style for functions (check `:help highlight-args` for options)                                                                                        |
+| variableStyle          | `NONE`   | Highlight style for variables and identifiers (check `:help highlight-args` for options)                                                                        |
+| transparent            | `false`  | Enable this to disable setting the background color                                                                                                             |
+| hideInactiveStatusline | `false`  | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
+| sidebars               | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                      |
+| darkSidebar            | `true`   | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
+| darkFloat              | `true`   | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
+| colors                 | `{}`     | You can override specific color groups to use other groups or a hex color                                                                                       |
 
 ```lua
 -- Example config in Lua
-vim.g.onedark_italic_functions = true
-vim.g.onedark_sidebars = { "qf", "vista_kind", "terminal", "packer" }
+require("onedark").setup({
+  functionStyle = "italic",
+  sidebars = {"qf", "vista_kind", "terminal", "packer"},
 
--- Change the "hint" color to the "orange" color, and make the "error" color bright red
-vim.g.onedark_colors = { hint = "orange", error = "#ff0000" }
-
--- Load the colorscheme
-vim.cmd[[colorscheme onedark]]
+  -- Change the "hint" color to the "orange" color, and make the "error" color bright red
+  colors = {hint = "orange", error = "#ff0000"}
+})
 ```
 
 ```vim
 " Example config in VimScript
-let g:onedark_italic_functions = 1
-let g:onedark_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+lua << EOF
+require("onedark").setup({
+  functionStyle = "italic",
+  sidebars = {"qf", "vista_kind", "terminal", "packer"},
 
-" Load the colorscheme
-colorscheme onedark
+  -- Change the "hint" color to the "orange" color, and make the "error" color bright red
+  colors = {hint = "orange", error = "#ff0000"}
+})
+EOF
 ```
 
 ### Making `undercurls` work properly in **Tmux**
@@ -143,7 +157,7 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 ## 🌈 Extras
 
-> To generate the configs `:luafile /lua/onedark/extra/init.lua`
+> To generate the configs `make extra`
 
 Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](extras/). To use them, refer to their respective documentation.
 
@@ -167,11 +181,14 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 
 ### Normal
 
-```
-vim.g.onedark_italic_comments = false
-vim.g.onedark_italic_keywords = false
-vim.g.onedark_italic_functions = false
-vim.g.onedark_italic_variables = false
+```lua
+require("onedark").setup({
+  commentStyle = "NONE",
+  keywordStyle = "NONE",
+  functionStyle = "NONE",
+  variableStyle = "NONE"
+  -- ... your onedark config
+})
 ```
 
 <p align="center">
@@ -180,15 +197,33 @@ vim.g.onedark_italic_variables = false
 
 ### Italic
 
-```
-vim.g.onedark_italic_comments = true
-vim.g.onedark_italic_keywords = true
-vim.g.onedark_italic_functions = true
-vim.g.onedark_italic_variables = true
+```lua
+require("onedark").setup({
+  commentStyle = "italic",
+  keywordStyle = "italic",
+  functionStyle = "italic",
+  variableStyle = "italic"
+  -- ... your onedark config
+})
 ```
 
 <p align="center">
     <img src="https://imgur.com/oA5PjUb.png" alt="Italic fonts" />
+</p>
+
+### Minimal
+
+```lua
+require("onedark").setup({
+  hideInactiveStatusline = true,
+  darkSidebar = false,
+  darkFloat = false
+  -- ... your onedark config
+})
+```
+
+<p align="center">
+    <img src="https://imgur.com/VSTW3Hr.png" alt="Minimal" />
 </p>
 
 ### Telescope
@@ -204,8 +239,6 @@ vim.g.onedark_italic_variables = true
 - [Wallpaper](https://hdqwalls.com/big-sur-4k-wallpaper)
 - [dotfiles](https://github.com/ful1e5/dotfiles)
 
-<!-- Support -->
-
 ## Support
 
 <a href="https://www.buymeacoffee.com/Nt7Wg4V" >
@@ -217,7 +250,6 @@ vim.g.onedark_italic_variables = true
 Follow me on **[Twitter](https://twitter.com/ful1e5)**
 
 <!-- Ninja  -->
-
 <p align="center">
   <h1 align="center">(◣_◢)</h1>
 </p>

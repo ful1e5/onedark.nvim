@@ -1,5 +1,5 @@
-local config = require("onedark.config")
-local colors = require("onedark.colors").setup(config)
+local configModule = require("onedark.config")
+local colors = require("onedark.colors").setup(configModule.config)
 
 local onedark = {}
 
