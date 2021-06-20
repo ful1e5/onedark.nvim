@@ -8,13 +8,16 @@ vim = vim or {g = {}, o = {}}
 
 local function opt(key, default)
   key = "onedark_" .. key
-  if vim.g[key] == nil then return default end
-  if vim.g[key] == 0 then
+  if vim.g[key] == nil then
+    return default
+  else
     vimConfig = true
-    return false
+    if vim.g[key] == 0 then
+      return false
+    else
+      return vim.g[key]
+    end
   end
-  vimConfig = true
-  return vim.g[key]
 end
 
 config = {
