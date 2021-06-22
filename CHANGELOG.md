@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **VertSplit** & **Inactive StatusLine** `fg` color changed to `bg_visual`
 - StatusLine bug note inside [README.md#usage](./README.md#-usage)
 - Configuration docs updated inside [README.md#configuration](./README.md#-configuration)
+- Fix `VertSplit` & `StatusLine` crossover on `hideInactiveStatusline` [check hoob3rt/lualine.nvim#274]
+- Change `NvimTreeEndOfBuffer` color on `darkSidebar=false`
 
 ## [v0.0.1] - 14 June 2021
 
