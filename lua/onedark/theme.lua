@@ -242,9 +242,11 @@ function M.setup(config)
     LspTroubleText = {fg = c.fg_dark},
     LspTroubleCount = {fg = c.purple, bg = c.fg_gutter},
     LspTroubleNormal = {fg = c.fg_sidebar, bg = c.bg_sidebar},
+
     -- Illuminate
     illuminatedWord = {bg = c.fg_gutter},
     illuminatedCurWord = {bg = c.fg_gutter},
+
     -- diff
     diffAdded = {fg = c.git.add},
     diffRemoved = {fg = c.git.delete},
@@ -254,6 +256,7 @@ function M.setup(config)
     diffFile = {fg = c.blue},
     diffLine = {fg = c.fg_gutter},
     diffIndexLine = {fg = c.purple},
+
     -- Neogit
     NeogitBranch = {fg = c.purple},
     NeogitRemote = {fg = c.purple},
@@ -262,19 +265,23 @@ function M.setup(config)
     NeogitDiffContextHighlight = {bg = util.darken(c.fg_gutter, 0.5), fg = c.fg_dark},
     NeogitDiffDeleteHighlight = {fg = c.git.delete, bg = c.diff.delete},
     NeogitDiffAddHighlight = {fg = c.git.add, bg = c.diff.add},
+
     -- GitGutter
     GitGutterAdd = {fg = c.gitSigns.add}, -- diff mode: Added line |diff.txt|
     GitGutterChange = {fg = c.gitSigns.change}, -- diff mode: Changed line |diff.txt|
     GitGutterDelete = {fg = c.gitSigns.delete}, -- diff mode: Deleted line |diff.txt|
+
     -- GitSigns
     GitSignsAdd = {fg = c.gitSigns.add}, -- diff mode: Added line |diff.txt|
     GitSignsChange = {fg = c.gitSigns.change}, -- diff mode: Changed line |diff.txt|
     GitSignsDelete = {fg = c.gitSigns.delete}, -- diff mode: Deleted line |diff.txt|
+
     -- Telescope
     TelescopeBorder = {fg = c.border_highlight},
+
     -- NvimTree
     NvimTreeNormal = {fg = c.fg_light, bg = c.bg_sidebar},
-    NvimTreeEndOfBuffer = {fg = c.bg2},
+    NvimTreeEndOfBuffer = config.darkSidebar and {fg = c.bg2} or {fg = c.bg},
     NvimTreeRootFolder = {fg = c.fg_light, style = "bold"},
     NvimTreeGitDirty = {fg = c.yellow2},
     NvimTreeGitNew = {fg = c.git.add},
@@ -289,11 +296,13 @@ function M.setup(config)
     LspDiagnosticsWarning = {fg = c.warning},
     LspDiagnosticsInformation = {fg = c.info},
     LspDiagnosticsHint = {fg = c.hint},
+
     -- Dashboard
     DashboardShortCut = {fg = c.purple},
     DashboardHeader = {fg = c.red},
     DashboardCenter = {fg = c.blue},
     DashboardFooter = {fg = c.yellow, style = "italic"},
+
     -- WhichKey
     WhichKey = {fg = c.yellow},
     WhichKeyGroup = {fg = c.blue},
@@ -302,18 +311,23 @@ function M.setup(config)
     WhichKeySeparator = {fg = c.fg_gutter},
     WhichKeyFloat = {bg = c.bg_sidebar},
     WhichKeyValue = {fg = c.dark5},
+
     -- LspSaga
     DiagnosticError = {fg = c.error},
     DiagnosticWarning = {fg = c.warning},
     DiagnosticInformation = {fg = c.info},
     DiagnosticHint = {fg = c.hint},
+
     -- NeoVim
     healthError = {fg = c.error},
     healthSuccess = {fg = c.green},
     healthWarning = {fg = c.warning},
+
     -- BufferLine
+
     BufferLineIndicatorSelected = {fg = c.git.change},
     BufferLineFill = {bg = c.black},
+
     -- ALE
     ALEWarningSign = {fg = c.yellow},
     ALEErrorSign = {fg = c.red}
@@ -322,12 +336,18 @@ function M.setup(config)
   if config.hideInactiveStatusline then
     local inactive = {style = "underline", bg = c.bg, fg = c.bg, sp = c.bg_visual}
 
-    -- StatusLineNC
+    -- StatusLine
     theme.base.StatusLineNC = inactive
 
-    -- LuaLine
-    for _, section in pairs({"a", "b", "c"}) do
-      theme.plugins["lualine_" .. section .. "_inactive"] = inactive
+    if vim.o.statusline ~= nil and string.find(vim.o.statusline, "lualine") then
+      -- Fix VertSplit & StatusLine crossover when lualine is active
+      -- https://github.com/hoob3rt/lualine.nvim/issues/274
+      theme.base.StatusLine = {bg = c.bg}
+
+      -- LuaLine
+      for _, section in pairs({"a", "b", "c"}) do
+        theme.plugins["lualine_" .. section .. "_inactive"] = inactive
+      end
     end
   end
 
