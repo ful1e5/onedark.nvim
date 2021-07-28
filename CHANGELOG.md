@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Format .lua code with [lua-format](https://github.com/Koihik/LuaFormatter)
 - **kitty tab** colors are changed
 - Init: `Makefile, .lua-format, .luacheckrc`
+- Add "NONE" color compatibility for colors override
 
 ### Changed
 
