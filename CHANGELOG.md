@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **kitty tab** colors are changed
 - Init: `Makefile, .lua-format, .luacheckrc`
 - Add "NONE" color compatibility for colors override
+- `barbar.nvim` plugin support ( related to monsonjeremy/onedark.nvim#8 )
 
 ### Changed
 
