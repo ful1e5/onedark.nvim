@@ -303,6 +303,15 @@ function M.setup(config)
     DashboardCenter = {fg = c.blue},
     DashboardFooter = {fg = c.yellow, style = "italic"},
 
+    -- glyph palette
+    GlyphPalette1 = {fg = c.red1},
+    GlyphPalette2 = {fg = c.green},
+    GlyphPalette3 = {fg = c.yellow},
+    GlyphPalette4 = {fg = c.blue},
+    GlyphPalette6 = {fg = c.green},
+    GlyphPalette7 = {fg = c.fg},
+    GlyphPalette9 = {fg = c.red},
+
     -- WhichKey
     WhichKey = {fg = c.yellow},
     WhichKeyGroup = {fg = c.blue},
@@ -349,6 +358,7 @@ function M.setup(config)
     -- ALE
     ALEWarningSign = {fg = c.yellow},
     ALEErrorSign = {fg = c.red}
+
   }
 
   theme.defer = {}
