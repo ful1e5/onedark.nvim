@@ -43,6 +43,7 @@
 - [Lightline](https://github.com/itchyny/lightline.vim)
 - [Neogit](https://github.com/TimUntersberger/neogit)
 - [Barbar](https://github.com/romgrk/barbar.nvim)
+- [glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim)
 
 ## ⚡️ Requirements
 
