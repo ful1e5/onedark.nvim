@@ -1,7 +1,11 @@
-" clear cache so this reloads changes.
-" useful for development
-lua package.loaded['onedark'] = nil
-lua package.loaded['onedark.theme'] = nil
-lua package.loaded['onedark.colors'] = nil
-lua package.loaded['onedark.util'] = nil
-lua package.loaded['onedark.config'] = nil
+lua << EOF
+
+-- clear cache so this reloads changes.
+-- useful for development
+package.loaded['onedark'] = nil
+package.loaded['onedark.util'] = nil
+package.loaded['onedark.colors'] = nil
+package.loaded['onedark.theme'] = nil
+package.loaded['onedark.config'] = nil
+
+EOF

@@ -23,7 +23,10 @@ active_tab_background ${blue}
 active_tab_foreground ${bg}
 inactive_tab_background ${fg}
 inactive_tab_foreground ${bg}
-#tab_bar_background ${black}
+
+# Windows Border
+active_border_color ${bg_visual}
+inactive_border_color ${bg_visual}
 
 # normal
 color0 ${black}
