@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add "NONE" color compatibility for colors override
 - `barbar.nvim` plugin support. related to monsonjeremy/onedark.nvim#8
 - `glyph-palette.vim` plugin support
+- kitty border color added
+- `./colors/onedark.vim` code in lua
 
 ### Changed
 
