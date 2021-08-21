@@ -44,6 +44,7 @@
 - [Neogit](https://github.com/TimUntersberger/neogit)
 - [Barbar](https://github.com/romgrk/barbar.nvim)
 - [glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim)
+- [circles.nvim](https://github.com/ful1e5/circles.nvim)
 
 ## ⚡️ Requirements
 
@@ -172,7 +173,7 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 ## 📺 Screenshot
 
 <p align="center">
-    <img src="https://imgur.com/tptzxgH.png" alt="onedark.nvim" />
+    <img src="https://imgur.com/8NHwJAJ.png" alt="onedark.nvim" />
 </p>
 
 ### Default
@@ -225,20 +226,20 @@ require("onedark").setup({
 ```
 
 <p align="center">
-    <img src="https://imgur.com/VSTW3Hr.png" alt="Minimal" />
+    <img src="https://imgur.com/SH31zet.png" alt="Minimal" />
 </p>
 
 ### Telescope
 
 <p align="center">
-    <img src="https://imgur.com/vgR9HRe.png" alt="Telescope plugin" />
+    <img src="https://imgur.com/2UsnFWV.png" alt="Telescope plugin" />
 </p>
 
 ## Useful Links
 
 - [Kitty](https://sw.kovidgoyal.net/kitty)
-- ~[SF Mono Nerd-Font](https://github.com/epk/SF-Mono-Nerd-Font)~ [Ubuntu Mono](https://design.ubuntu.com/font/)
-- [Wallpaper](https://hdqwalls.com/big-sur-4k-wallpaper)
+- [Ubuntu Mono](https://design.ubuntu.com/font/)
+- [Wallpaper](https://dribbble.com/shots/15296500-Waves-Wallpapers)
 - [dotfiles](https://github.com/ful1e5/dotfiles)
 
 ## Support
