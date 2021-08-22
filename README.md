@@ -44,7 +44,7 @@
 - [Neogit](https://github.com/TimUntersberger/neogit)
 - [Barbar](https://github.com/romgrk/barbar.nvim)
 - [glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim)
-- [circles.nvim](https://github.com/ful1e5/circles.nvim)
+- [circles.nvim](https://github.com/projekt0n/circles.nvim)
 
 ## ⚡️ Requirements
 
@@ -173,7 +173,7 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 ## 📺 Screenshot
 
 <p align="center">
-    <img src="https://imgur.com/8NHwJAJ.png" alt="onedark.nvim" />
+    <img src="https://imgur.com/vGvbzPR.png" alt="onedark.nvim" />
 </p>
 
 ### Default
@@ -237,10 +237,10 @@ require("onedark").setup({
 
 ## Useful Links
 
-- [Kitty](https://sw.kovidgoyal.net/kitty)
-- [Ubuntu Mono](https://design.ubuntu.com/font/)
-- [Wallpaper](https://dribbble.com/shots/15296500-Waves-Wallpapers)
-- [dotfiles](https://github.com/ful1e5/dotfiles)
+- Terminal: [Kitty](https://sw.kovidgoyal.net/kitty)
+- Font: [Ubuntu Mono](https://design.ubuntu.com/font/)
+- Dotfiles: [ful1e5/dotfiles](https://github.com/ful1e5/dotfiles)
+- Neovim icons: [projekt0n/circles.nvim](https://github.com/projekt0n/circles.nvim)
 
 ## Support
 
