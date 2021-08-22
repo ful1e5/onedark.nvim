@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `glyph-palette.vim` plugin support
 - kitty border color added
 - `./colors/onedark.vim` code in lua
+- [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) plugin support
 
 ### Changed
 
