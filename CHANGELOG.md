@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - kitty border color added
 - `./colors/onedark.vim` code in lua
 - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) plugin support
+- `msgAreaStyle` config added
 
 ### Changed
 
