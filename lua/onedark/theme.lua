@@ -277,7 +277,9 @@ function M.setup(config)
     GitSignsDelete = {fg = c.gitSigns.delete}, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
-    TelescopeBorder = {fg = c.border_highlight},
+    TelescopeBorder = {fg = c.border},
+    TelescopeMatching = {fg = c.fg_light, style = "bold"},
+    TelescopePromptPrefix = {fg = c.fg, style = "bold"},
 
     -- NvimTree
     NvimTreeNormal = {fg = c.fg_light, bg = c.bg_sidebar},

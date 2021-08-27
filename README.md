@@ -174,13 +174,13 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 ## 📺 Screenshot
 
 <p align="center">
-    <img src="https://imgur.com/vGvbzPR.png" alt="onedark.nvim" />
+  <img src="https://imgur.com/vGvbzPR.png" alt="onedark.nvim" />
 </p>
 
 ### Default
 
 <p align="center">
-    <img src="https://imgur.com/8KbGV7r.png" alt="Default fonts" />
+  <img src="https://imgur.com/8KbGV7r.png" alt="Default fonts" />
 </p>
 
 ### Normal
@@ -196,7 +196,7 @@ require("onedark").setup({
 ```
 
 <p align="center">
-    <img src="https://imgur.com/QZ0R0qC.png" alt="Normal fonts" />
+  <img src="https://imgur.com/QZ0R0qC.png" alt="Normal fonts" />
 </p>
 
 ### Italic
@@ -212,7 +212,7 @@ require("onedark").setup({
 ```
 
 <p align="center">
-    <img src="https://imgur.com/oA5PjUb.png" alt="Italic fonts" />
+  <img src="https://imgur.com/oA5PjUb.png" alt="Italic fonts" />
 </p>
 
 ### Minimal
@@ -227,13 +227,13 @@ require("onedark").setup({
 ```
 
 <p align="center">
-    <img src="https://imgur.com/SH31zet.png" alt="Minimal" />
+  <img src="https://imgur.com/SH31zet.png" alt="Minimal" />
 </p>
 
 ### Telescope
 
 <p align="center">
-    <img src="https://imgur.com/2UsnFWV.png" alt="Telescope plugin" />
+  <img src="https://i.imgur.com/dXuFkpI.png" alt="Telescope plugin" />
 </p>
 
 ## Useful Links
