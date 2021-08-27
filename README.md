@@ -233,7 +233,7 @@ require("onedark").setup({
 ### Telescope
 
 <p align="center">
-    <img src="https://imgur.com/2UsnFWV.png" alt="Telescope plugin" />
+    <img src="https://i.imgur.com/dXuFkpI.png" alt="Telescope plugin" />
 </p>
 
 ## Useful Links
