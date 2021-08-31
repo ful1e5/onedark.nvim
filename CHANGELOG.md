@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) plugin support
 - `msgAreaStyle` config added
 - `kitty` target added inside `Makefile` for reloading kitty theme
+- `TSVariable` & `TSOperator` colors added inside `colors.lua`
 
 ### Changed
 

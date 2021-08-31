@@ -208,7 +208,7 @@ function M.setup(config)
     TSNamespace = {fg = c.red}, -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
-    TSOperator = {fg = c.fg}, -- For any operator: `+`, but also `->` and `*` in C.
+    TSOperator = {fg = c.syntax.operator}, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter = {fg = c.red}, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
     TSProperty = {fg = c.red}, -- Same as `TSField`.
@@ -222,7 +222,7 @@ function M.setup(config)
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
-    TSVariable = {style = config.variableStyle}, -- Any variable name that does not have another highlight.
+    TSVariable = {fg = c.syntax.variable, style = config.variableStyle}, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = {fg = c.red}, -- Variable names that are defined by the languages, like `this` or `self`.
     TSTag = {fg = c.red}, -- Tags like html tag names.
     -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
