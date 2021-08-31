@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `./colors/onedark.vim` code in lua
 - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) plugin support
 - `msgAreaStyle` config added
+- `kitty` target added inside `Makefile` for reloading kitty theme
 
 ### Changed
 
@@ -35,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change `NvimTreeEndOfBuffer` color on `darkSidebar=false`
 - Parse lua table inside `colors` config **[fix #6]**
 - Better Telescope highlighting
+- Removed `_` from extra themes name
 
 ## [v0.0.1] - 14 June 2021
 
