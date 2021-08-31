@@ -16,7 +16,7 @@ foreground ${fg}
 selection_background ${bg_visual}
 selection_foreground ${fg}
 url_color ${green}
-cursor ${fg}
+cursor ${cursor}
 
 # Tabs
 active_tab_background ${blue}

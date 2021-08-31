@@ -35,12 +35,13 @@ function M.setup(config)
     git = {change = "#e0af68", add = "#109868", delete = "#9A353D", conflict = "#bb7a61"},
     gitSigns = {change = "#e0af68", add = "#109868", delete = "#9A353D"},
 
+    cursor = "#528bff",
     syntax = {
       variable = "#e06c75",
       operator = "#56b6c2"
       --
-
     },
+
     devIcons = {
       c = "#519aba",
       clojure = "#8dc149",

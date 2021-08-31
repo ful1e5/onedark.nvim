@@ -19,7 +19,7 @@ function M.setup(config)
     Comment = {fg = c.fg_gutter, style = config.commentStyle}, -- any comment
     ColorColumn = {bg = c.bg_visual}, -- used for the columns set with 'colorcolumn'
     Conceal = {fg = c.fg_gutter}, -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Cursor = {fg = c.bg, bg = c.fg}, -- character under the cursor
+    Cursor = {fg = c.cursor, bg = c.fg}, -- character under the cursor
     lCursor = {fg = c.bg, bg = c.fg}, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     CursorIM = {fg = c.bg, bg = c.fg}, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = {bg = c.bg_highlight}, -- Screen-column at the cursor, when 'cursorcolumn' is set.
