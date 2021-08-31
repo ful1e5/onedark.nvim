@@ -12,5 +12,5 @@ end
 local extras = {kitty = "conf", alacritty = "yml"}
 for extra, ext in pairs(extras) do
   local plugin = require("onedark.extra." .. extra)
-  write(plugin[extra](configModule.config), extra .. "_onedark_" .. "." .. ext)
+  write(plugin[extra](configModule.config), extra .. "_onedark" .. "." .. ext)
 end
