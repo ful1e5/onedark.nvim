@@ -211,7 +211,7 @@ function M.setup(config)
     TSOperator = {fg = c.syntax.operator}, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter = {fg = c.red}, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
-    TSProperty = {fg = c.red}, -- Same as `TSField`.
+    TSProperty = {fg = c.syntax.property}, -- Same as `TSField`.
     TSPunctDelimiter = {fg = c.fg}, -- For delimiters ie: `.`
     TSPunctBracket = {fg = c.fg_dark}, -- For brackets and parens.
     TSPunctSpecial = {fg = c.fg}, -- For special punctutation that does not fall in the catagories before.
