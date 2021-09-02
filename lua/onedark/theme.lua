@@ -223,7 +223,7 @@ function M.setup(config)
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
     TSVariable = {fg = c.syntax.variable, style = config.variableStyle}, -- Any variable name that does not have another highlight.
-    TSVariableBuiltin = {fg = c.red}, -- Variable names that are defined by the languages, like `this` or `self`.
+    TSVariableBuiltin = {fg = c.syntax.variable_builtin}, -- Variable names that are defined by the languages, like `this` or `self`.
     TSTag = {fg = c.red}, -- Tags like html tag names.
     -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
     -- TSText              = { };    -- For strings considered text in a markup language.
