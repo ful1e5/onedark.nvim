@@ -39,7 +39,8 @@ function M.setup(config)
     syntax = {
       variable = "#e06c75",
       operator = "#56b6c2",
-      property = "#56b6c2"
+      property = "#56b6c2",
+      variable_builtin = "#e5c07b"
 
       --
     },
