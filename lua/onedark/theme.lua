@@ -237,6 +237,7 @@ function M.setup(config)
 
     -- Lua
     -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
+    javascriptTSFunction = {fg = c.syntax.js.func}, -- For function (calls and definitions).
 
     -- LspTrouble
     LspTroubleText = {fg = c.fg_dark},
