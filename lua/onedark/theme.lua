@@ -204,6 +204,7 @@ function M.setup(config)
     TSKeyword = {fg = c.purple, style = config.keywordStyle}, -- For keywords that don't fall in previous categories.
     TSKeywordFunction = {fg = c.purple, style = config.functionStyle}, -- For keywords used to define a fuction.
     TSLabel = {fg = c.blue}, -- For labels: `label:` in C and `:label:` in Lua.
+    jsonTSLabel = {fg = c.syntax.json.label}, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     TSNamespace = {fg = c.red}, -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
