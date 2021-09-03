@@ -25,8 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `msgAreaStyle` config added
 - `kitty` target added inside `Makefile` for reloading kitty theme
 - `TSVariable` & `TSOperator` colors added inside `colors.lua`
-- `cursor` color added
-- `TSProperty` color added
+- `cursor`, `TSProperty`, `jsonTSLabel` colors added
 
 ### Changed
 
