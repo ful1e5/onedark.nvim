@@ -44,7 +44,8 @@ function M.setup(config)
       variable_builtin = "#e5c07b",
       js = {func = "#e5c07b"},
       json = {label = "#e06c75"},
-      less = {include = "#c678dd", class = "#d19a66"}
+      less = {include = "#c678dd", class = "#d19a66"},
+      make = {ident = "#e59b4e"}
     },
 
     devIcons = {
