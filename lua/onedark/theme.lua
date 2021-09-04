@@ -248,6 +248,9 @@ function M.setup(config)
     lessInclude = {fg = c.syntax.less.include},
     lessClass = {fg = c.syntax.less.class},
 
+    -- Make
+    makeIdent = {fg = c.syntax.make.ident},
+
     -- LspTrouble
     LspTroubleText = {fg = c.fg_dark},
     LspTroubleCount = {fg = c.purple, bg = c.fg_gutter},
