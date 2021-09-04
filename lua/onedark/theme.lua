@@ -240,6 +240,9 @@ function M.setup(config)
     -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
     javascriptTSFunction = {fg = c.syntax.js.func}, -- For function (calls and definitions).
 
+    -- less
+    lessInclude = {fg = c.syntax.less.include},
+
     -- LspTrouble
     LspTroubleText = {fg = c.fg_dark},
     LspTroubleCount = {fg = c.purple, bg = c.fg_gutter},
