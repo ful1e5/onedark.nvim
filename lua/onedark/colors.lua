@@ -37,13 +37,14 @@ function M.setup(config)
 
     cursor = "#528bff",
     syntax = {
+      string = "#98c379",
       variable = "#e06c75",
       operator = "#56b6c2",
       property = "#56b6c2",
       variable_builtin = "#e5c07b",
       js = {func = "#e5c07b"},
       json = {label = "#e06c75"},
-      less = {include = "#c678dd"}
+      less = {include = "#c678dd", class = "#d19a66"}
     },
 
     devIcons = {
