@@ -251,6 +251,11 @@ function M.setup(config)
     -- Make
     makeIdent = {fg = c.syntax.make.ident},
 
+    -- php
+    phpTSPunctBracket = {fg = c.syntax.php.punct_bracket},
+    phpTSKeyword = {fg = c.syntax.php.keyword},
+    phpTSConstructor = {fg = c.syntax.php.constructor},
+
     -- LspTrouble
     LspTroubleText = {fg = c.fg_dark},
     LspTroubleCount = {fg = c.purple, bg = c.fg_gutter},
