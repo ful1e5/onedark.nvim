@@ -256,6 +256,10 @@ function M.setup(config)
     phpTSKeyword = {fg = c.syntax.php.keyword},
     phpTSConstructor = {fg = c.syntax.php.constructor},
 
+    -- python
+    pythonTSParameter = {fg = c.syntax.python.param},
+    pythonTSFuncBuiltin = {fg = c.syntax.python.builtin_func},
+
     -- LspTrouble
     LspTroubleText = {fg = c.fg_dark},
     LspTroubleCount = {fg = c.purple, bg = c.fg_gutter},
