@@ -45,7 +45,8 @@ function M.setup(config)
       js = {func = "#e5c07b"},
       json = {label = "#e06c75"},
       less = {include = "#c678dd", class = "#d19a66"},
-      make = {ident = "#e59b4e"}
+      make = {ident = "#e59b4e"},
+      php = {punct_bracket = "#e06c75", keyword = "#56b6c2", constructor = "#e5c07b"}
     },
 
     devIcons = {
