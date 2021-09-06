@@ -52,11 +52,8 @@ function M.setup(config)
       less = {include = "#c678dd", class = "#d19a66"},
       make = {ident = "#e59b4e"},
       php = {punct_bracket = "#e06c75", keyword = "#56b6c2", constructor = "#e5c07b"},
-      python = {
-        param = "#e59b4e",
-        builtin_func = "#56b6c2"
-        --
-      }
+      python = {param = "#e59b4e", builtin_func = "#56b6c2"},
+      ruby = {symbol = "#56b6c2", variable = "#61afef", param = "#e5c07b"}
     },
 
     devIcons = {
