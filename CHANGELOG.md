@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `cursor`, `TSProperty`, `jsonTSLabel`, `lessInclude`, `lessClass`, `cssStringQQ`, `makeIdent` colors added
 - php syntax highlighting improved
 - python syntax highlighting improved
+- javascript syntax highlighting improved
 
 ### Changed
 

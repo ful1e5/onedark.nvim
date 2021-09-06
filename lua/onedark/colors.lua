@@ -42,7 +42,12 @@ function M.setup(config)
       operator = "#56b6c2",
       property = "#56b6c2",
       variable_builtin = "#e5c07b",
-      js = {func = "#e5c07b"},
+      js = {
+        func = "#e5c07b",
+        variable = "#e5c07b",
+        property = "#61afef",
+        tag_attribute = "#e59b4e"
+      },
       json = {label = "#e06c75"},
       less = {include = "#c678dd", class = "#d19a66"},
       make = {ident = "#e59b4e"},
