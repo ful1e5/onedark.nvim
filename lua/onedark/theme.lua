@@ -236,11 +236,13 @@ function M.setup(config)
     -- TSLiteral           = { };    -- Literal text.
     -- TSURI               = { };    -- Any URI like a link or email.
 
-    -- Lua
-    -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
+    -- javascript
     javascriptTSFunction = {fg = c.syntax.js.func}, -- For function (calls and definitions).
+    javascriptTSVariable = {fg = c.syntax.js.variable},
+    javascriptTSProperty = {fg = c.syntax.js.property},
+    javascriptTSTagAttribute = {fg = c.syntax.js.tag_attribute},
 
-    -- Css
+    -- css
     cssStringQQ = {fg = c.syntax.string, style = "underline"},
     cssBraces = {fg = c.fg},
 
@@ -248,7 +250,7 @@ function M.setup(config)
     lessInclude = {fg = c.syntax.less.include},
     lessClass = {fg = c.syntax.less.class},
 
-    -- Make
+    -- make
     makeIdent = {fg = c.syntax.make.ident},
 
     -- php
