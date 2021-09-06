@@ -262,6 +262,11 @@ function M.setup(config)
     pythonTSParameter = {fg = c.syntax.python.param},
     pythonTSFuncBuiltin = {fg = c.syntax.python.builtin_func},
 
+    -- ruby
+    rubyTSSymbol = {fg = c.syntax.ruby.symbol},
+    rubyTSVariable = {fg = c.syntax.ruby.variable},
+    rubyTSParameter = {fg = c.syntax.ruby.param},
+
     -- LspTrouble
     LspTroubleText = {fg = c.fg_dark},
     LspTroubleCount = {fg = c.purple, bg = c.fg_gutter},

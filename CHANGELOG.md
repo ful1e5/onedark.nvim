@@ -26,9 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `kitty` target added inside `Makefile` for reloading kitty theme
 - `TSVariable` & `TSOperator` colors added inside `colors.lua`
 - `cursor`, `TSProperty`, `jsonTSLabel`, `lessInclude`, `lessClass`, `cssStringQQ`, `makeIdent` colors added
-- php syntax highlighting improved
-- python syntax highlighting improved
-- javascript syntax highlighting improved
+- php, javascript, python, ruby syntax highlighting improved
 
 ### Changed
 
