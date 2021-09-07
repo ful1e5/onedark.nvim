@@ -54,7 +54,8 @@ function M.setup(config)
       php = {punct_bracket = "#e06c75", keyword = "#56b6c2", constructor = "#e5c07b"},
       python = {param = "#e59b4e", builtin_func = "#56b6c2"},
       ruby = {symbol = "#56b6c2", variable = "#61afef", param = "#e5c07b"},
-      scss = {property = "#e59b4e", string = "#98c379", type = "#e06c75"}
+      scss = {property = "#e59b4e", string = "#98c379", type = "#e06c75"},
+      bash = {builtin_func = "#56b6c2"}
     },
 
     devIcons = {
