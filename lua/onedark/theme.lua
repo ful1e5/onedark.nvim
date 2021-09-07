@@ -267,6 +267,11 @@ function M.setup(config)
     rubyTSVariable = {fg = c.syntax.ruby.variable},
     rubyTSParameter = {fg = c.syntax.ruby.param},
 
+    -- scss
+    scssTSProperty = {fg = c.syntax.scss.property},
+    scssTSString = {fg = c.syntax.scss.string, style = "underline"},
+    scssTSType = {fg = c.syntax.scss.type},
+
     -- LspTrouble
     LspTroubleText = {fg = c.fg_dark},
     LspTroubleCount = {fg = c.purple, bg = c.fg_gutter},

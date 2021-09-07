@@ -53,7 +53,8 @@ function M.setup(config)
       make = {ident = "#e59b4e"},
       php = {punct_bracket = "#e06c75", keyword = "#56b6c2", constructor = "#e5c07b"},
       python = {param = "#e59b4e", builtin_func = "#56b6c2"},
-      ruby = {symbol = "#56b6c2", variable = "#61afef", param = "#e5c07b"}
+      ruby = {symbol = "#56b6c2", variable = "#61afef", param = "#e5c07b"},
+      scss = {property = "#e59b4e", string = "#98c379", type = "#e06c75"}
     },
 
     devIcons = {
