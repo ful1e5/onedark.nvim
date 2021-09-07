@@ -272,6 +272,9 @@ function M.setup(config)
     scssTSString = {fg = c.syntax.scss.string, style = "underline"},
     scssTSType = {fg = c.syntax.scss.type},
 
+    -- bash shell
+    bashTSFuncBuiltin = {fg = c.syntax.bash.builtin_func},
+
     -- LspTrouble
     LspTroubleText = {fg = c.fg_dark},
     LspTroubleCount = {fg = c.purple, bg = c.fg_gutter},
