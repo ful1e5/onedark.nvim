@@ -275,6 +275,13 @@ function M.setup(config)
     -- bash shell
     bashTSFuncBuiltin = {fg = c.syntax.bash.builtin_func},
 
+    -- typescript
+    typescriptTSConstructor = {fg = c.syntax.ts.constructor},
+    typescriptTSKeywordOperator = {fg = c.syntax.ts.keyword},
+    typescriptTSMethod = {fg = c.syntax.ts.method},
+    typescriptTSProperty = {fg = c.syntax.ts.property},
+    typescriptTSVariable = {fg = c.syntax.ts.variable},
+
     -- LspTrouble
     LspTroubleText = {fg = c.fg_dark},
     LspTroubleCount = {fg = c.purple, bg = c.fg_gutter},

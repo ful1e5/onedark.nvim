@@ -55,7 +55,14 @@ function M.setup(config)
       python = {param = "#e59b4e", builtin_func = "#56b6c2"},
       ruby = {symbol = "#56b6c2", variable = "#61afef", param = "#e5c07b"},
       scss = {property = "#e59b4e", string = "#98c379", type = "#e06c75"},
-      bash = {builtin_func = "#56b6c2"}
+      bash = {builtin_func = "#56b6c2"},
+      ts = {
+        constructor = "#61afef",
+        keyword = "#c678dd",
+        method = "#c678dd",
+        property = "#e06c75",
+        variable = "#e5c07b"
+      }
     },
 
     devIcons = {
