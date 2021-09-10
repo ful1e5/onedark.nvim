@@ -236,6 +236,8 @@ function M.setup(config)
     -- TSLiteral           = { };    -- Literal text.
     -- TSURI               = { };    -- Any URI like a link or email.
 
+    Quote = {fg = c.syntax.string},
+
     -- javascript
     javascriptTSFunction = {fg = c.syntax.js.func}, -- For function (calls and definitions).
     javascriptTSVariable = {fg = c.syntax.js.variable},
@@ -274,6 +276,10 @@ function M.setup(config)
 
     -- bash shell
     bashTSFuncBuiltin = {fg = c.syntax.bash.builtin_func},
+
+    -- sql
+    sqlFold = {fg = c.syntax.sql.fold},
+    sqlKeyword = {fg = c.syntax.sql.keyword},
 
     -- typescript
     typescriptTSConstructor = {fg = c.syntax.ts.constructor},

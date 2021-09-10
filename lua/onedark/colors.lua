@@ -56,6 +56,7 @@ function M.setup(config)
       ruby = {symbol = "#56b6c2", variable = "#61afef", param = "#e5c07b"},
       scss = {property = "#e59b4e", string = "#98c379", type = "#e06c75"},
       bash = {builtin_func = "#56b6c2"},
+      sql = {fold = "#e59b4e", keyword = "#c678dd"},
       ts = {
         constructor = "#61afef",
         keyword = "#c678dd",
