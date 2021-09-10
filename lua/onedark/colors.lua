@@ -63,7 +63,8 @@ function M.setup(config)
         method = "#c678dd",
         property = "#e06c75",
         variable = "#e5c07b"
-      }
+      },
+      xml = {attrib = "#e06c75", tag_name = "#e06c75"}
     },
 
     devIcons = {
