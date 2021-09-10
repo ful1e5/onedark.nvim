@@ -288,6 +288,11 @@ function M.setup(config)
     typescriptTSProperty = {fg = c.syntax.ts.property},
     typescriptTSVariable = {fg = c.syntax.ts.variable},
 
+    -- xml
+    xmlAttrib = {fg = c.syntax.xml.attrib},
+    xmlTag = {fg = c.fg},
+    xmlTagName = {fg = c.syntax.xml.tag_name},
+
     -- LspTrouble
     LspTroubleText = {fg = c.fg_dark},
     LspTroubleCount = {fg = c.purple, bg = c.fg_gutter},
