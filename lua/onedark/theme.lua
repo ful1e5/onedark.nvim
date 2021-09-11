@@ -292,6 +292,9 @@ function M.setup(config)
     xmlAttrib = {fg = c.syntax.xml.attrib},
     xmlTag = {fg = c.fg},
     xmlTagName = {fg = c.syntax.xml.tag_name},
+    --
+    -- yaml
+    yamlTSField = {fg = c.syntax.yaml.field},
 
     -- LspTrouble
     LspTroubleText = {fg = c.fg_dark},

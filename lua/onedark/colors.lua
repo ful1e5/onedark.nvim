@@ -64,7 +64,8 @@ function M.setup(config)
         property = "#e06c75",
         variable = "#e5c07b"
       },
-      xml = {attrib = "#e06c75", tag_name = "#e06c75"}
+      xml = {attrib = "#e06c75", tag_name = "#e06c75"},
+      yaml = {field = "#e06c75"}
     },
 
     devIcons = {
