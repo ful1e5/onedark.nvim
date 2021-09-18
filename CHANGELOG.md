@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `TSVariable` & `TSOperator` colors added inside `colors.lua`
 - `cursor`, `TSProperty`, `jsonTSLabel`, `lessInclude`, `lessClass`, `cssStringQQ`, `makeIdent` colors added
 - php, javascript, python, ruby, scss, bash , typescript, sql, xml, yaml syntax highlighting improved
+- refactor: colors file to `lua`
 
 ### Changed
 
