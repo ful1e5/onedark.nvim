@@ -65,8 +65,8 @@ function M.setup(config)
     SpellCap = {sp = c.warning, style = "undercurl"}, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal = {sp = c.info, style = "undercurl"}, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = {sp = c.hint, style = "undercurl"}, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-    StatusLine = {fg = c.fg_sidebar, bg = c.bg_statusline}, -- status line of current window
-    StatusLineNC = {fg = c.fg_gutter, bg = c.bg_statusline}, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    StatusLine = {fg = c.syntax.comment, bg = c.bg_statusline}, -- status line of current window
+    StatusLineNC = {fg = c.fg_gutter, bg = c.bg}, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = {bg = c.bg_statusline, fg = c.fg_gutter}, -- tab pages line, not active tab page label
     TabLineFill = {bg = c.black}, -- tab pages line, where there are no labels
     TabLineSel = {fg = c.black, bg = c.blue}, -- tab pages line, active tab page label
