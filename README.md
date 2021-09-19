@@ -12,7 +12,7 @@
     <img alt="monsonjeremy/onedark.nvim" src="https://img.shields.io/badge/Fork%20of-monsonjeremy%2Fonedark.nvim-blue" />
   </a>
   <a href="https://github.com/ful1e5/onedark.nvim/actions">
-    <img alt="GitHub Action Linting" src="https://github.com/ful1e5/onedark.nvim/actions/workflows/lint.yml/badge.svg" width="102" />
+    <img alt="GitHub Action Linting" src="https://github.com/ful1e5/onedark.nvim/actions/workflows/lint.yml/badge.svg" />
   </a>
 </p>
 
@@ -167,20 +167,26 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 
 ## Credit
 
-- [onedark.nvim](https://github.com/monsonjeremy/onedark.nvim) ⚡
 - [OneDark-Pro VSCode Theme](https://github.com/Binaryify/OneDark-Pro)
+- [onedark.nvim](https://github.com/monsonjeremy/onedark.nvim) ⚡
+- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 - [gruvbox-flat.nvim](https://github.com/eddyekofo94/gruvbox-flat.nvim)
 
 ## 📺 Screenshot
 
+- Terminal: [Kitty](https://sw.kovidgoyal.net/kitty)
+- Font: [Ubuntu Mono](https://design.ubuntu.com/font/)
+- icons: [projekt0n/circles.nvim](https://github.com/projekt0n/circles.nvim)
+- Dotfiles: [ful1e5/dotfiles](https://github.com/ful1e5/dotfiles)
+
 <p align="center">
-  <img src="https://imgur.com/vGvbzPR.png" alt="onedark.nvim" />
+  <img src="https://imgur.com/yap8q3B.png" alt="onedark.nvim" />
 </p>
 
 ### Default
 
 <p align="center">
-  <img src="https://imgur.com/8KbGV7r.png" alt="Default fonts" />
+  <img src="https://imgur.com/nnRERfV.png" alt="Default fonts" />
 </p>
 
 ### Normal
@@ -196,7 +202,7 @@ require("onedark").setup({
 ```
 
 <p align="center">
-  <img src="https://imgur.com/QZ0R0qC.png" alt="Normal fonts" />
+  <img src="https://imgur.com/AIyHhqe.png" alt="Normal fonts" />
 </p>
 
 ### Italic
@@ -212,7 +218,7 @@ require("onedark").setup({
 ```
 
 <p align="center">
-  <img src="https://imgur.com/oA5PjUb.png" alt="Italic fonts" />
+  <img src="https://imgur.com/BhpArix.png" alt="Italic fonts" />
 </p>
 
 ### Minimal
@@ -227,21 +233,14 @@ require("onedark").setup({
 ```
 
 <p align="center">
-  <img src="https://imgur.com/SH31zet.png" alt="Minimal" />
+  <img src="https://imgur.com/uloZd1y.png" alt="Minimal" />
 </p>
 
 ### Telescope
 
 <p align="center">
-  <img src="https://i.imgur.com/dXuFkpI.png" alt="Telescope plugin" />
+  <img src="https://imgur.com/xOXa7sh.png" alt="Telescope plugin" />
 </p>
-
-## Useful Links
-
-- Terminal: [Kitty](https://sw.kovidgoyal.net/kitty)
-- Font: [Ubuntu Mono](https://design.ubuntu.com/font/)
-- Dotfiles: [ful1e5/dotfiles](https://github.com/ful1e5/dotfiles)
-- Neovim icons: [projekt0n/circles.nvim](https://github.com/projekt0n/circles.nvim)
 
 ## Support
 

@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- docs updated
+
+### Changed
+
+-
+
+## [v0.0.2]- 19 Sep 2021
+
+### Added
+
 - **Warning** on `vim.g` configuration
 - Configure plugin in lua using `require('onedark').setup({})` **[fix monsonjeremy/onedark.nvim#5]**
 - Minimal config example added inside [README.md#minimal](./README.md#minimal)
@@ -49,5 +59,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release 🎊
 
-[unreleased]: https://github.com/ful1e5/onedark.nvim/compare/v0.0.1...main
+[unreleased]: https://github.com/ful1e5/onedark.nvim/compare/v0.0.2...main
+[v0.0.2]: https://github.com/ful1e5/onedark.nvim/compare/v0.0.2...v0.0.1
 [v0.0.1]: https://github.com/ful1e5/onedark.nvim/tree/v0.0.1
