@@ -41,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Parse lua table inside `colors` config **[fix #6]**
 - Better Telescope highlighting
 - Removed `_` from extra themes name
+- inactive statusline background color
 
 ## [v0.0.1] - 14 June 2021
 
