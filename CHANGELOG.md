@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
--
+- projekt0n/github-nvim-theme#73 fixed
 
 ## [v0.0.2]- 19 Sep 2021
 

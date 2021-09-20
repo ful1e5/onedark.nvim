@@ -160,7 +160,11 @@ function M.setup(config)
     LspDiagnosticsUnderlineError = {style = "undercurl", sp = c.error}, -- Used to underline "Error" diagnostics
     LspDiagnosticsUnderlineWarning = {style = "undercurl", sp = c.warning}, -- Used to underline "Warning" diagnostics
     LspDiagnosticsUnderlineInformation = {style = "undercurl", sp = c.info}, -- Used to underline "Information" diagnostics
-    LspDiagnosticsUnderlineHint = {style = "undercurl", sp = c.hint} -- Used to underline "Hint" diagnostics
+    LspDiagnosticsUnderlineHint = {style = "undercurl", sp = c.hint}, -- Used to underline "Hint" diagnostics
+    DiagnosticUnderlineError = {link = "LspDiagnosticsUnderlineError"}, -- Used to underline "Error" diagnostics
+    DiagnosticUnderlineWarn = {link = "LspDiagnosticsUnderlineWarning"}, -- Used to underline "Warning" diagnostics
+    DiagnosticUnderlineInfo = {link = "LspDiagnosticsUnderlineInformation"}, -- Used to underline "Information" diagnostics
+    DiagnosticUnderlineHint = {link = "LspDiagnosticsVirtualTextHint"} -- Used to underline "Hint" diagnostics
 
     -- LspDiagnosticsFloatingError         = { }, -- Used to color "Error" diagnostic messages in diagnostics float
     -- LspDiagnosticsFloatingWarning       = { }, -- Used to color "Warning" diagnostic messages in diagnostics float
