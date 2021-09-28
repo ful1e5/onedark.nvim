@@ -96,18 +96,6 @@ require('lualine').setup {
 }
 ```
 
-To enable the `onedark` colorscheme for `Lightline`:
-
-```vim
-" Vim Script
-let g:lightline = {'colorscheme': 'onedark'}
-```
-
-```lua
--- Lua
-vim.g.lightline = {colorscheme = "onedark"}
-```
-
 ## ⚙️ Configuration
 
 | Option                 | Default  | Description                                                                                                                                                     |
