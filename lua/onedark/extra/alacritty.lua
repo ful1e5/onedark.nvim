@@ -1,10 +1,10 @@
 local util = require("onedark.util")
-local configModule = require("onedark.config")
+local config_module = require("onedark.config")
 
 local M = {}
 
 function M.alacritty(config)
-  config = config or configModule.config
+  config = config or config_module.config
   config.transform_colors = true
   local colors = require("onedark.colors").setup(config)
 

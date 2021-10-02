@@ -23,17 +23,17 @@ end
 
 config = {
   transparent = opt("transparent", false),
-  commentStyle = opt("italic_comments", true) and "italic" or "NONE",
-  keywordStyle = opt("italic_keywords", true) and "italic" or "NONE",
-  functionStyle = opt("italic_functions", false) and "italic" or "NONE",
-  variableStyle = opt("italic_variables", false) and "italic" or "NONE",
-  msgAreaStyle = opt("italic_msg_area", false) and "italic" or "NONE",
-  hideInactiveStatusline = opt("hide_inactive_statusline", false),
+  comment_style = opt("italic_comments", true) and "italic" or "NONE",
+  keyword_style = opt("italic_keywords", true) and "italic" or "NONE",
+  function_style = opt("italic_functions", false) and "italic" or "NONE",
+  variable_style = opt("italic_variables", false) and "italic" or "NONE",
+  msg_area_style = opt("italic_msg_area", false) and "italic" or "NONE",
+  hide_inactive_statusline = opt("hide_inactive_statusline", false),
   sidebars = opt("sidebars", {}),
   colors = opt("colors", {}),
   dev = opt("dev", false),
-  darkFloat = opt("dark_float", true),
-  darkSidebar = opt("dark_sidebar", true),
+  dark_float = opt("dark_float", true),
+  dark_sidebar = opt("dark_sidebar", true),
   transform_colors = false
 }
 

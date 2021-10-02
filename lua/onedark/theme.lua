@@ -1,13 +1,13 @@
 local util = require("onedark.util")
 local colors = require("onedark.colors")
-local configModule = require("onedark.config")
+local config_module = require("onedark.config")
 
 local M = {}
 
 ---@param config Config
 ---@return Theme
 function M.setup(config)
-  config = config or configModule.config
+  config = config or config_module.config
 
   ---@class Theme
   local theme = {}
@@ -16,7 +16,7 @@ function M.setup(config)
   local c = theme.colors
 
   theme.base = { -- luacheck: ignore
-    Comment = {fg = c.fg_gutter, style = config.commentStyle}, -- any comment
+    Comment = {fg = c.fg_gutter, style = config.comment_style}, -- any comment
     ColorColumn = {bg = c.bg_visual}, -- used for the columns set with 'colorcolumn'
     Conceal = {fg = c.fg_gutter}, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = {fg = c.cursor, bg = c.fg}, -- character under the cursor
@@ -43,7 +43,7 @@ function M.setup(config)
     CursorLineNr = {fg = c.dark5}, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = {fg = c.orange, style = "bold"}, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = {fg = c.fg_dark, style = "bold"}, -- 'showmode' message (e.g., "-- INSERT -- ")
-    MsgArea = {fg = c.fg_dark, style = config.msgAreaStyle}, -- Area for messages and cmdline
+    MsgArea = {fg = c.fg_dark, style = config.msg_area_style}, -- Area for messages and cmdline
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = {fg = c.blue}, -- |more-prompt|
     NonText = {fg = c.bg}, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -89,14 +89,14 @@ function M.setup(config)
     -- Boolean       = { }, --  a boolean constant: TRUE, false
     -- Float         = { }, --    a floating point constant: 2.3e10
 
-    Identifier = {fg = c.red, style = config.variableStyle}, -- (preferred) any variable name
-    Function = {fg = c.blue, style = config.functionStyle}, -- function name (also: methods for classes)
+    Identifier = {fg = c.red, style = config.variable_style}, -- (preferred) any variable name
+    Function = {fg = c.blue, style = config.function_style}, -- function name (also: methods for classes)
     Statement = {fg = c.purple}, -- (preferred) any statement
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
     Operator = {fg = c.red}, -- "sizeof", "+", "*", etc.
-    Keyword = {fg = c.cyan, style = config.keywordStyle}, --  any other keyword
+    Keyword = {fg = c.cyan, style = config.keyword_style}, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
     PreProc = {fg = c.cyan}, -- (preferred) generic Preprocessor
@@ -210,8 +210,8 @@ function M.setup(config)
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     TSInclude = {fg = c.purple}, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    TSKeyword = {fg = c.purple, style = config.keywordStyle}, -- For keywords that don't fall in previous categories.
-    TSKeywordFunction = {fg = c.purple, style = config.functionStyle}, -- For keywords used to define a fuction.
+    TSKeyword = {fg = c.purple, style = config.keyword_style}, -- For keywords that don't fall in previous categories.
+    TSKeywordFunction = {fg = c.purple, style = config.function_style}, -- For keywords used to define a fuction.
     TSLabel = {fg = c.blue}, -- For labels: `label:` in C and `:label:` in Lua.
     jsonTSLabel = {fg = c.syntax.json.label}, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
@@ -232,7 +232,7 @@ function M.setup(config)
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
-    TSVariable = {fg = c.syntax.variable, style = config.variableStyle}, -- Any variable name that does not have another highlight.
+    TSVariable = {fg = c.syntax.variable, style = config.variable_style}, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = {fg = c.syntax.variable_builtin}, -- Variable names that are defined by the languages, like `this` or `self`.
     TSTag = {fg = c.red}, -- Tags like html tag names.
     -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
@@ -350,7 +350,7 @@ function M.setup(config)
 
     -- NvimTree
     NvimTreeNormal = {fg = c.fg_light, bg = c.bg_sidebar},
-    NvimTreeEndOfBuffer = config.darkSidebar and {fg = c.bg2} or {fg = c.bg},
+    NvimTreeEndOfBuffer = config.dark_sidebar and {fg = c.bg2} or {fg = c.bg},
     NvimTreeRootFolder = {fg = c.fg_light, style = "bold"},
     NvimTreeGitDirty = {fg = c.yellow2},
     NvimTreeGitNew = {fg = c.git.add},
@@ -461,7 +461,7 @@ function M.setup(config)
 
   theme.defer = {}
 
-  if config.hideInactiveStatusline then
+  if config.hide_inactive_statusline then
     local inactive = {style = "underline", bg = c.bg, fg = c.bg, sp = c.bg_visual}
 
     -- StatusLine

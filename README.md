@@ -98,24 +98,24 @@ require('lualine').setup {
 
 ## ⚙️ Configuration
 
-| Option                 | Default  | Description                                                                                                                                                     |
-| ---------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| commentStyle           | `italic` | Highlight style for comments (check `:help highlight-args` for options)                                                                                         |
-| keywordStyle           | `italic` | Highlight style for keywords (check `:help highlight-args` for options)                                                                                         |
-| functionStyle          | `NONE`   | Highlight style for functions (check `:help highlight-args` for options)                                                                                        |
-| variableStyle          | `NONE`   | Highlight style for variables and identifiers (check `:help highlight-args` for options)                                                                        |
-| msgAreaStyle           | `NONE`   | Highlight style for messages and cmdline (check `:help highlight-args` for options)                                                                             |
-| transparent            | `false`  | Enable this to disable setting the background color                                                                                                             |
-| hideInactiveStatusline | `false`  | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
-| sidebars               | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                      |
-| darkSidebar            | `true`   | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
-| darkFloat              | `true`   | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
-| colors                 | `{}`     | You can override specific color groups to use other groups or a hex color                                                                                       |
+| Option                   | Default  | Description                                                                                                                                                     |
+| ------------------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| comment_style            | `italic` | Highlight style for comments (check `:help highlight-args` for options)                                                                                         |
+| keyword_style            | `italic` | Highlight style for keywords (check `:help highlight-args` for options)                                                                                         |
+| functionStyle            | `NONE`   | Highlight style for functions (check `:help highlight-args` for options)                                                                                        |
+| variableStyle            | `NONE`   | Highlight style for variables and identifiers (check `:help highlight-args` for options)                                                                        |
+| msg_area_style           | `NONE`   | Highlight style for messages and cmdline (check `:help highlight-args` for options)                                                                             |
+| transparent              | `false`  | Enable this to disable setting the background color                                                                                                             |
+| hide_inactive_statusline | `false`  | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
+| sidebars                 | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                      |
+| darkSidebar              | `true`   | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
+| dark_float               | `true`   | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
+| colors                   | `{}`     | You can override specific color groups to use other groups or a hex color                                                                                       |
 
 ```lua
 -- Example config in Lua
 require("onedark").setup({
-  functionStyle = "italic",
+  function_style = "italic",
   sidebars = {"qf", "vista_kind", "terminal", "packer"},
 
   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
@@ -127,7 +127,7 @@ require("onedark").setup({
 " Example config in VimScript
 lua << EOF
 require("onedark").setup({
-  functionStyle = "italic",
+  function_style = "italic",
   sidebars = {"qf", "vista_kind", "terminal", "packer"},
 
   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
@@ -181,10 +181,10 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 
 ```lua
 require("onedark").setup({
-  commentStyle = "NONE",
-  keywordStyle = "NONE",
-  functionStyle = "NONE",
-  variableStyle = "NONE"
+  comment_style = "NONE",
+  keyword_style = "NONE",
+  function_style = "NONE",
+  variable_style = "NONE"
   -- ... your onedark config
 })
 ```
@@ -197,10 +197,10 @@ require("onedark").setup({
 
 ```lua
 require("onedark").setup({
-  commentStyle = "italic",
-  keywordStyle = "italic",
-  functionStyle = "italic",
-  variableStyle = "italic"
+  comment_style = "italic",
+  keyword_style = "italic",
+  function_style = "italic",
+  variable_style = "italic"
   -- ... your onedark config
 })
 ```
@@ -213,9 +213,9 @@ require("onedark").setup({
 
 ```lua
 require("onedark").setup({
-  hideInactiveStatusline = true,
-  darkSidebar = false,
-  darkFloat = false
+  hide_inactive_statusline = true,
+  dark_sidebar = false,
+  dark_float = false
   -- ... your onedark config
 })
 ```
