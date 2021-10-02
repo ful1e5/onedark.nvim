@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - projekt0n/github-nvim-theme#73 fixed
 - refactor: lualine colors added inside `colors.lua`
+- breaking change: consistent variable naming in `onedark` config
 
 ## [v0.0.2]- 19 Sep 2021
 
@@ -34,7 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - kitty border color added
 - `./colors/onedark.vim` code in lua
 - [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) plugin support
-- `msgAreaStyle` config added
+- `msg_area_style` config added
 - `kitty` target added inside `Makefile` for reloading kitty theme
 - `TSVariable` & `TSOperator` colors added inside `colors.lua`
 - `cursor`, `TSProperty`, `jsonTSLabel`, `lessInclude`, `lessClass`, `cssStringQQ`, `makeIdent` colors added
@@ -48,8 +49,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **VertSplit** & **Inactive StatusLine** `fg` color changed to `bg_visual`
 - StatusLine bug note inside [README.md#usage](./README.md#-usage)
 - Configuration docs updated inside [README.md#configuration](./README.md#-configuration)
-- Fix `VertSplit` & `StatusLine` crossover on `hideInactiveStatusline` [check hoob3rt/lualine.nvim#274]
-- Change `NvimTreeEndOfBuffer` color on `darkSidebar=false`
+- Fix `VertSplit` & `StatusLine` crossover on `hide_inactive_statusline` [check hoob3rt/lualine.nvim#274]
 - Parse lua table inside `colors` config **[fix #6]**
 - Better Telescope highlighting
 - Removed `_` from extra themes name
