@@ -5,6 +5,11 @@ colors:
     background: '0x282c34'
     foreground: '0xabb2bf'
 
+  # Selection colors
+  selection:
+    text:       CellForeground
+    background: '0x393f4a'
+
   # Normal colors
   normal:
     black:   '0x20232A'

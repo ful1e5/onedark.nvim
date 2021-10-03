@@ -21,6 +21,11 @@ colors:
     background: '${bg}'
     foreground: '${fg}'
 
+  # Selection colors
+  selection:
+    text:       CellForeground
+    background: '${bg_visual}'
+
   # Normal colors
   normal:
     black:   '${black}'
