@@ -108,7 +108,7 @@ require('lualine').setup {
 | transparent              | `false`  | Enable this to disable setting the background color                                                                                                             |
 | hide_inactive_statusline | `false`  | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
 | sidebars                 | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                      |
-| darkSidebar              | `true`   | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
+| dark_sidebar             | `true`   | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
 | dark_float               | `true`   | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
 | colors                   | `{}`     | You can override specific color groups to use other groups or a hex color                                                                                       |
 
