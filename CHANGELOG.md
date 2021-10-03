@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - docs updated
 - Assign `dark5` color to `LineNr` inside `transparent` mode
+- docs: contributing guidelines added
+- docs: code of conduct added
 
 ### Changed
 
