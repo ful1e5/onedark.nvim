@@ -16,7 +16,7 @@ function M.setup(config)
   local c = theme.colors
 
   theme.base = { -- luacheck: ignore
-    Comment = {fg = c.fg_gutter, style = config.comment_style}, -- any comment
+    Comment = {fg = c.syntax.comment, style = config.comment_style}, -- any comment
     ColorColumn = {bg = c.bg_visual}, -- used for the columns set with 'colorcolumn'
     Conceal = {fg = c.fg_gutter}, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = {fg = c.cursor, bg = c.fg}, -- character under the cursor
@@ -36,11 +36,14 @@ function M.setup(config)
     VertSplit = {fg = c.bg_visual}, -- the column separating vertically split windows
     Folded = {fg = c.blue, bg = c.fg_gutter}, -- line used for closed folds
     FoldColumn = {bg = c.bg, fg = c.fg_gutter}, -- 'foldcolumn'
-    SignColumn = {bg = config.transparent and c.none or c.bg, fg = c.fg_gutter}, -- column where |signs| are displayed
+    SignColumn = {bg = config.transparent and c.none or c.bg_linenumber, fg = c.fg_gutter}, -- column where |signs| are displayed
     SignColumnSB = {bg = c.bg_sidebar, fg = c.fg_gutter}, -- column where |signs| are displayed
     Substitute = {bg = c.red, fg = c.black}, -- |:substitute| replacement text highlighting
-    LineNr = {fg = config.transparent and c.dark5 or c.fg_gutter}, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = {fg = c.dark5}, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    LineNr = {
+      fg = config.transparent and c.fg_cursor_linenumber or c.fg_linenumber,
+      bg = c.bg_linenumber
+    }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr = {fg = c.dark5, bg = c.bg_linenumber}, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = {fg = c.orange, style = "bold"}, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = {fg = c.fg_dark, style = "bold"}, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = {fg = c.fg_dark, style = config.msg_area_style}, -- Area for messages and cmdline
@@ -65,7 +68,7 @@ function M.setup(config)
     SpellCap = {sp = c.warning, style = "undercurl"}, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal = {sp = c.info, style = "undercurl"}, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = {sp = c.hint, style = "undercurl"}, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-    StatusLine = {fg = c.syntax.comment, bg = c.bg_statusline}, -- status line of current window
+    StatusLine = {fg = c.fg, bg = c.bg_statusline}, -- status line of current window
     StatusLineNC = {fg = c.fg_gutter, bg = c.bg}, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = {bg = c.bg_statusline, fg = c.fg_gutter}, -- tab pages line, not active tab page label
     TabLineFill = {bg = c.black}, -- tab pages line, where there are no labels
@@ -125,7 +128,7 @@ function M.setup(config)
 
     Error = {fg = c.error}, -- (preferred) any erroneous construct
     Todo = {bg = c.yellow, fg = c.bg}, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    qfLineNr = {fg = c.dark5},
+    qfLineNr = {link = "CursorLineNr"},
     qfFileName = {fg = c.blue},
     htmlTag = {fg = c.purple, style = "bold"},
     -- mkdHeading = { fg = c.orange, style = "bold" },
@@ -166,6 +169,10 @@ function M.setup(config)
     DiagnosticWarn = {link = "LspDiagnosticsDefaultWarning"}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
     DiagnosticInfo = {link = "LspDiagnosticsDefaultInformation"}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
     DiagnosticHint = {link = "LspDiagnosticsDefaultHint"}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    DiagnosticsVirtualTextError = {link = "LspDiagnosticsVirtualTextError"}, -- Used for "Error" diagnostic virtual text
+    DiagnosticsVirtualTextWarning = {link = "LspDiagnosticsVirtualTextWarning"}, -- Used for "Warning" diagnostic virtual text
+    DiagnosticsVirtualTextInformation = {link = "LspDiagnosticsVirtualTextInformation"}, -- Used for "Information" diagnostic virtual text
+    DiagnosticsVirtualTextHint = {link = "LspDiagnosticsVirtualTextHint"}, -- Used for "Hint" diagnostic virtual text
     DiagnosticUnderlineError = {link = "LspDiagnosticsUnderlineError"}, -- Used to underline "Error" diagnostics
     DiagnosticUnderlineWarn = {link = "LspDiagnosticsUnderlineWarning"}, -- Used to underline "Warning" diagnostics
     DiagnosticUnderlineInfo = {link = "LspDiagnosticsUnderlineInformation"}, -- Used to underline "Information" diagnostics
@@ -339,9 +346,9 @@ function M.setup(config)
     GitGutterDelete = {fg = c.gitSigns.delete}, -- diff mode: Deleted line |diff.txt|
 
     -- GitSigns
-    GitSignsAdd = {fg = c.gitSigns.add}, -- diff mode: Added line |diff.txt|
-    GitSignsChange = {fg = c.gitSigns.change}, -- diff mode: Changed line |diff.txt|
-    GitSignsDelete = {fg = c.gitSigns.delete}, -- diff mode: Deleted line |diff.txt|
+    GitSignsAdd = {fg = c.gitSigns.add, bg = c.bg_linenumber}, -- diff mode: Added line |diff.txt|
+    GitSignsChange = {fg = c.gitSigns.change, bg = c.bg_linenumber}, -- diff mode: Changed line |diff.txt|
+    GitSignsDelete = {fg = c.gitSigns.delete, bg = c.bg_linenumber}, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
     TelescopeBorder = {fg = c.border},
@@ -350,8 +357,8 @@ function M.setup(config)
 
     -- NvimTree
     NvimTreeNormal = {fg = c.fg_light, bg = c.bg_sidebar},
-    NvimTreeEndOfBuffer = config.dark_sidebar and {fg = c.bg2} or {fg = c.bg},
-    NvimTreeRootFolder = {fg = c.fg_light, style = "bold"},
+    NvimTreeEndOfBuffer = {fg = c.bg_sidebar},
+    NvimTreeRootFolder = {fg = c.fg_light, style = "bold", bg = c.bg_sidebar},
     NvimTreeGitDirty = {fg = c.yellow2},
     NvimTreeGitNew = {fg = c.git.add},
     NvimTreeGitDeleted = {fg = c.git.delete},

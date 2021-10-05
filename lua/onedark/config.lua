@@ -29,6 +29,7 @@ config = {
   variable_style = opt("italic_variables", false) and "italic" or "NONE",
   msg_area_style = opt("italic_msg_area", false) and "italic" or "NONE",
   hide_inactive_statusline = opt("hide_inactive_statusline", false),
+  highlight_linenumber = opt("highlight_linenumber", false),
   sidebars = opt("sidebars", {}),
   colors = opt("colors", {}),
   dev = opt("dev", false),

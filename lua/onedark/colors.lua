@@ -42,6 +42,7 @@ function M.setup(config)
       operator = "#56b6c2",
       property = "#56b6c2",
       variable_builtin = "#e5c07b",
+      comment = "#5c6370",
       js = {
         func = "#e5c07b",
         variable = "#e5c07b",
@@ -148,6 +149,11 @@ function M.setup(config)
   colors.bg_sidebar = config.dark_sidebar and colors.bg2 or colors.bg
   colors.bg_sidebar = config.transparent and colors.none or colors.bg_sidebar
   colors.bg_float = config.dark_float and colors.bg2 or colors.bg
+
+  -- LineNumber is configurable
+  colors.bg_linenumber = config.highlight_linenumber and colors.bg2 or colors.bg
+  colors.fg_linenumber = colors.fg_gutter
+  colors.fg_cursor_linenumber = colors.dark5
 
   colors.bg_search = colors.bg_yellow
   colors.fg_search = colors.bg2
