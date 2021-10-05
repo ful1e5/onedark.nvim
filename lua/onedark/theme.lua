@@ -39,8 +39,11 @@ function M.setup(config)
     SignColumn = {bg = config.transparent and c.none or c.bg, fg = c.fg_gutter}, -- column where |signs| are displayed
     SignColumnSB = {bg = c.bg_sidebar, fg = c.fg_gutter}, -- column where |signs| are displayed
     Substitute = {bg = c.red, fg = c.black}, -- |:substitute| replacement text highlighting
-    LineNr = {fg = config.transparent and c.dark5 or c.fg_gutter}, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = {fg = c.dark5}, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    LineNr = {
+      fg = config.transparent and c.fg_cursor_linenumber or c.fg_linenumber,
+      bg = c.bg_linenumber
+    }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr = {fg = c.dark5, bg = c.bg_linenumber}, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = {fg = c.orange, style = "bold"}, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = {fg = c.fg_dark, style = "bold"}, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = {fg = c.fg_dark, style = config.msg_area_style}, -- Area for messages and cmdline
@@ -125,7 +128,7 @@ function M.setup(config)
 
     Error = {fg = c.error}, -- (preferred) any erroneous construct
     Todo = {bg = c.yellow, fg = c.bg}, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    qfLineNr = {fg = c.dark5},
+    qfLineNr = {link = "CursorLineNr"},
     qfFileName = {fg = c.blue},
     htmlTag = {fg = c.purple, style = "bold"},
     -- mkdHeading = { fg = c.orange, style = "bold" },

@@ -102,11 +102,12 @@ require('lualine').setup {
 | ------------------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | comment_style            | `italic` | Highlight style for comments (check `:help highlight-args` for options)                                                                                         |
 | keyword_style            | `italic` | Highlight style for keywords (check `:help highlight-args` for options)                                                                                         |
-| function_style            | `NONE`   | Highlight style for functions (check `:help highlight-args` for options)                                                                                        |
-| variable_style            | `NONE`   | Highlight style for variables and identifiers (check `:help highlight-args` for options)                                                                        |
+| function_style           | `NONE`   | Highlight style for functions (check `:help highlight-args` for options)                                                                                        |
+| variable_style           | `NONE`   | Highlight style for variables and identifiers (check `:help highlight-args` for options)                                                                        |
 | msg_area_style           | `NONE`   | Highlight style for messages and cmdline (check `:help highlight-args` for options)                                                                             |
 | transparent              | `false`  | Enable this to disable setting the background color                                                                                                             |
 | hide_inactive_statusline | `false`  | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
+| highlight_linenumber     | `false`  | Enabling this option, will enable dark color to `LineNr` and `CursorLineNr` highlights.                                                                         |
 | sidebars                 | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                      |
 | dark_sidebar             | `true`   | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
 | dark_float               | `true`   | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |

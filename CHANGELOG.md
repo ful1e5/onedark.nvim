@@ -13,12 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Assign `dark5` color to `LineNr` inside `transparent` mode
 - docs: contributing guidelines added
 - docs: code of conduct added
+- feat: `highlight_linenumber` config for setting dark color to number line
 
 ### Changed
 
 - projekt0n/github-nvim-theme#73 fixed
 - refactor: lualine colors added inside `colors.lua`
 - breaking change: consistent variable naming in `onedark` config
+- undefined color `syntax.comment` fixed
 
 ## [v0.0.2]- 19 Sep 2021
 
