@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - docs: contributing guidelines added
 - docs: code of conduct added
 - feat: `highlight_linenumber` config for setting dark color to number line
+- feat: support `highlight_linenumber` with gitsigns
 
 ### Changed
 

@@ -36,7 +36,7 @@ function M.setup(config)
     VertSplit = {fg = c.bg_visual}, -- the column separating vertically split windows
     Folded = {fg = c.blue, bg = c.fg_gutter}, -- line used for closed folds
     FoldColumn = {bg = c.bg, fg = c.fg_gutter}, -- 'foldcolumn'
-    SignColumn = {bg = config.transparent and c.none or c.bg, fg = c.fg_gutter}, -- column where |signs| are displayed
+    SignColumn = {bg = config.transparent and c.none or c.bg_linenumber, fg = c.fg_gutter}, -- column where |signs| are displayed
     SignColumnSB = {bg = c.bg_sidebar, fg = c.fg_gutter}, -- column where |signs| are displayed
     Substitute = {bg = c.red, fg = c.black}, -- |:substitute| replacement text highlighting
     LineNr = {
@@ -169,6 +169,10 @@ function M.setup(config)
     DiagnosticWarn = {link = "LspDiagnosticsDefaultWarning"}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
     DiagnosticInfo = {link = "LspDiagnosticsDefaultInformation"}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
     DiagnosticHint = {link = "LspDiagnosticsDefaultHint"}, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+    DiagnosticsVirtualTextError = {link = "LspDiagnosticsVirtualTextError"}, -- Used for "Error" diagnostic virtual text
+    DiagnosticsVirtualTextWarning = {link = "LspDiagnosticsVirtualTextWarning"}, -- Used for "Warning" diagnostic virtual text
+    DiagnosticsVirtualTextInformation = {link = "LspDiagnosticsVirtualTextInformation"}, -- Used for "Information" diagnostic virtual text
+    DiagnosticsVirtualTextHint = {link = "LspDiagnosticsVirtualTextHint"}, -- Used for "Hint" diagnostic virtual text
     DiagnosticUnderlineError = {link = "LspDiagnosticsUnderlineError"}, -- Used to underline "Error" diagnostics
     DiagnosticUnderlineWarn = {link = "LspDiagnosticsUnderlineWarning"}, -- Used to underline "Warning" diagnostics
     DiagnosticUnderlineInfo = {link = "LspDiagnosticsUnderlineInformation"}, -- Used to underline "Information" diagnostics
@@ -342,9 +346,9 @@ function M.setup(config)
     GitGutterDelete = {fg = c.gitSigns.delete}, -- diff mode: Deleted line |diff.txt|
 
     -- GitSigns
-    GitSignsAdd = {fg = c.gitSigns.add}, -- diff mode: Added line |diff.txt|
-    GitSignsChange = {fg = c.gitSigns.change}, -- diff mode: Changed line |diff.txt|
-    GitSignsDelete = {fg = c.gitSigns.delete}, -- diff mode: Deleted line |diff.txt|
+    GitSignsAdd = {fg = c.gitSigns.add, bg = c.bg_linenumber}, -- diff mode: Added line |diff.txt|
+    GitSignsChange = {fg = c.gitSigns.change, bg = c.bg_linenumber}, -- diff mode: Changed line |diff.txt|
+    GitSignsDelete = {fg = c.gitSigns.delete, bg = c.bg_linenumber}, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
     TelescopeBorder = {fg = c.border},
