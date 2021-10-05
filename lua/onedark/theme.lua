@@ -357,8 +357,8 @@ function M.setup(config)
 
     -- NvimTree
     NvimTreeNormal = {fg = c.fg_light, bg = c.bg_sidebar},
-    NvimTreeEndOfBuffer = config.dark_sidebar and {fg = c.bg2} or {fg = c.bg},
-    NvimTreeRootFolder = {fg = c.fg_light, style = "bold"},
+    NvimTreeEndOfBuffer = {fg = c.bg_sidebar},
+    NvimTreeRootFolder = {fg = c.fg_light, style = "bold", bg = c.bg_sidebar},
     NvimTreeGitDirty = {fg = c.yellow2},
     NvimTreeGitNew = {fg = c.git.add},
     NvimTreeGitDeleted = {fg = c.git.delete},
