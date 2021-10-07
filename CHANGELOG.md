@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: lualine colors added inside `colors.lua`
 - breaking change: consistent variable naming in `onedark` config
 - undefined color `syntax.comment` fixed
+- lualine theme provided by official lualine repo (fix #46)
 
 ## [v0.0.2]- 19 Sep 2021
 

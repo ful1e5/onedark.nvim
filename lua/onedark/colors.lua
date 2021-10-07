@@ -100,30 +100,6 @@ function M.setup(config)
 
   util.bg = colors.bg
 
-  colors.lualine = {
-    normal = {
-      a = {bg = colors.green, fg = colors.black},
-      b = {bg = colors.fg_gutter, fg = colors.green},
-      c = {bg = colors.bg_statusline, fg = colors.fg_sidebar}
-    },
-    insert = {
-      a = {bg = colors.blue, fg = colors.black},
-      b = {bg = colors.fg_gutter, fg = colors.blue}
-    },
-    command = {
-      a = {bg = colors.purple, fg = colors.black},
-      b = {bg = colors.fg_gutter, fg = colors.purple}
-    },
-    visual = {
-      a = {bg = colors.yellow, fg = colors.black},
-      b = {bg = colors.fg_gutter, fg = colors.yellow}
-    },
-    replace = {
-      a = {bg = colors.red, fg = colors.black},
-      b = {bg = colors.fg_gutter, fg = colors.red}
-    }
-  }
-
   colors.diff = {
     add = util.darken(colors.git.add, 0.15),
     delete = util.darken(colors.git.delete, 0.15),
