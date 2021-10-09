@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - docs: code of conduct added
 - feat: `highlight_linenumber` config for setting dark color to number line
 - feat: support `highlight_linenumber` with gitsigns
+- enhance: nvim-cmp highlight
 
 ### Changed
 
@@ -23,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - breaking change: consistent variable naming in `onedark` config
 - undefined color `syntax.comment` fixed
 - lualine theme provided by official lualine repo (fix #46)
+- refactor: group colors according to assignment
+- enhance: barbar highlighting monsonjeremy/onedark.nvim#16
 
 ## [v0.0.2]- 19 Sep 2021
 

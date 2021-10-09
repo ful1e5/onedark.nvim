@@ -45,6 +45,7 @@
 - [Barbar](https://github.com/romgrk/barbar.nvim)
 - [glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim)
 - [circles.nvim](https://github.com/projekt0n/circles.nvim)
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 
 ## ⚡️ Requirements
 
