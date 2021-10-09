@@ -98,7 +98,13 @@ function M.setup(config)
     }
   }
 
+  -- useful for 'util.darken()' and 'util.lighten()'
   util.bg = colors.bg
+  util.fg = colors.fg
+
+  --
+  -- NOTE: These colors are also configurable
+  --
 
   colors.diff = {
     add = util.darken(colors.git.add, 0.15),
@@ -121,20 +127,22 @@ function M.setup(config)
   colors.bg_popup = colors.bg2
   colors.bg_statusline = colors.bg2
 
-  -- Sidebar and Floats are configurable
+  -- Sidebar and Floats
   colors.bg_sidebar = config.dark_sidebar and colors.bg2 or colors.bg
   colors.bg_sidebar = config.transparent and colors.none or colors.bg_sidebar
   colors.bg_float = config.dark_float and colors.bg2 or colors.bg
+  colors.fg_sidebar = colors.fg_dark
 
-  -- LineNumber is configurable
+  -- LineNumber
   colors.bg_linenumber = config.highlight_linenumber and colors.bg2 or colors.bg
   colors.fg_linenumber = colors.fg_gutter
   colors.fg_cursor_linenumber = colors.dark5
 
+  -- Search
   colors.bg_search = colors.bg_yellow
   colors.fg_search = colors.bg2
-  colors.fg_sidebar = colors.fg_dark
 
+  -- Diagnostic
   colors.error = colors.red
   colors.warning = colors.yellow
   colors.info = colors.blue
