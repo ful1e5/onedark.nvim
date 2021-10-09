@@ -478,7 +478,13 @@ function M.setup(config)
     DevIconTs = {fg = c.devIcons.typescript},
     DevIconXml = {fg = c.devIcons.xml},
     DevIconYaml = {fg = c.devIcons.yml},
-    DevIconYml = {fg = c.devIcons.yml}
+    DevIconYml = {fg = c.devIcons.yml},
+
+    -- Cmp
+    CmpItemAbbrDeprecatedDefault = {fg = c.fg},
+    CmpItemAbbrDefault = {fg = util.darken(c.fg, 0.9)},
+    CmpItemKindDefault = {fg = util.darken(c.fg, 0.6), style = "italic"},
+    CmpItemMenuDefault = {fg = util.darken(c.blue, 0.8), style = "bold"}
 
   }
 
