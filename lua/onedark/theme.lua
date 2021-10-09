@@ -413,23 +413,39 @@ function M.setup(config)
     BufferLineFill = {bg = c.black},
 
     -- Barbar
-    BufferCurrent = {bg = c.fg_gutter, fg = c.fg},
-    BufferCurrentIndex = {bg = c.fg_gutter, fg = c.info},
-    BufferCurrentMod = {bg = c.fg_gutter, fg = c.warning},
-    BufferCurrentSign = {bg = c.fg_gutter, fg = c.info},
-    BufferCurrentTarget = {bg = c.fg_gutter, fg = c.red},
-    BufferVisible = {bg = c.bg_statusline, fg = c.fg},
-    BufferVisibleIndex = {bg = c.bg_statusline, fg = c.info},
-    BufferVisibleMod = {bg = c.bg_statusline, fg = c.warning},
-    BufferVisibleSign = {bg = c.bg_statusline, fg = c.info},
-    BufferVisibleTarget = {bg = c.bg_statusline, fg = c.red},
-    BufferInactive = {bg = c.bg_statusline, fg = c.dark5},
-    BufferInactiveIndex = {bg = c.bg_statusline, fg = c.dark5},
-    BufferInactiveMod = {bg = c.bg_statusline, fg = util.darken(c.warning, 0.7)},
-    BufferInactiveSign = {bg = c.bg_statusline, fg = c.border_highlight},
-    BufferInactiveTarget = {bg = c.bg_statusline, fg = c.red},
-    BufferTabpages = {bg = c.bg_statusline, fg = c.none},
-    BufferTabpage = {bg = c.bg_statusline, fg = c.border_highlight},
+    -- reference: https://github.com/romgrk/barbar.nvim#highlighting
+
+    -- status:
+    -- Current: current buffer
+    -- Visible: visible but not current buffer
+    -- Inactive: invisible but not current buffer
+
+    -- part:
+    -- Icon: filetype icon
+    -- Index: buffer index
+    -- Mod: when modified
+    -- Sign: the separator between buffers
+    -- Target: letter in buffer-picking mod
+
+    BufferTabpageFill = {bg = c.bg2, fg = c.bg_visual}, -- filler after the buffer section
+
+    BufferCurrent = {bg = c.bg, fg = c.fg},
+    BufferCurrentIndex = {bg = c.bg, fg = c.blue},
+    BufferCurrentMod = {bg = c.bg, fg = c.yellow},
+    BufferCurrentSign = {link = "BufferCurrentIndex"},
+    BufferCurrentTarget = {bg = c.bg, fg = c.red, style = "bold"},
+
+    BufferVisible = {bg = c.bg, fg = util.darken(c.fg, 0.8)},
+    BufferVisibleIndex = {link = "BufferCurrentIndex"},
+    BufferVisibleMod = {link = "BufferVisibleMod"},
+    BufferVisibleSign = {bg = c.bg, fg = util.darken(c.blue, 0.8)},
+    BufferVisibleTarget = {link = "BufferCurrentTarget"},
+
+    BufferInactive = {bg = c.bg2, fg = util.darken(c.fg, 0.5)},
+    BufferInactiveIndex = {bg = c.bg2, fg = util.darken(c.fg, 0.25)},
+    BufferInactiveMod = {bg = c.bg2, fg = util.darken(c.yellow, 0.7)},
+    BufferInactiveSign = {link = "BufferInactiveIndex"},
+    BufferInactiveTarget = {bg = c.bg2, fg = c.red, style = "bold"},
 
     -- ALE
     ALEWarningSign = {fg = c.yellow},
