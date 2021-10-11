@@ -33,7 +33,6 @@ function M.setup(config)
     red = "#e86671",
     red1 = "#f65866",
     git = {change = "#e0af68", add = "#109868", delete = "#9A353D", conflict = "#bb7a61"},
-    gitSigns = {change = "#e0af68", add = "#109868", delete = "#9A353D"},
 
     cursor = "#528bff",
     syntax = {
@@ -69,7 +68,7 @@ function M.setup(config)
       yaml = {field = "#e06c75"}
     },
 
-    devIcons = {
+    dev_icons = {
       c = "#519aba",
       clojure = "#8dc149",
       coffeescript = "#cbcb41",
@@ -113,10 +112,10 @@ function M.setup(config)
     text = colors.fg_gutter
   }
 
-  colors.gitSigns = {
-    add = util.brighten(colors.gitSigns.add, 0.2),
-    change = util.brighten(colors.gitSigns.change, 0.2),
-    delete = util.brighten(colors.gitSigns.delete, 0.2)
+  colors.git_signs = {
+    add = util.brighten(colors.git.add, 0.2),
+    change = util.brighten(colors.git.change, 0.2),
+    delete = util.brighten(colors.git.delete, 0.2)
   }
 
   colors.git.ignore = colors.fg_gutter
