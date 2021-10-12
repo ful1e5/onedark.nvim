@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: group colors according to assignment
 - enhance: barbar highlighting monsonjeremy/onedark.nvim#16
 - enhance: 'cmp' menu with 'fg' color
+- docs: minimal screenshot updated in [README.md#minimal](https://github.com/ful1e5/onedark.nvim#minimal)
 
 ## [v0.0.2]- 19 Sep 2021
 
