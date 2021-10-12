@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - lualine theme provided by official lualine repo (fix #46)
 - refactor: group colors according to assignment
 - enhance: barbar highlighting monsonjeremy/onedark.nvim#16
+- enhance: 'cmp' menu with 'fg' color
 
 ## [v0.0.2]- 19 Sep 2021
 

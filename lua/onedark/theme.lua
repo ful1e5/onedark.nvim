@@ -484,7 +484,7 @@ function M.setup(config)
     CmpItemAbbrDeprecatedDefault = {fg = c.fg},
     CmpItemAbbrDefault = {fg = util.darken(c.fg, 0.9)},
     CmpItemKindDefault = {fg = util.darken(c.fg, 0.6), style = "italic"},
-    CmpItemMenuDefault = {fg = util.darken(c.blue, 0.8), style = "bold"}
+    CmpItemMenuDefault = {fg = util.darken(c.fg, 0.8)}
 
   }
 
