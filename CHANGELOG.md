@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - feat: `highlight_linenumber` config for setting dark color to number line
 - feat: support `highlight_linenumber` with gitsigns
 - enhance: nvim-cmp highlight
+- change popup 'select' highlight background to green
 
 ### Changed
 

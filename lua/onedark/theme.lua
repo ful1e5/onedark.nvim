@@ -56,8 +56,8 @@ function M.setup(config)
     NormalFloat = {fg = c.fg, bg = c.bg_float}, -- Normal text in floating windows.
     FloatBorder = {fg = c.border_highlight},
     Pmenu = {bg = c.bg_popup, fg = c.fg}, -- Popup menu: normal item.
-    PmenuSel = {bg = util.darken(c.fg_gutter, 0.8)}, -- Popup menu: selected item.
-    PmenuSbar = {bg = util.lighten(c.bg_popup, 0.95)}, -- Popup menu: scrollbar.
+    PmenuSel = {bg = util.darken(c.green, 0.8), fg = c.bg_popup}, -- Popup menu: selected item.at
+    PmenuSbar = {bg = util.lighten(c.bg_popup, 0.9)}, -- Popup menu: scrollbar.
     PmenuThumb = {bg = c.fg_gutter}, -- Popup menu: Thumb of the scrollbar.
     Question = {fg = c.blue}, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = {bg = c.bg_visual, style = "bold"}, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
