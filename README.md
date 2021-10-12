@@ -14,9 +14,12 @@
   <a href="https://github.com/ful1e5/onedark.nvim/actions">
     <img alt="GitHub Action Linting" src="https://github.com/ful1e5/onedark.nvim/actions/workflows/lint.yml/badge.svg" />
   </a>
+  <a href="twitter.com/ful1e5">
+    <img alt="Twitter" src="https://img.shields.io/badge/twitter-ful1e5-blue" />
+  </a>
 </p>
 
-## ✨ Features
+## Features
 
 - supports the latest Neovim 0.5 features like TreeSitter and LSP
 - minimal inactive statusline (currently bugged)
@@ -25,7 +28,7 @@
 - color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include) and [Alacritty](https://github.com/alacritty/alacritty)
 - **lualine** theme
 
-### 🔌 Plugin Support
+### Plugin Support
 
 - [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
@@ -47,11 +50,11 @@
 - [circles.nvim](https://github.com/projekt0n/circles.nvim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 
-## ⚡️ Requirements
+## Requirements
 
 - Neovim >= 0.5.0
 
-## 📦 Installation
+## Installation
 
 Install the theme with your preferred package manager:
 
@@ -67,7 +70,7 @@ Plug 'ful1e5/onedark.nvim'
 use 'ful1e5/onedark.nvim'
 ```
 
-## 🚀 Usage
+## Usage
 
 Enable the colorscheme:
 
@@ -83,7 +86,7 @@ require('onedark').setup()
 
 To enable the `onedark` theme for `Lualine`, simply specify it in your lualine settings:
 
-> **📝 NOTE:** Set `lualine` configuration **before** `onedark`.
+> **NOTE:** Set `lualine` configuration **before** `onedark`.
 
 ```lua
 require('lualine').setup {
@@ -97,7 +100,7 @@ require('lualine').setup {
 }
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 | Option                   | Default  | Description                                                                                                                                                                       |
 | ------------------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -149,7 +152,7 @@ set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
 set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 ```
 
-## 🌈 Extras
+## Extras
 
 > To generate the configs `make extra`
 
@@ -157,12 +160,12 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 
 ## Credit
 
-- [OneDark-Pro VSCode Theme](https://github.com/Binaryify/OneDark-Pro)
-- [onedark.nvim](https://github.com/monsonjeremy/onedark.nvim) ⚡
+- [OneDark-Pro](https://github.com/Binaryify/OneDark-Pro)
+- [onedark.nvim](https://github.com/monsonjeremy/onedark.nvim)
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 - [gruvbox-flat.nvim](https://github.com/eddyekofo94/gruvbox-flat.nvim)
 
-## 📺 Screenshot
+## Screenshot
 
 - Terminal: [Kitty](https://sw.kovidgoyal.net/kitty)
 - Font: [Ubuntu Mono](https://design.ubuntu.com/font/)
@@ -252,15 +255,7 @@ require("onedark").setup({
   <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" >
 </a>
 
-## Self Promotion
-
-Follow me on **[Twitter](https://twitter.com/ful1e5)**
-
 <!-- Ninja  -->
 <p align="center">
   <h1 align="center">(◣_◢)</h1>
-</p>
-
-<p align="center">
-  <sub>Stop <strong>scrolling</strong>, It's <strong>hurts</strong> me</sub>
 </p>
