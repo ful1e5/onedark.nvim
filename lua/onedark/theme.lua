@@ -481,10 +481,10 @@ function M.setup(config)
     DevIconYml = {fg = c.dev_icons.yml},
 
     -- Cmp
-    CmpItemAbbrDeprecatedDefault = {fg = c.fg},
-    CmpItemAbbrDefault = {fg = util.darken(c.fg, 0.9)},
-    CmpItemKindDefault = {fg = util.darken(c.fg, 0.6), style = "italic"},
-    CmpItemMenuDefault = {fg = util.darken(c.fg, 0.8)}
+    CmpItemAbbrDeprecatedDefault = {fg = util.darken(c.fg, 0.4)},
+    CmpItemAbbrDefault = {link = "CmpItemAbbrDeprecatedDefault"},
+    CmpItemKindDefault = {fg = util.darken(c.fg, 0.8)},
+    CmpItemMenuDefault = {link = "CmpItemKindDefault"}
 
   }
 
