@@ -210,13 +210,14 @@ function util.load(theme)
   vim.o.termguicolors = true
   vim.g.colors_name = "onedark"
   -- vim.api.nvim__set_hl_ns(ns)
+
   -- load base theme
   util.syntax(theme.base)
 
   -- load syntax for plugins and terminal async
+  util.autocmds(theme.config)
   util.terminal(theme.colors)
   util.syntax(theme.plugins)
-  util.autocmds(theme.config)
   vim.defer_fn(function()
     util.syntax(theme.defer)
   end, 100)
