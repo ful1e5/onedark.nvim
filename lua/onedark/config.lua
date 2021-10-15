@@ -1,26 +1,23 @@
 ---@class Config
 local config
 
-local vimConfig = false
-
 -- shim vim for kitty and other generators
 vim = vim or {g = {}, o = {}}
 
 local function opt(key, default)
-  key = "onedark_" .. key
-
+  key = "github_" .. key
   if vim.g[key] == nil then
     return default
   else
-    vimConfig = true
-    if vim.g[key] == 0 then
+    if vim.g[key] == 1 then
+      return true
+    elseif vim.g[key] == 0 then
       return false
     else
       return vim.g[key]
     end
   end
 end
-
 config = {
   transparent = opt("transparent", false),
   comment_style = opt("italic_comments", true) and "italic" or "NONE",
@@ -51,4 +48,4 @@ local function applyConfiguration(userConfig)
   end
 end
 
-return {config = config, vimConfig = vimConfig, applyConfiguration = applyConfiguration}
+return {config = config, applyConfiguration = applyConfiguration}
