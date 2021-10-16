@@ -8,9 +8,9 @@ function M.alacritty(config)
   config.transform_colors = true
   local colors = require("onedark.colors").setup(config)
 
-  local alacrittyColors = {}
+  local alacritty_colors = {}
   for k, v in pairs(colors) do
-    if type(v) == "string" then alacrittyColors[k] = v:gsub("^#", "0x") end
+    if type(v) == "string" then alacritty_colors[k] = v:gsub("^#", "0x") end
   end
 
   local alacritty = util.template([[
@@ -51,7 +51,7 @@ colors:
   indexed_colors:
     - { index: 16, color: '${orange}' }
     - { index: 17, color: '${red1}' }
-]], alacrittyColors)
+]], alacritty_colors)
 
   return alacritty
 end
