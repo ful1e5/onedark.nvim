@@ -36,7 +36,7 @@ config = {
   transform_colors = false
 }
 
----@param user_config Config
+--- @param user_config Config
 local function apply_configuration(user_config)
   for key, value in pairs(user_config) do
     if value ~= nil then
