@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - enhance: nvim-cmp highlight
 - change popup 'select' highlight background to green
 - enhance(nvim-cmp):separate match highlights
+- plugin-support: [nvim-notify](https://github.com/rcarriga/nvim-notify)
 
 ### Changed
 
