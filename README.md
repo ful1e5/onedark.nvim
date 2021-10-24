@@ -115,6 +115,7 @@ require('lualine').setup {
 | highlight_linenumber     | `false`  | Enabling this option, will enable dark color to `LineNr`, `SignColumn` and `CursorLineNr` highlights.(also support [gitsigns](https://github.com/lewis6991/gitsigns.nvim) plugin) |
 | sidebars                 | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                                        |
 | dark_sidebar             | `true`   | Sidebar like windows like `NvimTree` get a darker background                                                                                                                      |
+| transparent_sidebar      | `false`  | Sidebar like windows like `NvimTree` get a transparent background                                                                                                                 |
 | dark_float               | `true`   | Float windows like the lsp diagnostics windows get a darker background.                                                                                                           |
 | colors                   | `{}`     | You can override specific color groups to use other groups or a hex color                                                                                                         |
 

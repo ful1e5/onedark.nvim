@@ -127,8 +127,9 @@ function M.setup(config)
   colors.bg_statusline = colors.bg2
 
   -- Sidebar and Floats
-  colors.bg_sidebar = config.dark_sidebar and colors.bg2 or colors.bg
-  colors.bg_sidebar = config.transparent and colors.none or colors.bg_sidebar
+  colors.bg_sidebar =
+      (config.transparent_sidebar and colors.none) or config.dark_sidebar and colors.bg2 or
+          colors.bg
   colors.bg_float = config.dark_float and colors.bg2 or colors.bg
   colors.fg_sidebar = colors.fg_dark
 

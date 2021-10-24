@@ -34,6 +34,7 @@ config = {
   dev = opt("dev", false),
   dark_float = opt("dark_float", true),
   dark_sidebar = opt("dark_sidebar", true),
+  transparent_sidebar = opt("transparent_sidebar", false),
   transform_colors = false
 }
 

@@ -144,7 +144,7 @@ function M.setup(config)
     markdownH1 = {fg = c.red, style = "bold"},
     markdownH2 = {fg = c.blue, style = "bold"},
     markdownLinkText = {fg = c.blue, style = "underline"},
-    debugPC = {bg = c.bg_sidebar}, -- used for highlighting the current line in terminal-debug
+    debugPC = {bg = c.bg2}, -- used for highlighting the current line in terminal-debug
     debugBreakpoint = {bg = util.darken(c.info, 0.1), fg = c.info}, -- used for breakpoint colors in terminal-debug
     -- These groups are for the native LSP client. Some other LSP clients may
     -- use these groups, or use their own. Consult your LSP client's
@@ -315,7 +315,7 @@ function M.setup(config)
     -- LspTrouble
     LspTroubleText = {fg = c.fg_dark},
     LspTroubleCount = {fg = c.purple, bg = c.fg_gutter},
-    LspTroubleNormal = {fg = c.fg_sidebar, bg = c.bg_sidebar},
+    LspTroubleNormal = {fg = c.fg_dark, bg = c.bg2},
 
     -- Illuminate
     illuminatedWord = {bg = c.fg_gutter},
@@ -394,7 +394,7 @@ function M.setup(config)
     WhichKeyDesc = {fg = c.red},
     WhichKeySeperator = {fg = c.fg_gutter},
     WhichKeySeparator = {fg = c.fg_gutter},
-    WhichKeyFloat = {bg = c.bg_sidebar},
+    WhichKeyFloat = {bg = c.bg2},
     WhichKeyValue = {fg = c.dark5},
 
     -- LspSaga
