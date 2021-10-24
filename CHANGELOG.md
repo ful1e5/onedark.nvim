@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - plugin-support: [nvim-notify](https://github.com/rcarriga/nvim-notify)
 - enhance: set default config value to `vim.g` variables
 - feat: `onedark_transparent_sidebar` option
+- docs: vim config docs added inside README.md
 
 ### Changed
 
