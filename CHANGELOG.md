@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - enhance(nvim-cmp):separate match highlights
 - plugin-support: [nvim-notify](https://github.com/rcarriga/nvim-notify)
 - enhance: set default config value to `vim.g` variables
-- feat: `onedark_transparent_sidebar` option
+- feat: `onedark_transparent_sidebar` option #60
 - docs: vim config docs added inside README.md
 
 ### Changed
