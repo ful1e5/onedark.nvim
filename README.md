@@ -115,8 +115,25 @@ require('lualine').setup {
 | highlight_linenumber     | `false`  | Enabling this option, will enable dark color to `LineNr`, `SignColumn` and `CursorLineNr` highlights.(also support [gitsigns](https://github.com/lewis6991/gitsigns.nvim) plugin) |
 | sidebars                 | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                                        |
 | dark_sidebar             | `true`   | Sidebar like windows like `NvimTree` get a darker background                                                                                                                      |
+| transparent_sidebar      | `false`  | Sidebar like windows like `NvimTree` get a transparent background                                                                                                                 |
 | dark_float               | `true`   | Float windows like the lsp diagnostics windows get a darker background.                                                                                                           |
 | colors                   | `{}`     | You can override specific color groups to use other groups or a hex color                                                                                                         |
+
+```vim
+" Example config in VimScript
+" configuration needs to be set BEFORE loading the color scheme with `colorscheme` command
+let g:onedark_function_style = "italic"
+let g:onedark_sidebars = ["qf", "vista_kind", "terminal", "packer"]
+
+" Change the "hint" color to the "orange" color, and make the "error" color bright red
+let g:onedark_colors = {
+  \ 'hint': 'orange',
+  \ 'error': '#ff0000'
+\ }
+
+" Load the colorscheme
+colorscheme onedark
+```
 
 ```lua
 -- Example config in Lua
@@ -127,19 +144,6 @@ require("onedark").setup({
   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
   colors = {hint = "orange", error = "#ff0000"}
 })
-```
-
-```vim
-" Example config in VimScript
-lua << EOF
-require("onedark").setup({
-  function_style = "italic",
-  sidebars = {"qf", "vista_kind", "terminal", "packer"},
-
-  -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-  colors = {hint = "orange", error = "#ff0000"}
-})
-EOF
 ```
 
 ### Making `undercurls` work properly in **Tmux**
@@ -185,7 +189,16 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 
 ### Normal
 
+```vim
+" VimScript
+let g:onedark_comment_style = "NONE"
+let g:onedark_keyword_style = "NONE"
+let g:onedark_function_style = "NONE"
+let g:onedark_variable_style = "NONE"
+```
+
 ```lua
+-- Lua
 require("onedark").setup({
   comment_style = "NONE",
   keyword_style = "NONE",
@@ -201,7 +214,16 @@ require("onedark").setup({
 
 ### Italic
 
+```vim
+" VimScript
+let g:onedark_comment_style = "italic"
+let g:onedark_keyword_style = "italic"
+let g:onedark_function_style = "italic"
+let g:onedark_variable_style = "italic"
+```
+
 ```lua
+-- Lua
 require("onedark").setup({
   comment_style = "italic",
   keyword_style = "italic",
@@ -217,7 +239,15 @@ require("onedark").setup({
 
 ### Minimal
 
+```vim
+" VimScript
+let g:onedark_hide_inactive_statusline = 1
+let g:onedark_dark_sidebar = 0
+let g:onedark_dark_float = 0
+```
+
 ```lua
+-- Lua
 require("onedark").setup({
   hide_inactive_statusline = true,
   dark_sidebar = false,
@@ -232,7 +262,14 @@ require("onedark").setup({
 
 ### Highlight Line-Number
 
+```vim
+" VimScript
+let g:onedark_dark_sidebar = 0
+let g:onedark_highlight_linenumber = 1
+```
+
 ```lua
+-- Lua
 require("onedark").setup({
   dark_sidebar = false,
   highlight_linenumber = true
