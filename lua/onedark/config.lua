@@ -29,11 +29,11 @@ end
 
 config = {
   transparent = opt("transparent", false),
-  comment_style = opt("italic_comments", true) and "italic" or "NONE",
-  keyword_style = opt("italic_keywords", true) and "italic" or "NONE",
-  function_style = opt("italic_functions", false) and "italic" or "NONE",
-  variable_style = opt("italic_variables", false) and "italic" or "NONE",
-  msg_area_style = opt("italic_msg_area", false) and "italic" or "NONE",
+  comment_style = opt("comment_style", "italic"),
+  keyword_style = opt("keyword_style", "italic"),
+  function_style = opt("function_style", "italic"),
+  variable_style = opt("variable_style", "NONE"),
+  msg_area_style = opt("msg_area_style", "NONE"),
   hide_inactive_statusline = opt("hide_inactive_statusline", false),
   highlight_linenumber = opt("highlight_linenumber", false),
   sidebars = opt("sidebars", {}),
