@@ -4,8 +4,15 @@ local config
 -- shim vim for kitty and other generators
 vim = vim or {g = {}, o = {}}
 
+--- Return global key from config key.
+---@param key string
+---@return string global key for `vim.g`
+local g_key = function(key)
+  return "onedark_" .. key
+end
+
 local function opt(key, default)
-  key = "github_" .. key
+  key = g_key(key)
   if vim.g[key] == nil then
     vim.g[key] = default
     return default
@@ -44,6 +51,7 @@ local function apply_configuration(user_config)
     if value ~= nil then
       if config[key] ~= nil then
         config[key] = value
+        vim.g[g_key(key)] = value
       else
         error("ful1e5/onedark: Option " .. key .. " does not exist") -- luacheck: ignore
       end
