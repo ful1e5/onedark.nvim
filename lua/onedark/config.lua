@@ -4,8 +4,15 @@ local config
 -- shim vim for kitty and other generators
 vim = vim or {g = {}, o = {}}
 
+--- Return global key from config key.
+---@param key string
+---@return string global key for `vim.g`
+local g_key = function(key)
+  return "onedark_" .. key
+end
+
 local function opt(key, default)
-  key = "github_" .. key
+  key = g_key(key)
   if vim.g[key] == nil then
     vim.g[key] = default
     return default
@@ -22,11 +29,11 @@ end
 
 config = {
   transparent = opt("transparent", false),
-  comment_style = opt("italic_comments", true) and "italic" or "NONE",
-  keyword_style = opt("italic_keywords", true) and "italic" or "NONE",
-  function_style = opt("italic_functions", false) and "italic" or "NONE",
-  variable_style = opt("italic_variables", false) and "italic" or "NONE",
-  msg_area_style = opt("italic_msg_area", false) and "italic" or "NONE",
+  comment_style = opt("comment_style", "italic"),
+  keyword_style = opt("keyword_style", "italic"),
+  function_style = opt("function_style", "italic"),
+  variable_style = opt("variable_style", "NONE"),
+  msg_area_style = opt("msg_area_style", "NONE"),
   hide_inactive_statusline = opt("hide_inactive_statusline", false),
   highlight_linenumber = opt("highlight_linenumber", false),
   sidebars = opt("sidebars", {}),
@@ -44,6 +51,7 @@ local function apply_configuration(user_config)
     if value ~= nil then
       if config[key] ~= nil then
         config[key] = value
+        vim.g[g_key(key)] = value
       else
         error("ful1e5/onedark: Option " .. key .. " does not exist") -- luacheck: ignore
       end

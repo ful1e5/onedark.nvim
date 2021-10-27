@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - enhance: set default config value to `vim.g` variables
 - feat: `onedark_transparent_sidebar` option #60
 - docs: vim config docs added inside README.md
+- feat: store `user_config` value to `vim.g` variables
 
 ### Changed
 
@@ -37,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - docs: removed emoji from README.md
 - cleanup: removed vim config deprecated message
 - breaking change: use snake_case inside config and alacritty module
+- breaking change: changed config variables name inside `vim.g` variables
 
 ## [v0.0.2]- 19 Sep 2021
 
