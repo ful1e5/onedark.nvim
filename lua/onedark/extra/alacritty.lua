@@ -5,7 +5,6 @@ local M = {}
 
 function M.alacritty(config)
   config = config or config_module.config
-  config.transform_colors = true
   local colors = require("onedark.colors").setup(config)
 
   local alacritty_colors = {}
