@@ -3,9 +3,10 @@ local config_module = require("onedark.config")
 
 local M = {}
 
+---Generate github theme for Alacritty terminal.
+---@param config Config
 function M.alacritty(config)
   config = config or config_module.config
-  config.transform_colors = true
   local colors = require("onedark.colors").setup(config)
 
   local alacritty_colors = {}

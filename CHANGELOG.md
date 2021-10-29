@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - feat: `onedark_transparent_sidebar` option #60
 - docs: vim config docs added inside README.md
 - feat: store `user_config` value to `vim.g` variables
+- docs: luadoc added inside `config` and `extra` module
 
 ### Changed
 
@@ -39,6 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - cleanup: removed vim config deprecated message
 - breaking change: use snake_case inside config and alacritty module
 - breaking change: changed config variables name inside `vim.g` variables
+- refactor: colors transform config inside `extra` module
 
 ## [v0.0.2]- 19 Sep 2021
 
