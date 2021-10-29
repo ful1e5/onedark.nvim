@@ -4,9 +4,9 @@ local config
 -- shim vim for kitty and other generators
 vim = vim or {g = {}, o = {}}
 
---- Return global key from config key.
+--- Get `vim.g` key from config key.
 ---@param key string
----@return string global key for `vim.g`
+---@return string key A global key for onedark theme which is useful for assigning value to `vim.g`.
 local g_key = function(key)
   return "onedark_" .. key
 end
