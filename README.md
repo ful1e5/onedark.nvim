@@ -77,7 +77,7 @@ Enable the colorscheme:
 
 ```vim
 " Vim Script
-lua require('onedark').setup()
+colorscheme onedark
 ```
 
 ```lua
