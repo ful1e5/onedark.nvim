@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - docs: vim config docs added inside README.md
 - feat: store `user_config` value to `vim.g` variables
 - docs: luadoc added inside `config` and `extra` module
+- A new lualine theme added 'onedark-nvim' #65
 
 ### Changed
 

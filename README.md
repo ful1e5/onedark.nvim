@@ -92,7 +92,7 @@ To enable the `onedark` theme for `Lualine`, simply specify it in your lualine s
 ```lua
 require('lualine').setup {
   options = {
-    theme = 'onedark',
+    theme = 'onedark-nvim',
     -- For round icons (require Nerd-Font)
     -- section_separators = {"", ""},
     -- component_separators = {"", ""},
