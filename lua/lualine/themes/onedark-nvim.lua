@@ -5,8 +5,8 @@ local util = require("onedark.util")
 local onedark = {}
 
 onedark.normal = {
-  a = { bg = colors.blue, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.blue },
+  a = { bg = colors.cyan, fg = colors.black },
+  b = { bg = colors.fg_gutter, fg = colors.cyan },
   c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
 }
 
@@ -31,7 +31,7 @@ onedark.replace = {
 }
 
 onedark.inactive = {
-  a = { bg = colors.bg_statusline, fg = colors.blue },
+  a = { bg = colors.bg_statusline, fg = colors.cyan },
   b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold" },
   c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
 }
