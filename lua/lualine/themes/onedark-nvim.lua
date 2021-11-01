@@ -5,7 +5,7 @@ local util = require("onedark.util")
 local onedark = {}
 
 onedark.normal = {
-  a = { bg = "#282c34", fg = colors.black },
+  a = { bg = "#282c34", fg = colors.fg },
   b = { bg = colors.fg_gutter, fg = "#282c34" },
   c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
 }
