@@ -123,7 +123,7 @@ function util.onColorScheme()
   end
 end
 
----@param config Config
+---@param config onedark.Config
 function util.autocmds(config)
   vim.cmd([[augroup onedark]])
   vim.cmd([[  autocmd!]])
@@ -224,7 +224,7 @@ function util.load(theme)
 end
 
 ---@param colors ColorScheme
----@param config Config
+---@param config onedark.Config
 function util.color_overrides(colors, config)
   if type(config.colors) == "table" then
     for key, value in pairs(config.colors) do

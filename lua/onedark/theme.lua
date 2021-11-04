@@ -4,7 +4,7 @@ local config_module = require("onedark.config")
 
 local M = {}
 
----@param config Config
+---@param config onedark.Config
 ---@return Theme
 function M.setup(config)
   config = config or config_module.config
