@@ -34,6 +34,7 @@ config = {
   function_style = opt("function_style", "italic"),
   variable_style = opt("variable_style", "NONE"),
   msg_area_style = opt("msg_area_style", "NONE"),
+  lualine_bold = opt("lualine_bold", false),
   hide_inactive_statusline = opt("hide_inactive_statusline", false),
   highlight_linenumber = opt("highlight_linenumber", false),
   sidebars = opt("sidebars", {}),

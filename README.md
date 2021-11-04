@@ -113,6 +113,7 @@ require('lualine').setup {
 | transparent              | `false`  | Enable this to disable setting the background color                                                                                                                               |
 | hide_inactive_statusline | `false`  | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.                   |
 | highlight_linenumber     | `false`  | Enabling this option, will enable dark color to `LineNr`, `SignColumn` and `CursorLineNr` highlights.(also support [gitsigns](https://github.com/lewis6991/gitsigns.nvim) plugin) |
+| lualine_bold             | `false`  | When `true`, section headers in the lualine theme will be bold                                                                                                                    |
 | sidebars                 | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                                        |
 | dark_sidebar             | `true`   | Sidebar like windows like `NvimTree` get a darker background                                                                                                                      |
 | transparent_sidebar      | `false`  | Sidebar like windows like `NvimTree` get a transparent background                                                                                                                 |
