@@ -3,8 +3,8 @@ local config_module = require("onedark.config")
 
 local M = {}
 
----Generate github theme for kitty terminal.
----@param config Config
+---Generate onedark theme for kitty terminal.
+---@param config onedark.Config
 function M.kitty(config)
   config = config or config_module.config
   local colors = require("onedark.colors").setup(config)

@@ -1,6 +1,3 @@
----@class Config
-local config
-
 -- shim vim for kitty and other generators
 vim = vim or {g = {}, o = {}}
 
@@ -27,13 +24,15 @@ local function opt(key, default)
   end
 end
 
-config = {
+---@class onedark.Config
+local config = {
   transparent = opt("transparent", false),
   comment_style = opt("comment_style", "italic"),
   keyword_style = opt("keyword_style", "italic"),
   function_style = opt("function_style", "italic"),
   variable_style = opt("variable_style", "NONE"),
   msg_area_style = opt("msg_area_style", "NONE"),
+  lualine_bold = opt("lualine_bold", false),
   hide_inactive_statusline = opt("hide_inactive_statusline", false),
   highlight_linenumber = opt("highlight_linenumber", false),
   sidebars = opt("sidebars", {}),
@@ -45,7 +44,7 @@ config = {
   transform_colors = false
 }
 
---- @param user_config Config
+--- @param user_config onedark.Config
 local function apply_configuration(user_config)
   for key, value in pairs(user_config) do
     if value ~= nil then

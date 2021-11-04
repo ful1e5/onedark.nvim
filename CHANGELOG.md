@@ -26,6 +26,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - docs: luadoc added inside `config` and `extra` module
 - A new lualine theme added 'onedark-nvim' #65
 - expose onedark theme in [fzf.vim](https://github.com/junegunn/fzf.vim)
+- added hot reloaded to `onedark-nvim` lualine theme
+- feat: `lualine_bold` option added
+- luadoc: fix warning inside config module
 
 ### Changed
 
