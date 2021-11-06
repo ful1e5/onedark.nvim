@@ -46,6 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - breaking change: use snake_case inside config and alacritty module
 - breaking change: changed config variables name inside `vim.g` variables
 - refactor: colors transform config inside `extra` module
+- fix: diff text with comment text #68
 
 ## [v0.0.2]- 19 Sep 2021
 
