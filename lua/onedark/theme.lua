@@ -408,10 +408,6 @@ function M.setup(config)
     healthSuccess = {fg = c.green},
     healthWarning = {fg = c.warning},
 
-    -- BufferLine
-    BufferLineIndicatorSelected = {fg = c.git.change},
-    BufferLineFill = {bg = c.black},
-
     -- Barbar
     -- reference: https://github.com/romgrk/barbar.nvim#highlighting
 
