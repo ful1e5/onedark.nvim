@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - added hot reloaded to `onedark-nvim` lualine theme
 - feat: `lualine_bold` option added
 - luadoc: fix warning inside config module
+- fixed #71 in normal mode
 
 ### Changed
 
