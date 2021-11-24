@@ -133,7 +133,7 @@ function M.setup(config)
     htmlTag = {fg = c.purple, style = "bold"},
     -- mkdHeading = { fg = c.orange, style = "bold" },
     -- mkdCode = { bg = c.bg2, fg = c.fg },
-    mkdCodeDelimiter = {bg = c.bg2, fg = c.fg},
+    mkdCodeDelimiter = {fg = c.fg},
     mkdCodeStart = {fg = c.yellow, style = "bold"},
     mkdCodeEnd = {fg = c.yellow, style = "bold"},
     -- mkdLink = { fg = c.blue, style = "underline" },
