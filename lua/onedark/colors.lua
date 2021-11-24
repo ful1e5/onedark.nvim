@@ -108,7 +108,8 @@ function M.setup(config)
   colors.diff = {
     add = util.darken(colors.git.add, 0.15),
     delete = util.darken(colors.git.delete, 0.15),
-    change = util.darken(colors.git.change, 0.15)
+    change = util.darken(colors.git.change, 0.15),
+    text = util.darken(colors.git.change, 0.25)
   }
 
   colors.git_signs = {
