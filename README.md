@@ -1,13 +1,10 @@
-<!-- Branding -->
 <p align="center">
   <img src="https://i.imgur.com/lNdBu1v.png" alt="onedark.nvim" />
   <br />
   Atom's iconic One Dark theme for Neovim, written in Lua
 </p>
 
-<!-- Badges -->
 <p align="center">
-  <!-- First Row -->
   <a href="https://github.com/monsonjeremy/onedark.nvim">
     <img alt="monsonjeremy/onedark.nvim" src="https://img.shields.io/badge/Fork%20of-monsonjeremy%2Fonedark.nvim-blue" />
   </a>
@@ -286,15 +283,4 @@ require("onedark").setup({
 
 <p align="center">
   <img src="https://imgur.com/xOXa7sh.png" alt="Telescope plugin" />
-</p>
-
-## Support
-
-<a href="https://www.buymeacoffee.com/Nt7Wg4V" >
-  <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" >
-</a>
-
-<!-- Ninja  -->
-<p align="center">
-  <h1 align="center">(◣_◢)</h1>
 </p>
