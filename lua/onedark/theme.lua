@@ -481,6 +481,17 @@ function M.setup(config)
     CmpItemAbbrDefault = {link = "CmpItemAbbrDeprecatedDefault"},
     CmpItemKindDefault = {fg = util.darken(c.fg, 0.8)},
     CmpItemMenuDefault = {link = "CmpItemKindDefault"},
+    CmpItemAbbrDeprecated = {fg = c.fg_gutter, style = "strikethrough"},
+    CmpItemAbbrMatch = {fg = c.green},
+    CmpItemAbbrMatchFuzzy = {link = "CmpItemAbbrMatch"},
+    CmpItemKindVariable = {fg = c.syntax.variable},
+    CmpItemKindInterface = {link = "CmpItemKindVariable"},
+    CmpItemKindText = {link = "CmpItemKindVariable"},
+    CmpItemKindFunction = {fg = c.purple},
+    CmpItemKindMethod = {link = "CmpItemKindFunction"},
+    CmpItemKindKeyword = {fg = c.syntax.keyword},
+    CmpItemKindProperty = {link = "CmpItemKindKeyword"},
+    CmpItemKindUnit = {link = "CmpItemKindKeyword"},
 
     -- nvim-notify
     NotifyERRORTitle = {fg = util.darken(c.error, 0.9)},
