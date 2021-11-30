@@ -5,11 +5,11 @@ local config_module = require("onedark.config")
 local M = {}
 
 ---@param config onedark.Config
----@return Theme
+---@return onedark.Theme
 function M.setup(config)
   config = config or config_module.config
 
-  ---@class Theme
+  ---@class onedark.Theme
   local theme = {}
   theme.config = config
   theme.colors = colors.setup(config)
