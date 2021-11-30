@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - feat: `lualine_bold` option added
 - luadoc: fix warning inside config module
 - fixed #71 in normal mode
+- vscode like `nvim-cmp` highlights [ref:nvim-cmp wiki](https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#how-to-add-visual-studio-code-dark-theme-colors-to-the-menu)
 
 ### Changed
 

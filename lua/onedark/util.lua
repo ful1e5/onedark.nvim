@@ -159,7 +159,7 @@ function util.syntax(syntax)
   for group, colors in pairs(syntax) do util.highlight(group, colors) end
 end
 
----@param colors ColorScheme
+---@param colors onedark.ColorScheme
 function util.terminal(colors)
   -- dark
   vim.g.terminal_color_0 = colors.black
@@ -202,7 +202,7 @@ function util.light_colors(colors)
   return ret
 end
 
----@param theme Theme
+---@param theme onedark.Theme
 function util.load(theme)
   vim.cmd("hi clear")
   if vim.fn.exists("syntax_on") then vim.cmd("syntax reset") end
@@ -223,7 +223,7 @@ function util.load(theme)
   end, 100)
 end
 
----@param colors ColorScheme
+---@param colors onedark.ColorScheme
 ---@param config onedark.Config
 function util.color_overrides(colors, config)
   if type(config.colors) == "table" then

@@ -4,12 +4,12 @@ local config_module = require("onedark.config")
 local M = {}
 
 ---@param config onedark.Config
----@return ColorScheme
+---@return onedark.ColorScheme
 function M.setup(config)
   config = config or config_module.config
 
   -- Color Palette
-  ---@class ColorScheme
+  ---@class onedark.ColorScheme
   local colors = {
     none = "NONE",
     bg = "#282c34",
