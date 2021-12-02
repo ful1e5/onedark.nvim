@@ -255,7 +255,7 @@ require("onedark").setup({
 ```
 
 <p align="center">
-  <img src="https://imgur.com/izfgSg7.png" alt="Minimal" />
+  <img src="https://imgur.com/6IXYKaG.png" alt="Minimal" />
 </p>
 
 ### Highlight Line-Number
