@@ -51,6 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: colors transform config inside `extra` module
 - fix: diff text with comment text #68
 - docs: cleanup some nonsense
+- `NvimTreeGitRenamed` highlight with onedark purple color
 
 ## [v0.0.2]- 19 Sep 2021
 
