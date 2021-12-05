@@ -25,9 +25,9 @@ function M.setup(config)
     CursorColumn = {bg = c.bg_highlight}, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine = {bg = c.bg_highlight}, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory = {fg = c.blue}, -- directory names (and other special names in listings)
-    DiffAdd = {bg = c.diff.add}, -- diff mode: Added line |diff.txt|
-    DiffChange = {bg = c.diff.change}, -- diff mode: Changed line |diff.txt|
-    DiffDelete = {bg = c.diff.delete}, -- diff mode: Deleted line |diff.txt|
+    DiffAdd = {fg = c.git.add, bg = c.diff.add}, -- diff mode: Added line |diff.txt|
+    DiffChange = {fg = c.git.change, bg = c.diff.change}, -- diff mode: Changed line |diff.txt|
+    DiffDelete = {fg = c.git.delete, bg = c.diff.change}, -- diff mode: Deleted line |diff.txt|
     DiffText = {bg = c.diff.text}, -- diff mode: Changed text within a changed line |diff.txt|
     EndOfBuffer = {fg = c.bg}, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     -- TermCursor  = { }, -- cursor in a focused terminal
@@ -322,9 +322,9 @@ function M.setup(config)
     illuminatedCurWord = {bg = c.fg_gutter},
 
     -- diff
-    diffAdded = {fg = c.git.add},
-    diffRemoved = {fg = c.git.delete},
-    diffChanged = {fg = c.git.change},
+    diffAdded = {link = "DiffAdd"},
+    diffChanged = {link = "DiffChange"},
+    diffRemoved = {link = "DiffDelete"},
     diffOldFile = {fg = c.yellow},
     diffNewFile = {fg = c.orange},
     diffFile = {fg = c.blue},
@@ -337,8 +337,8 @@ function M.setup(config)
     NeogitHunkHeader = {bg = c.bg_highlight, fg = c.fg},
     NeogitHunkHeaderHighlight = {bg = c.fg_gutter, fg = c.blue},
     NeogitDiffContextHighlight = {bg = util.darken(c.fg_gutter, 0.5), fg = c.fg_dark},
-    NeogitDiffDeleteHighlight = {fg = c.git.delete, bg = c.diff.delete},
-    NeogitDiffAddHighlight = {fg = c.git.add, bg = c.diff.add},
+    NeogitDiffAddHighlight = {link = "DiffAdd"},
+    NeogitDiffDeleteHighlight = {link = "DiffDelete"},
 
     -- GitGutter
     GitGutterAdd = {fg = c.git_signs.add}, -- diff mode: Added line |diff.txt|
