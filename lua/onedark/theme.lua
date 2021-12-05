@@ -27,7 +27,7 @@ function M.setup(config)
     Directory = {fg = c.blue}, -- directory names (and other special names in listings)
     DiffAdd = {fg = c.git.add, bg = c.diff.add}, -- diff mode: Added line |diff.txt|
     DiffChange = {fg = c.git.change, bg = c.diff.change}, -- diff mode: Changed line |diff.txt|
-    DiffDelete = {fg = c.git.delete, bg = c.diff.change}, -- diff mode: Deleted line |diff.txt|
+    DiffDelete = {fg = c.git.delete, bg = c.diff.delete}, -- diff mode: Deleted line |diff.txt|
     DiffText = {bg = c.diff.text}, -- diff mode: Changed text within a changed line |diff.txt|
     EndOfBuffer = {fg = c.bg}, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     -- TermCursor  = { }, -- cursor in a focused terminal
