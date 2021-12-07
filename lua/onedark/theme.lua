@@ -369,6 +369,7 @@ function M.setup(config)
     NvimTreeSymlink = {fg = c.purple},
     NvimTreeFolderName = {fg = c.fg_light},
     NvimTreeOpenedFolderName = {fg = c.fg_light, style = "bold"},
+    NvimTreeEmptyFolderName = {fg = c.syntax.comment},
     LspDiagnosticsError = {fg = c.error},
     LspDiagnosticsWarning = {fg = c.warning},
     LspDiagnosticsInformation = {fg = c.info},
