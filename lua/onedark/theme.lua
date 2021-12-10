@@ -357,6 +357,7 @@ function M.setup(config)
     TelescopeBorder = {fg = c.border},
     TelescopeMatching = {fg = c.fg_light, style = "bold"},
     TelescopePromptPrefix = {fg = c.fg, style = "bold"},
+    TelescopePromptCounter = {fg = c.blue},
 
     -- NvimTree
     NvimTreeNormal = {fg = c.fg_light, bg = c.bg_sidebar},
