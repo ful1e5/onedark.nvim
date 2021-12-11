@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+## [v0.0.3]- 11 Dec 2021
+
 ### Added
 
 - docs updated
@@ -98,6 +100,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release 🎊
 
-[unreleased]: https://github.com/ful1e5/onedark.nvim/compare/v0.0.2...main
+[unreleased]: https://github.com/ful1e5/onedark.nvim/compare/v0.0.3...main
+[v0.0.3]: https://github.com/ful1e5/onedark.nvim/compare/v0.0.3...v0.0.2
 [v0.0.2]: https://github.com/ful1e5/onedark.nvim/compare/v0.0.2...v0.0.1
 [v0.0.1]: https://github.com/ful1e5/onedark.nvim/tree/v0.0.1
