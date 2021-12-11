@@ -43,10 +43,7 @@ function M.setup(config)
       fg = config.transparent and c.fg_cursor_linenumber or c.fg_linenumber,
       bg = config.transparent and c.none or c.bg_linenumber
     }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = {
-      fg = c.dark5,
-      bg = config.transparent and c.none or c.bg_linenumber
-    }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    CursorLineNr = {fg = c.dark5, bg = config.transparent and c.none or c.bg_linenumber}, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = {fg = c.orange, style = "bold"}, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = {fg = c.fg_dark, style = "bold"}, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = {fg = c.fg_dark, style = config.msg_area_style}, -- Area for messages and cmdline
@@ -358,6 +355,7 @@ function M.setup(config)
     TelescopeMatching = {fg = c.fg_light, style = "bold"},
     TelescopePromptPrefix = {fg = c.fg, style = "bold"},
     TelescopePromptCounter = {fg = c.blue},
+    TelescopeMultiSelection = {fg = c.syntax.comment},
 
     -- NvimTree
     NvimTreeNormal = {fg = c.fg_light, bg = c.bg_sidebar},
