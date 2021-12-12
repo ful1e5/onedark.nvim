@@ -340,6 +340,12 @@ function M.setup(config)
     NeogitDiffAddHighlight = {link = "DiffAdd"},
     NeogitDiffDeleteHighlight = {link = "DiffDelete"},
 
+    -- Hop
+    HopNextKey = {fg = c.purple, style = "bold"},
+    HopNextKey1 = {fg = c.blue, style = "bold"},
+    HopNextKey2 = {fg = util.darken(c.blue, 0.8)},
+    HopUnmatched = {fg = c.fg_dark},
+
     -- GitGutter
     GitGutterAdd = {fg = c.git_signs.add}, -- diff mode: Added line |diff.txt|
     GitGutterChange = {fg = c.git_signs.change}, -- diff mode: Changed line |diff.txt|
