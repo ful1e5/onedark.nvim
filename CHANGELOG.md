@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### Added
+
+- plugin support [hop.nvim](https://github.com/phaazon/hop.nvim)
+
+### Changed
+
 ## [v0.0.3]- 11 Dec 2021
 
 ### Added
