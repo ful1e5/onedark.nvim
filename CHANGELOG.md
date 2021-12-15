@@ -10,8 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - plugin support [hop.nvim](https://github.com/phaazon/hop.nvim)
+- lualine `terminal` highlight added
 
 ### Changed
+
+- `hide_inactive_statusline` option deprecated from `lualine` plugin
 
 ## [v0.0.3]- 11 Dec 2021
 

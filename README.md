@@ -19,7 +19,7 @@
 ## Features
 
 - supports the latest Neovim 0.5 features like TreeSitter and LSP
-- minimal inactive statusline (currently bugged)
+- minimal inactive StatusLine
 - vim terminal colors
 - darker background for sidebar-like windows
 - color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include) and [Alacritty](https://github.com/alacritty/alacritty)
@@ -27,27 +27,26 @@
 
 ### Plugin Support
 
-- [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
-- [LSP Trouble](https://github.com/folke/lsp-trouble.nvim)
-- [LSP Saga](https://github.com/glepnir/lspsaga.nvim)
-- [Git Signs](https://github.com/lewis6991/gitsigns.nvim)
-- [Git Gutter](https://github.com/airblade/vim-gitgutter)
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
-- [WhichKey](https://github.com/liuchengxu/vim-which-key)
-- [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [Dashboard](https://github.com/glepnir/dashboard-nvim)
-- [BufferLine](https://github.com/akinsho/nvim-bufferline.lua)
-- [Lualine](https://github.com/hoob3rt/lualine.nvim)
-- [Lightline](https://github.com/itchyny/lightline.vim)
-- [Neogit](https://github.com/TimUntersberger/neogit)
-- [Barbar](https://github.com/romgrk/barbar.nvim)
-- [glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim)
+- [Built LSP diagnostics](https://neovim.io/doc/user/lsp.html)
+- [barbar.nvim](https://github.com/romgrk/barbar.nvim)
 - [circles.nvim](https://github.com/projekt0n/circles.nvim)
+- [dashboard-nvim)](https://github.com/glepnir/dashboard-nvim)
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim)
+- [hop.nvim](https://github.com/phaazon/hop.nvim)
+- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [lsp-trouble.nvim](https://github.com/folke/lsp-trouble.nvim)
+- [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+- [neogit](https://github.com/TimUntersberger/neogit)
+- [nvim-bufferline.lua](https://github.com/akinsho/nvim-bufferline.lua)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [nvim-notify](https://github.com/rcarriga/nvim-notify)
-- [hop.nvim](https://github.com/phaazon/hop.nvim)
+- [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+- [vim-which-key](https://github.com/liuchengxu/vim-which-key)
 
 ## Requirements
 
@@ -83,9 +82,9 @@ colorscheme onedark
 require('onedark').setup()
 ```
 
-To enable the `onedark` theme for `Lualine`, simply specify it in your lualine settings:
+### lualine.nvim
 
-> **NOTE:** Set `lualine` configuration **before** `onedark`.
+To enable the `onedark` theme for `Lualine`, simply specify it in your lualine settings:
 
 ```lua
 require('lualine').setup {
@@ -99,6 +98,12 @@ require('lualine').setup {
 }
 ```
 
+![normal](https://imgur.com/utoeRWg.png)
+![insert](https://imgur.com/cimWSSb.png)
+![visual](https://imgur.com/4ntUbvB.png)
+![command](https://imgur.com/bmreFgJ.png)
+![terminal](https://imgur.com/Fw0Btae.png)
+
 ## Configuration
 
 | Option                   | Default  | Description                                                                                                                                                                       |
@@ -109,7 +114,7 @@ require('lualine').setup {
 | variable_style           | `NONE`   | Highlight style for variables and identifiers (check `:help highlight-args` for options)                                                                                          |
 | msg_area_style           | `NONE`   | Highlight style for messages and cmdline (check `:help highlight-args` for options)                                                                                               |
 | transparent              | `false`  | Enable this to disable setting the background color                                                                                                                               |
-| hide_inactive_statusline | `false`  | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.                   |
+| hide_inactive_statusline | `false`  | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine**.                                   |
 | highlight_linenumber     | `false`  | Enabling this option, will enable dark color to `LineNr`, `SignColumn` and `CursorLineNr` highlights.(also support [gitsigns](https://github.com/lewis6991/gitsigns.nvim) plugin) |
 | lualine_bold             | `false`  | When `true`, section headers in the lualine theme will be bold                                                                                                                    |
 | sidebars                 | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                                        |
