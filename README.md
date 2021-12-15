@@ -19,7 +19,7 @@
 ## Features
 
 - supports the latest Neovim 0.5 features like TreeSitter and LSP
-- minimal inactive statusline (currently bugged)
+- minimal inactive StatusLine
 - vim terminal colors
 - darker background for sidebar-like windows
 - color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include) and [Alacritty](https://github.com/alacritty/alacritty)
@@ -85,8 +85,6 @@ require('onedark').setup()
 
 To enable the `onedark` theme for `Lualine`, simply specify it in your lualine settings:
 
-> **NOTE:** Set `lualine` configuration **before** `onedark`.
-
 ```lua
 require('lualine').setup {
   options = {
@@ -109,7 +107,7 @@ require('lualine').setup {
 | variable_style           | `NONE`   | Highlight style for variables and identifiers (check `:help highlight-args` for options)                                                                                          |
 | msg_area_style           | `NONE`   | Highlight style for messages and cmdline (check `:help highlight-args` for options)                                                                                               |
 | transparent              | `false`  | Enable this to disable setting the background color                                                                                                                               |
-| hide_inactive_statusline | `false`  | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.                   |
+| hide_inactive_statusline | `false`  | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine**.                                   |
 | highlight_linenumber     | `false`  | Enabling this option, will enable dark color to `LineNr`, `SignColumn` and `CursorLineNr` highlights.(also support [gitsigns](https://github.com/lewis6991/gitsigns.nvim) plugin) |
 | lualine_bold             | `false`  | When `true`, section headers in the lualine theme will be bold                                                                                                                    |
 | sidebars                 | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                                        |

@@ -173,6 +173,10 @@ function M.setup(config)
       a = {bg = colors.red, fg = colors.black},
       b = {bg = colors.fg_gutter, fg = colors.red}
     },
+    terminal = {
+      a = {bg = colors.red1, fg = colors.black},
+      b = {bg = colors.fg_gutter, fg = colors.red1}
+    },
     inactive = {
       a = {bg = colors.bg_statusline, fg = colors.cyan},
       b = {bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold"},
