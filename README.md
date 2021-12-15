@@ -83,6 +83,8 @@ colorscheme onedark
 require('onedark').setup()
 ```
 
+### lualine.nvim
+
 To enable the `onedark` theme for `Lualine`, simply specify it in your lualine settings:
 
 ```lua
@@ -96,6 +98,12 @@ require('lualine').setup {
   }
 }
 ```
+
+![normal](https://imgur.com/utoeRWg.png)
+![insert](https://imgur.com/cimWSSb.png)
+![visual](https://imgur.com/4ntUbvB.png)
+![command](https://imgur.com/bmreFgJ.png)
+![terminal](https://imgur.com/Fw0Btae.png)
 
 ## Configuration
 
