@@ -552,7 +552,31 @@ function M.setup(config)
     NotifyWARNBody = {fg = util.lighten(c.warning, 0.1)},
     NotifyINFOBody = {fg = util.lighten(c.green, 0.1)},
     NotifyDEBUGBody = {link = "NotifyDEBUGTitle"},
-    NotifyTRACEBody = {fg = util.lighten(c.purple, 0.1)}
+    NotifyTRACEBody = {fg = util.lighten(c.purple, 0.1)},
+
+    -- Coc
+    CocErrorSign = {link = "ErrorMsg"},
+    CocWarningSign = {link = "WarningMsg"},
+    CocInfoSign = {link = "DiagnosticInfo"},
+    CocHintSign = {link = "DiagnosticHint"},
+    CocErrorFloat = {link = "ErrorMsg"},
+    CocWarningFloat = {link = "WarningMsg"},
+    CocInfoFloat = {link = "DiagnosticInfo"},
+    CocHintFloat = {link = "DiagnosticHint"},
+    CocDiagnosticsError = {link = "ErrorMsg"},
+    CocDiagnosticsWarning = {link = "WarningMsg"},
+    CocDiagnosticsInfo = {link = "DiagnosticInfo"},
+    CocDiagnosticsHint = {link = "DiagnosticHint"},
+    CocSelectedText = {fg = c.red},
+    CocCodeLens = {fg = c.fg_dark},
+
+    CocErrorHighlight = {link = "LspDiagnosticsUnderlineError"},
+    CocWarningHighlight = {link = "LspDiagnosticsUnderlineWarning"},
+    CocInfoHighlight = {link = "LspDiagnosticsUnderlineInformation"},
+    CocHintHighlight = {link = "LspDiagnosticsUnderlineHint"},
+
+    CocHighlightText = {link = "Visual"},
+    CocUnderline = {style = "undercurl"}
   }
 
   theme.defer = {}

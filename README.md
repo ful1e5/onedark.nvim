@@ -30,6 +30,7 @@
 - [Built LSP diagnostics](https://neovim.io/doc/user/lsp.html)
 - [barbar.nvim](https://github.com/romgrk/barbar.nvim)
 - [circles.nvim](https://github.com/projekt0n/circles.nvim)
+- [coc.nvim](https://github.com/neoclide/coc.nvim)
 - [dashboard-nvim)](https://github.com/glepnir/dashboard-nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim)
