@@ -27,7 +27,7 @@
 
 ### Plugin Support
 
-- [Built LSP diagnostics](https://neovim.io/doc/user/lsp.html)
+- [Builtin LSP diagnostics](https://neovim.io/doc/user/lsp.html)
 - [barbar.nvim](https://github.com/romgrk/barbar.nvim)
 - [circles.nvim](https://github.com/projekt0n/circles.nvim)
 - [coc.nvim](https://github.com/neoclide/coc.nvim)
@@ -179,7 +179,8 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 
 - Terminal: [Kitty](https://sw.kovidgoyal.net/kitty)
 - Font: [Ubuntu Mono](https://design.ubuntu.com/font/)
-- icons: [projekt0n/circles.nvim](https://github.com/projekt0n/circles.nvim)
+- Icons: [projekt0n/circles.nvim](https://github.com/projekt0n/circles.nvim)
+- StatusLine: **Default**. [dotfiles/nvim/.config/nvim/lua/options.lua#L19-L30](https://github.com/ful1e5/dotfiles/blob/a2777f85b104622dd82f4adfc6ad032e3ff074bf/nvim/.config/nvim/lua/options.lua#L19-L30)
 - Dotfiles: [ful1e5/dotfiles](https://github.com/ful1e5/dotfiles)
 
 <p align="center">
