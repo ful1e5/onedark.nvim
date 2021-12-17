@@ -242,6 +242,7 @@ function M.setup(config)
     TSVariable = {fg = c.syntax.variable, style = config.variable_style}, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = {fg = c.syntax.variable_builtin}, -- Variable names that are defined by the languages, like `this` or `self`.
     TSTag = {fg = c.red}, -- Tags like html tag names.
+    TSTagAttribute = {fg = c.syntax.tag_attribute},
     -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
     -- TSText              = { };    -- For strings considered text in a markup language.
     TSTextReference = {fg = c.red}, -- FIXME
@@ -258,7 +259,6 @@ function M.setup(config)
     javascriptTSFunction = {fg = c.syntax.js.func}, -- For function (calls and definitions).
     javascriptTSVariable = {fg = c.syntax.js.variable},
     javascriptTSProperty = {fg = c.syntax.js.property},
-    javascriptTSTagAttribute = {fg = c.syntax.js.tag_attribute},
 
     -- css
     cssStringQQ = {fg = c.syntax.string, style = "underline"},

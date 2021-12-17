@@ -42,12 +42,8 @@ function M.setup(config)
       property = "#56b6c2",
       variable_builtin = "#e5c07b",
       comment = "#5c6370",
-      js = {
-        func = "#e5c07b",
-        variable = "#e5c07b",
-        property = "#61afef",
-        tag_attribute = "#e59b4e"
-      },
+      tag_attribute = "#e59b4e",
+      js = {func = "#e5c07b", variable = "#e5c07b", property = "#61afef"},
       json = {label = "#e06c75"},
       less = {include = "#c678dd", class = "#d19a66"},
       make = {ident = "#e59b4e"},
