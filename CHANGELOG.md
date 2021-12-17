@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `hide_inactive_statusline` option deprecated from `lualine` plugin
 - `javascriptTSTagAttribute` highlight removed
 - `TSTagAttribute` highlight added
+- yellow changed to the same version as onedark palette. monsonjeremy/onedark.nvim#19
 
 ## [v0.0.3]- 11 Dec 2021
 

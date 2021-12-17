@@ -26,7 +26,7 @@ function M.setup(config)
     cyan = "#56b6c2",
     purple = "#c678dd",
     orange = "#d19a66",
-    yellow = "#e0af68",
+    yellow = "#e5c07b",
     yellow2 = "#e2c08d",
     bg_yellow = "#ebd09c",
     green = "#98c379",
