@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `javascriptTSTagAttribute` highlight removed
 - `TSTagAttribute` highlight added
 - yellow changed to the same version as onedark palette. monsonjeremy/onedark.nvim#19
+- Boolean set to orange as in VSC onedark theme. monsonjeremy/onedark.nvim#19
 
 ## [v0.0.3]- 11 Dec 2021
 

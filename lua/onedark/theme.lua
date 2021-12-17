@@ -89,7 +89,7 @@ function M.setup(config)
     String = {fg = c.green}, --   a string constant: "this is a string"
     Character = {fg = c.green}, --  a character constant: 'c', '\n'
     -- Number        = { }, --   a number constant: 234, 0xff
-    -- Boolean       = { }, --  a boolean constant: TRUE, false
+    Boolean = {fg = c.orange}, --  a boolean constant: TRUE, false
     -- Float         = { }, --    a floating point constant: 2.3e10
 
     Identifier = {fg = c.red, style = config.variable_style}, -- (preferred) any variable name
