@@ -26,7 +26,7 @@ function M.setup(config)
     cyan = "#56b6c2",
     purple = "#c678dd",
     orange = "#d19a66",
-    yellow = "#e0af68",
+    yellow = "#e5c07b",
     yellow2 = "#e2c08d",
     bg_yellow = "#ebd09c",
     green = "#98c379",
@@ -42,12 +42,8 @@ function M.setup(config)
       property = "#56b6c2",
       variable_builtin = "#e5c07b",
       comment = "#5c6370",
-      js = {
-        func = "#e5c07b",
-        variable = "#e5c07b",
-        property = "#61afef",
-        tag_attribute = "#e59b4e"
-      },
+      tag_attribute = "#e59b4e",
+      js = {func = "#e5c07b", variable = "#e5c07b", property = "#61afef"},
       json = {label = "#e06c75"},
       less = {include = "#c678dd", class = "#d19a66"},
       make = {ident = "#e59b4e"},
