@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - plugin support [hop.nvim](https://github.com/phaazon/hop.nvim)
 - lualine `terminal` highlight added
 - plugin support [coc.nvim](https://github.com/neoclide/coc.nvim)
+- define global in project `luarc` config file.
 
 ### Changed
 
