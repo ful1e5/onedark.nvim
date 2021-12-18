@@ -271,6 +271,15 @@ function M.setup(config)
     -- make
     makeIdent = {fg = c.syntax.make.ident},
 
+    -- markdown
+    TSURI = {fg = c.blue, style = "underline"},
+    TSLiteral = { fg = c.red },
+    TSTextReference = { fg = c.blue },
+    TSTitle = {fg = c.red, style = "bold"},
+    TSEmphasis = { style = "italic" },
+    TSStrong = { style = "bold" },
+    TSStringEscape = { fg = c.yellow },
+
     -- php
     phpTSPunctBracket = {fg = c.syntax.php.punct_bracket},
     phpTSKeyword = {fg = c.syntax.php.keyword},
