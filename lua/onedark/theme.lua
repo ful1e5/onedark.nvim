@@ -245,7 +245,6 @@ function M.setup(config)
     TSTagAttribute = {fg = c.syntax.tag_attribute},
     -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
     -- TSText              = { };    -- For strings considered text in a markup language.
-    TSTextReference = {fg = c.red}, -- FIXME
     -- TSEmphasis          = { };    -- For text to be represented with emphasis.
     -- TSUnderline         = { };    -- For text to be represented with an underline.
     -- TSStrike            = { };    -- For strikethrough text.
@@ -278,7 +277,6 @@ function M.setup(config)
     TSTitle = {fg = c.red, style = "bold"},
     TSEmphasis = { style = "italic" },
     TSStrong = { style = "bold" },
-    TSStringEscape = { fg = c.yellow },
 
     -- php
     phpTSPunctBracket = {fg = c.syntax.php.punct_bracket},
