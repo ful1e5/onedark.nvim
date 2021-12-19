@@ -129,6 +129,12 @@ function M.setup(config)
   colors.bg_float = config.dark_float and colors.bg2 or colors.bg
   colors.fg_sidebar = colors.fg_dark
 
+  -- EndOfBuffer
+  colors.sidebar_eob = config.dark_sidebar and colors.bg2 or colors.bg
+  colors.sidebar_eob = config.hide_end_of_buffer and colors.sidebar_eob or
+                           colors.fg_gutter
+  colors.eob = config.hide_end_of_buffer and colors.bg or colors.fg_gutter
+
   -- LineNumber
   colors.bg_linenumber = config.highlight_linenumber and colors.bg2 or colors.bg
   colors.fg_linenumber = colors.fg_gutter

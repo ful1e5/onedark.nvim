@@ -29,7 +29,7 @@ function M.setup(config)
     DiffChange = {fg = c.git.change, bg = c.diff.change}, -- diff mode: Changed line |diff.txt|
     DiffDelete = {fg = c.git.delete, bg = c.diff.delete}, -- diff mode: Deleted line |diff.txt|
     DiffText = {bg = c.diff.text}, -- diff mode: Changed text within a changed line |diff.txt|
-    EndOfBuffer = {fg = c.bg}, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+    EndOfBuffer = {fg = c.eob}, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     -- TermCursor  = { }, -- cursor in a focused terminal
     -- TermCursorNC= { }, -- cursor in an unfocused terminal
     ErrorMsg = {fg = c.error}, -- error messages on the command line
@@ -49,7 +49,7 @@ function M.setup(config)
     MsgArea = {fg = c.fg_dark, style = config.msg_area_style}, -- Area for messages and cmdline
     -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = {fg = c.blue}, -- |more-prompt|
-    NonText = {fg = c.bg}, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    NonText = {fg = c.eob}, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal = {fg = c.fg, bg = config.transparent and c.none or c.bg}, -- normal text
     NormalNC = {fg = c.fg, bg = config.transparent and c.none or c.bg}, -- normal text in non-current windows
     NormalSB = {fg = c.fg_sidebar, bg = c.bg_sidebar}, -- normal text in non-current windows
@@ -272,11 +272,11 @@ function M.setup(config)
 
     -- markdown
     TSURI = {fg = c.blue, style = "underline"},
-    TSLiteral = { fg = c.red },
-    TSTextReference = { fg = c.blue },
+    TSLiteral = {fg = c.red},
+    TSTextReference = {fg = c.blue},
     TSTitle = {fg = c.red, style = "bold"},
-    TSEmphasis = { style = "italic" },
-    TSStrong = { style = "bold" },
+    TSEmphasis = {style = "italic"},
+    TSStrong = {style = "bold"},
 
     -- php
     phpTSPunctBracket = {fg = c.syntax.php.punct_bracket},
@@ -372,7 +372,7 @@ function M.setup(config)
 
     -- NvimTree
     NvimTreeNormal = {fg = c.fg_light, bg = c.bg_sidebar},
-    NvimTreeEndOfBuffer = {fg = c.bg_sidebar},
+    NvimTreeEndOfBuffer = {fg = c.sidebar_eob},
     NvimTreeRootFolder = {fg = c.fg_light, style = "bold", bg = c.bg_sidebar},
     NvimTreeGitDirty = {fg = c.yellow2},
     NvimTreeGitNew = {fg = c.git.add},
