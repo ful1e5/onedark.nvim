@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - lualine `terminal` highlight added
 - plugin support [coc.nvim](https://github.com/neoclide/coc.nvim)
 - define global in project `luarc` config file.
+- config option added `hide_end_of_buffer`
 
 ### Changed
 
