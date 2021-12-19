@@ -26,22 +26,23 @@ end
 
 ---@class onedark.Config
 local config = {
-  transparent = opt("transparent", false),
-  comment_style = opt("comment_style", "italic"),
-  keyword_style = opt("keyword_style", "italic"),
-  function_style = opt("function_style", "italic"),
-  variable_style = opt("variable_style", "NONE"),
-  msg_area_style = opt("msg_area_style", "NONE"),
-  lualine_bold = opt("lualine_bold", false),
-  hide_inactive_statusline = opt("hide_inactive_statusline", false),
-  highlight_linenumber = opt("highlight_linenumber", false),
-  sidebars = opt("sidebars", {}),
   colors = opt("colors", {}),
-  dev = opt("dev", false),
+  comment_style = opt("comment_style", "italic"),
   dark_float = opt("dark_float", true),
   dark_sidebar = opt("dark_sidebar", true),
+  dev = opt("dev", false),
+  function_style = opt("function_style", "italic"),
+  hide_end_of_buffer = opt("hide_end_of_buffer", true),
+  hide_inactive_statusline = opt("hide_inactive_statusline", false),
+  highlight_linenumber = opt("highlight_linenumber", false),
+  keyword_style = opt("keyword_style", "italic"),
+  lualine_bold = opt("lualine_bold", false),
+  msg_area_style = opt("msg_area_style", "NONE"),
+  sidebars = opt("sidebars", {}),
+  transform_colors = false,
+  transparent = opt("transparent", false),
   transparent_sidebar = opt("transparent_sidebar", false),
-  transform_colors = false
+  variable_style = opt("variable_style", "NONE")
 }
 
 --- @param user_config onedark.Config

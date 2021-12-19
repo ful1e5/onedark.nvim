@@ -109,20 +109,21 @@ require('lualine').setup {
 
 | Option                   | Default  | Description                                                                                                                                                                       |
 | ------------------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| colors                   | `{}`     | You can override specific color groups to use other groups or a hex color                                                                                                         |
 | comment_style            | `italic` | Highlight style for comments (check `:help highlight-args` for options)                                                                                                           |
-| keyword_style            | `italic` | Highlight style for keywords (check `:help highlight-args` for options)                                                                                                           |
+| dark_float               | `true`   | Float windows like the lsp diagnostics windows get a darker background.                                                                                                           |
+| dark_sidebar             | `true`   | Sidebar like windows like `NvimTree` get a darker background                                                                                                                      |
 | function_style           | `NONE`   | Highlight style for functions (check `:help highlight-args` for options)                                                                                                          |
-| variable_style           | `NONE`   | Highlight style for variables and identifiers (check `:help highlight-args` for options)                                                                                          |
-| msg_area_style           | `NONE`   | Highlight style for messages and cmdline (check `:help highlight-args` for options)                                                                                               |
-| transparent              | `false`  | Enable this to disable setting the background color                                                                                                                               |
+| hide_end_of_buffer       | `true`   | Enabling this option, will hide filler lines (~) after the end of the buffer                                                                                                      |
 | hide_inactive_statusline | `false`  | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine**.                                   |
 | highlight_linenumber     | `false`  | Enabling this option, will enable dark color to `LineNr`, `SignColumn` and `CursorLineNr` highlights.(also support [gitsigns](https://github.com/lewis6991/gitsigns.nvim) plugin) |
+| keyword_style            | `italic` | Highlight style for keywords (check `:help highlight-args` for options)                                                                                                           |
 | lualine_bold             | `false`  | When `true`, section headers in the lualine theme will be bold                                                                                                                    |
+| msg_area_style           | `NONE`   | Highlight style for messages and cmdline (check `:help highlight-args` for options)                                                                                               |
 | sidebars                 | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                                        |
-| dark_sidebar             | `true`   | Sidebar like windows like `NvimTree` get a darker background                                                                                                                      |
+| transparent              | `false`  | Enable this to disable setting the background color                                                                                                                               |
 | transparent_sidebar      | `false`  | Sidebar like windows like `NvimTree` get a transparent background                                                                                                                 |
-| dark_float               | `true`   | Float windows like the lsp diagnostics windows get a darker background.                                                                                                           |
-| colors                   | `{}`     | You can override specific color groups to use other groups or a hex color                                                                                                         |
+| variable_style           | `NONE`   | Highlight style for variables and identifiers (check `:help highlight-args` for options)                                                                                          |
 
 ```vim
 " Example config in VimScript
