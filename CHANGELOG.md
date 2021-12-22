@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - plugin support [coc.nvim](https://github.com/neoclide/coc.nvim)
 - define global in project `luarc` config file.
 - config option added `hide_end_of_buffer`
+- allow customizing highlight group #91
+- Removed unnecessary defer function & highlights
 
 ### Changed
 
@@ -22,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `TSTagAttribute` highlight added
 - yellow changed to the same version as onedark palette. monsonjeremy/onedark.nvim#19
 - Boolean set to orange as in VSC onedark theme. monsonjeremy/onedark.nvim#19
+- refactor override function to util.lua module #91
 
 ## [v0.0.3]- 11 Dec 2021
 

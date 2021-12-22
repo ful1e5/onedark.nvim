@@ -77,9 +77,7 @@ end
 
 -- local ns = vim.api.nvim_create_namespace("onedark")
 function util.highlight(group, color)
-  if not (color.fg or color.bg or color.sp or color.style or color.link) then
-    return
-  end
+  if not (color.fg or color.bg or color.sp or color.style or color.link) then return end
 
   if color.fg then util.colorsUsed[color.fg] = true end
   if color.bg then util.colorsUsed[color.bg] = true end
@@ -206,6 +204,15 @@ function util.light_colors(colors)
   return ret
 end
 
+---Override custom highlights in `group`
+---@param group table
+---@param overrides table
+function util.apply_overrides(group, overrides)
+  for k, v in pairs(overrides) do
+    if group[k] ~= nil and type(v) == "table" then group[k] = v end
+  end
+end
+
 ---@param theme onedark.Theme
 function util.load(theme)
   vim.cmd("hi clear")
@@ -217,14 +224,9 @@ function util.load(theme)
 
   -- load base theme
   util.syntax(theme.base)
-
-  -- load syntax for plugins and terminal async
-  vim.defer_fn(function()
-    util.autocmds(theme.config)
-    util.terminal(theme.colors)
-    util.syntax(theme.plugins)
-    util.syntax(theme.defer)
-  end, 100)
+  util.autocmds(theme.config)
+  util.terminal(theme.colors)
+  util.syntax(theme.plugins)
 end
 
 ---@param colors onedark.ColorScheme

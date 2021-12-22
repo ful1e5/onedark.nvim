@@ -107,24 +107,24 @@ require('lualine').setup {
 
 ## Configuration
 
-| Option                   | Default  | Description                                                                                                                                                                       |
-| ------------------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| colors                   | `{}`     | You can override specific color groups to use other groups or a hex color                                                                                                         |
-| comment_style            | `italic` | Highlight style for comments (check `:help highlight-args` for options)                                                                                                           |
-| dark_float               | `true`   | Float windows like the lsp diagnostics windows get a darker background.                                                                                                           |
-| dark_sidebar             | `true`   | Sidebar like windows like `NvimTree` get a darker background                                                                                                                      |
-| function_style           | `NONE`   | Highlight style for functions (check `:help highlight-args` for options)                                                                                                          |
-| hide_end_of_buffer       | `true`   | Enabling this option, will hide filler lines (~) after the end of the buffer                                                                                                      |
-| hide_inactive_statusline | `false`  | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine**.                                   |
-| highlight_linenumber     | `false`  | Enabling this option, will enable dark color to `LineNr`, `SignColumn` and `CursorLineNr` highlights.(also support [gitsigns](https://github.com/lewis6991/gitsigns.nvim) plugin) |
-| keyword_style            | `italic` | Highlight style for keywords (check `:help highlight-args` for options)                                                                                                           |
-| lualine_bold             | `false`  | When `true`, section headers in the lualine theme will be bold                                                                                                                    |
-| msg_area_style           | `NONE`   | Highlight style for messages and cmdline (check `:help highlight-args` for options)                                                                                               |
-| overrides                | `function` | Override specific highlight groups. The function accpet colors as argument.                                                              |
-| sidebars                 | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                                        |
-| transparent              | `false`  | Enable this to disable setting the background color                                                                                                                               |
-| transparent_sidebar      | `false`  | Sidebar like windows like `NvimTree` get a transparent background                                                                                                                 |
-| variable_style           | `NONE`   | Highlight style for variables and identifiers (check `:help highlight-args` for options)                                                                                          |
+| Option                   | Default    | Description                                                                                                                                                                       |
+| ------------------------ | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| colors                   | `{}`       | You can override specific color groups to use other groups or a hex color                                                                                                         |
+| comment_style            | `italic`   | Highlight style for comments (check `:help highlight-args` for options)                                                                                                           |
+| dark_float               | `true`     | Float windows like the lsp diagnostics windows get a darker background.                                                                                                           |
+| dark_sidebar             | `true`     | Sidebar like windows like `NvimTree` get a darker background                                                                                                                      |
+| function_style           | `NONE`     | Highlight style for functions (check `:help highlight-args` for options)                                                                                                          |
+| hide_end_of_buffer       | `true`     | Enabling this option, will hide filler lines (~) after the end of the buffer                                                                                                      |
+| hide_inactive_statusline | `false`    | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine**.                                   |
+| highlight_linenumber     | `false`    | Enabling this option, will enable dark color to `LineNr`, `SignColumn` and `CursorLineNr` highlights.(also support [gitsigns](https://github.com/lewis6991/gitsigns.nvim) plugin) |
+| keyword_style            | `italic`   | Highlight style for keywords (check `:help highlight-args` for options)                                                                                                           |
+| lualine_bold             | `false`    | When `true`, section headers in the lualine theme will be bold                                                                                                                    |
+| msg_area_style           | `NONE`     | Highlight style for messages and cmdline (check `:help highlight-args` for options)                                                                                               |
+| overrides                | `function` | Override specific highlight groups. The function accpet colors as argument.                                                                                                       |
+| sidebars                 | `{}`       | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                                        |
+| transparent              | `false`    | Enable this to disable setting the background color                                                                                                                               |
+| transparent_sidebar      | `false`    | Sidebar like windows like `NvimTree` get a transparent background                                                                                                                 |
+| variable_style           | `NONE`     | Highlight style for variables and identifiers (check `:help highlight-args` for options)                                                                                          |
 
 ```vim
 " Example config in VimScript
@@ -150,6 +150,7 @@ require("onedark").setup({
 
   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
   colors = {hint = "orange", error = "#ff0000"},
+
   -- Overwrite the highlight groups
   overrides = function(c)
     return {
