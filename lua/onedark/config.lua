@@ -38,6 +38,7 @@ local config = {
   keyword_style = opt("keyword_style", "italic"),
   lualine_bold = opt("lualine_bold", false),
   msg_area_style = opt("msg_area_style", "NONE"),
+  overrides = opt("overrides", function() return {} end),
   sidebars = opt("sidebars", {}),
   transform_colors = false,
   transparent = opt("transparent", false),

@@ -120,6 +120,7 @@ require('lualine').setup {
 | keyword_style            | `italic` | Highlight style for keywords (check `:help highlight-args` for options)                                                                                                           |
 | lualine_bold             | `false`  | When `true`, section headers in the lualine theme will be bold                                                                                                                    |
 | msg_area_style           | `NONE`   | Highlight style for messages and cmdline (check `:help highlight-args` for options)                                                                                               |
+| overrides                | `function` | Override specific highlight groups. The function accpet colors as argument.                                                              |
 | sidebars                 | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                                        |
 | transparent              | `false`  | Enable this to disable setting the background color                                                                                                                               |
 | transparent_sidebar      | `false`  | Sidebar like windows like `NvimTree` get a transparent background                                                                                                                 |
@@ -148,7 +149,16 @@ require("onedark").setup({
   sidebars = {"qf", "vista_kind", "terminal", "packer"},
 
   -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-  colors = {hint = "orange", error = "#ff0000"}
+  colors = {hint = "orange", error = "#ff0000"},
+  -- Overwrite the highlight groups
+  overrides = function(c)
+    return {
+      htmlTag = {fg = c.red, bg = "#282c34", sp = c.hint, style = "underline"},
+      DiagnosticHint = {link = "LspDiagnosticsDefaultHint"},
+      -- this will remove the highlight groups
+      TSField = {},
+    }
+  end
 })
 ```
 

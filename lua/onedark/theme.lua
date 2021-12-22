@@ -4,6 +4,14 @@ local config_module = require("onedark.config")
 
 local M = {}
 
+local function apply_overrides(group, overrides)
+  for k, v in pairs(overrides) do
+    if group[k] ~= nil and type(v) == "table"  then
+      group[k] = v
+    end
+  end
+end
+
 ---@param config onedark.Config
 ---@return onedark.Theme
 function M.setup(config)
@@ -587,6 +595,11 @@ function M.setup(config)
   }
 
   theme.defer = {}
+
+  local overrides = config.overrides(c)
+  apply_overrides(theme.base, overrides)
+  apply_overrides(theme.plugins, overrides)
+  apply_overrides(theme.defer, overrides)
 
   if config.hide_inactive_statusline then
 
