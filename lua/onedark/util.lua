@@ -77,6 +77,10 @@ end
 
 -- local ns = vim.api.nvim_create_namespace("onedark")
 function util.highlight(group, color)
+  if not (color.fg or color.bg or color.sp or color.style or color.link) then
+    return
+  end
+
   if color.fg then util.colorsUsed[color.fg] = true end
   if color.bg then util.colorsUsed[color.bg] = true end
   if color.sp then util.colorsUsed[color.sp] = true end
