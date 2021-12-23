@@ -180,12 +180,12 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](extras/). To use them, refer to their respective documentation.
 
-## Credit
+## Inspirations
 
-- [OneDark-Pro](https://github.com/Binaryify/OneDark-Pro)
-- [onedark.nvim](https://github.com/monsonjeremy/onedark.nvim)
-- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
-- [gruvbox-flat.nvim](https://github.com/eddyekofo94/gruvbox-flat.nvim)
+- [Binaryify/OneDark-Pro](https://github.com/Binaryify/OneDark-Pro)
+- [monsonjeremy/onedark.nvim](https://github.com/monsonjeremy/onedark.nvim)
+- [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+- [eddyekofo94/gruvbox-flat.nvim](https://github.com/eddyekofo94/gruvbox-flat.nvim)
 
 ## Screenshot
 
