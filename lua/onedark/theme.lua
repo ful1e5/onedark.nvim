@@ -362,6 +362,7 @@ function M.setup(config)
     GitSignsAdd = { fg = c.git_signs.add, bg = c.bg_linenumber }, -- diff mode: Added line |diff.txt|
     GitSignsChange = { fg = c.git_signs.change, bg = c.bg_linenumber }, -- diff mode: Changed line |diff.txt|
     GitSignsDelete = { fg = c.git_signs.delete, bg = c.bg_linenumber }, -- diff mode: Deleted line |diff.txt|
+    GitSignsCurrentLineBlame = { fg = util.darken(c.syntax.comment, 0.6) }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
     TelescopeBorder = { fg = c.border },
