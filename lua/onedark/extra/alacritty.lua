@@ -1,5 +1,5 @@
-local util = require("onedark.util")
-local config_module = require("onedark.config")
+local util = require('onedark.util')
+local config_module = require('onedark.config')
 
 local M = {}
 
@@ -7,14 +7,17 @@ local M = {}
 ---@param config onedark.Config
 function M.alacritty(config)
   config = config or config_module.config
-  local colors = require("onedark.colors").setup(config)
+  local colors = require('onedark.colors').setup(config)
 
   local alacritty_colors = {}
   for k, v in pairs(colors) do
-    if type(v) == "string" then alacritty_colors[k] = v:gsub("^#", "0x") end
+    if type(v) == 'string' then
+      alacritty_colors[k] = v:gsub('^#', '0x')
+    end
   end
 
-  local alacritty = util.template([[
+  local alacritty = util.template(
+    [[
 # onedark Alacritty Colors
 colors:
   # Default colors
@@ -52,7 +55,9 @@ colors:
   indexed_colors:
     - { index: 16, color: '${orange}' }
     - { index: 17, color: '${red1}' }
-]], alacritty_colors)
+]],
+    alacritty_colors
+  )
 
   return alacritty
 end

@@ -1,18 +1,17 @@
 .DEFAULT_GOAL = check
 
-onedark_path = lua/onedark
-extra_path = $(onedark_path)/extra
+src = lua/onedark
 
-extra: $(extra_path)
-	@lua $(extra_path)/init.lua
+extra: $(src)/extra
+	@lua $(src)/extra/init.lua
 
-format:
-	@for file in `find . -name '*.lua'`;do lua-format $$file -i; done;
+fmt:
+	stylua --config-path stylua.toml --glob 'lua/**/*.lua' -- lua
 
-lint: $(onedark_path)
-	@luacheck $(onedark_path)
+lint: $(src)
+	luacheck $(src)
 
-check: format lint
+check: fmt lint
 
 # reload kitty theme
 # My Dotfiles: https://github.com/ful1e5/dotfiles

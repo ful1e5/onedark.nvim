@@ -1,5 +1,5 @@
-local util = require("onedark.util")
-local config_module = require("onedark.config")
+local util = require('onedark.util')
+local config_module = require('onedark.config')
 
 local M = {}
 
@@ -7,9 +7,10 @@ local M = {}
 ---@param config onedark.Config
 function M.kitty(config)
   config = config or config_module.config
-  local colors = require("onedark.colors").setup(config)
+  local colors = require('onedark.colors').setup(config)
 
-  local kitty = util.template([[
+  local kitty = util.template(
+    [[
 # onedark colors for Kitty
 
 background ${bg}
@@ -52,7 +53,9 @@ color15 ${fg}
 # extended colors
 color16 ${orange}
 color17 ${red1}
-]], colors)
+]],
+    colors
+  )
   return kitty
 end
 

@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - yellow changed to the same version as onedark palette. monsonjeremy/onedark.nvim#19
 - Boolean set to orange as in VSC onedark theme. monsonjeremy/onedark.nvim#19
 - refactor override function to util.lua module #91
+- formatter changed `LuaFormatter` -> `Stylua`
 
 ## [v0.0.3]- 11 Dec 2021
 
