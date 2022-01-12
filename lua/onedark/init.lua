@@ -2,8 +2,10 @@ local util = require('onedark.util')
 local theme = require('onedark.theme')
 local config_module = require('onedark.config')
 
+local init = {}
+
 --- @param user_config onedark.Config
-local function setup(user_config)
+init.setup = function(user_config)
   -- Applying user configuration
   if user_config then
     config_module.apply_configuration(user_config)
@@ -13,4 +15,4 @@ local function setup(user_config)
   util.load(theme.setup(config_module.config))
 end
 
-return { setup = setup }
+return init

@@ -1,3 +1,4 @@
+local config = {}
 -- shim vim for kitty and other generators
 vim = vim or { g = {}, o = {} }
 
@@ -25,7 +26,7 @@ local function opt(key, default)
 end
 
 ---@class onedark.Config
-local config = {
+config.config = {
   colors = opt('colors', {}),
   comment_style = opt('comment_style', 'italic'),
   dark_float = opt('dark_float', true),
@@ -49,17 +50,17 @@ local config = {
 }
 
 --- @param user_config onedark.Config
-local function apply_configuration(user_config)
+config.apply_configuration = function(user_config)
   for key, value in pairs(user_config) do
     if value ~= nil then
-      if config[key] ~= nil then
-        config[key] = value
+      if config.config[key] ~= nil then
+        config.config[key] = value
         vim.g[g_key(key)] = value
       else
-        error('ful1e5/onedark: Option ' .. key .. ' does not exist') -- luacheck: ignore
+        error('Option ' .. key .. ' does not exist') -- luacheck: ignore
       end
     end
   end
 end
 
-return { config = config, apply_configuration = apply_configuration }
+return config

@@ -1,16 +1,13 @@
 local util = require('onedark.util')
-local config_module = require('onedark.config')
 
-local M = {}
+local colors = {}
 
----@param config onedark.Config
+---@param cfg onedark.Config
 ---@return onedark.ColorScheme
-function M.setup(config)
-  config = config or config_module.config
-
+colors.setup = function(cfg)
   -- Color Palette
   ---@class onedark.ColorScheme
-  local colors = {
+  local c = {
     none = 'NONE',
     bg = '#282c34',
     bg2 = '#21252b',
@@ -94,62 +91,61 @@ function M.setup(config)
   }
 
   -- useful for 'util.darken()' and 'util.lighten()'
-  util.bg = colors.bg
-  util.fg = colors.fg
+  util.bg = c.bg
+  util.fg = c.fg
 
   --
   -- NOTE: These colors are also configurable
   --
 
-  colors.diff = {
-    add = util.darken(colors.git.add, 0.15),
-    delete = util.darken(colors.git.delete, 0.15),
-    change = util.darken(colors.git.change, 0.15),
-    text = util.darken(colors.git.change, 0.25),
+  c.diff = {
+    add = util.darken(c.git.add, 0.15),
+    delete = util.darken(c.git.delete, 0.15),
+    change = util.darken(c.git.change, 0.15),
+    text = util.darken(c.git.change, 0.25),
   }
 
-  colors.git_signs = {
-    add = util.brighten(colors.git.add, 0.2),
-    change = util.brighten(colors.git.change, 0.2),
-    delete = util.brighten(colors.git.delete, 0.2),
+  c.git_signs = {
+    add = util.brighten(c.git.add, 0.2),
+    change = util.brighten(c.git.change, 0.2),
+    delete = util.brighten(c.git.delete, 0.2),
   }
 
-  colors.git.ignore = colors.fg_gutter
-  colors.black = util.darken(colors.bg, 0.8, '#000000')
-  colors.border_highlight = colors.blue
+  c.git.ignore = c.fg_gutter
+  c.black = util.darken(c.bg, 0.8, '#000000')
+  c.border_highlight = c.blue
 
   -- Popups and statusline always get a dark background
-  colors.bg_popup = colors.bg2
-  colors.bg_statusline = colors.bg2
+  c.bg_popup = c.bg2
+  c.bg_statusline = c.bg2
 
   -- Sidebar and Floats
-  colors.bg_sidebar = (config.transparent_sidebar and colors.none) or config.dark_sidebar and colors.bg2 or colors.bg
-  colors.bg_float = config.dark_float and colors.bg2 or colors.bg
-  colors.fg_sidebar = colors.fg_dark
+  c.bg_sidebar = (cfg.transparent_sidebar and c.none) or cfg.dark_sidebar and c.bg2 or c.bg
+  c.bg_float = cfg.dark_float and c.bg2 or c.bg
+  c.fg_sidebar = c.fg_dark
 
   -- EndOfBuffer
-  colors.sidebar_eob = config.dark_sidebar and colors.bg2 or colors.bg
-  colors.sidebar_eob = config.hide_end_of_buffer and colors.sidebar_eob or colors.fg_gutter
-  colors.eob = config.hide_end_of_buffer and colors.bg or colors.fg_gutter
+  c.sidebar_eob = cfg.dark_sidebar and c.bg2 or c.bg
+  c.sidebar_eob = cfg.hide_end_of_buffer and c.sidebar_eob or c.fg_gutter
+  c.eob = cfg.hide_end_of_buffer and c.bg or c.fg_gutter
 
   -- LineNumber
-  colors.bg_linenumber = config.highlight_linenumber and colors.bg2 or colors.bg
-  colors.fg_linenumber = colors.fg_gutter
-  colors.fg_cursor_linenumber = colors.dark5
+  c.bg_linenumber = cfg.highlight_linenumber and c.bg2 or c.bg
+  c.fg_linenumber = c.fg_gutter
+  c.fg_cursor_linenumber = c.dark5
 
   -- Search
-  colors.bg_search = colors.bg_yellow
-  colors.fg_search = colors.bg2
+  c.bg_search = c.bg_yellow
+  c.fg_search = c.bg2
 
   -- Diagnostic
-  colors.error = colors.red
-  colors.warning = colors.yellow
-  colors.info = colors.blue
-  colors.hint = colors.cyan
+  c.error = c.red
+  c.warning = c.yellow
+  c.info = c.blue
+  c.hint = c.cyan
 
-  util.color_overrides(colors, config)
-
-  return colors
+  util.color_overrides(c, cfg)
+  return c
 end
 
-return M
+return colors
