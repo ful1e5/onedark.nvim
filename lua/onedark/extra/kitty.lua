@@ -1,12 +1,8 @@
 local util = require('onedark.util')
-local config_module = require('onedark.config')
-
-local M = {}
 
 ---Generate onedark theme for kitty terminal.
 ---@param config onedark.Config
-function M.kitty(config)
-  config = config or config_module.config
+return function(config)
   local colors = require('onedark.colors').setup(config)
 
   local kitty = util.template(
@@ -58,5 +54,3 @@ color17 ${red1}
   )
   return kitty
 end
-
-return M

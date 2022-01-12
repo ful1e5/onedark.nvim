@@ -11,5 +11,5 @@ local extras = { kitty = 'conf', alacritty = 'yml' }
 for extra, ext in pairs(extras) do
   local config = { transform_colors = true }
   local plugin = require('onedark.extra.' .. extra)
-  write(plugin[extra](config), extra .. '_onedark' .. '.' .. ext)
+  write(plugin(config), extra .. '_onedark' .. '.' .. ext)
 end

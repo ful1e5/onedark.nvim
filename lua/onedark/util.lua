@@ -2,13 +2,13 @@ local hsluv = require('onedark.hsluv')
 
 local util = {}
 
-util.colorsUsed = {}
-util.colorCache = {}
+util.used_colors = {}
+util.color_cache = {}
 
 util.bg = '#000000'
 util.fg = '#ffffff'
 
-local function hexToRgb(hex_str)
+local function hex_to_rgb(hex_str)
   local hex = '[abcdef0-9][abcdef0-9]'
   local pat = '^#(' .. hex .. ')(' .. hex .. ')(' .. hex .. ')$'
   hex_str = string.lower(hex_str)
@@ -22,9 +22,9 @@ end
 ---@param fg string foreground color
 ---@param bg string background color
 ---@param alpha number number between 0 and 1. 0 results in bg, 1 results in fg
-function util.blend(fg, bg, alpha)
-  bg = hexToRgb(bg)
-  fg = hexToRgb(fg)
+util.blend = function(fg, bg, alpha)
+  bg = hex_to_rgb(bg)
+  fg = hex_to_rgb(fg)
 
   local blendChannel = function(i)
     local ret = (alpha * fg[i] + ((1 - alpha) * bg[i]))
@@ -34,14 +34,14 @@ function util.blend(fg, bg, alpha)
   return string.format('#%02X%02X%02X', blendChannel(1), blendChannel(2), blendChannel(3))
 end
 
-function util.darken(hex, amount, bg)
+util.darken = function(hex, amount, bg)
   return util.blend(hex, bg or util.bg, math.abs(amount))
 end
-function util.lighten(hex, amount, fg)
+util.lighten = function(hex, amount, fg)
   return util.blend(hex, fg or util.fg, math.abs(amount))
 end
 
-function util.brighten(color, percentage)
+util.brighten = function(color, percentage)
   local hsl = hsluv.hex_to_hsluv(color)
   local larpSpace = 100 - hsl[3]
   if percentage < 0 then
@@ -51,7 +51,7 @@ function util.brighten(color, percentage)
   return hsluv.hsluv_to_hex(hsl)
 end
 
-function util.invertColor(color)
+util.invert_color = function(color)
   if color ~= 'NONE' then
     local hsl = hsluv.hex_to_hsluv(color)
     hsl[3] = 100 - hsl[3]
@@ -63,7 +63,7 @@ function util.invertColor(color)
   return color
 end
 
-function util.randomColor(color)
+util.random_color = function(color)
   if color ~= 'NONE' then
     local hsl = hsluv.hex_to_hsluv(color)
     hsl[1] = math.random(1, 360)
@@ -72,36 +72,36 @@ function util.randomColor(color)
   return color
 end
 
-function util.getColor(color)
+util.get_color = function(color)
   if vim.o.background == 'dark' then
     return color
   end
-  if not util.colorCache[color] then
-    util.colorCache[color] = util.invertColor(color)
+  if not util.color_cache[color] then
+    util.color_cache[color] = util.invert_color(color)
   end
-  return util.colorCache[color]
+  return util.color_cache[color]
 end
 
 -- local ns = vim.api.nvim_create_namespace("onedark")
-function util.highlight(group, color)
+util.highlight = function(group, color)
   if not (color.fg or color.bg or color.sp or color.style or color.link) then
     return
   end
 
   if color.fg then
-    util.colorsUsed[color.fg] = true
+    util.used_colors[color.fg] = true
   end
   if color.bg then
-    util.colorsUsed[color.bg] = true
+    util.used_colors[color.bg] = true
   end
   if color.sp then
-    util.colorsUsed[color.sp] = true
+    util.used_colors[color.sp] = true
   end
 
   local style = color.style and 'gui=' .. color.style or 'gui=NONE'
-  local fg = color.fg and 'guifg=' .. util.getColor(color.fg) or 'guifg=NONE'
-  local bg = color.bg and 'guibg=' .. util.getColor(color.bg) or 'guibg=NONE'
-  local sp = color.sp and 'guisp=' .. util.getColor(color.sp) or ''
+  local fg = color.fg and 'guifg=' .. util.get_color(color.fg) or 'guifg=NONE'
+  local bg = color.bg and 'guibg=' .. util.get_color(color.bg) or 'guibg=NONE'
+  local sp = color.sp and 'guisp=' .. util.get_color(color.sp) or ''
 
   local hl = 'highlight ' .. group .. ' ' .. style .. ' ' .. fg .. ' ' .. bg .. ' ' .. sp
 
@@ -118,14 +118,14 @@ function util.highlight(group, color)
   end
 end
 
-function util.debug(colors)
+util.debug = function(colors)
   colors = colors or require('onedark.colors')
   -- Dump unused colors
   for name, color in pairs(colors) do
     if type(color) == 'table' then
       util.debug(color)
     else
-      if util.colorsUsed[color] == nil then
+      if util.used_colors[color] == nil then
         print('not used: ' .. name .. ' : ' .. color)
       end
     end
@@ -133,7 +133,7 @@ function util.debug(colors)
 end
 
 --- Delete the autocmds when the theme changes to something else
-function util.onColorScheme()
+util.on_colorscheme = function()
   if vim.g.colors_name ~= 'onedark' then
     vim.cmd([[autocmd! onedark]])
     vim.cmd([[augroup! onedark]])
@@ -141,10 +141,10 @@ function util.onColorScheme()
 end
 
 ---@param config onedark.Config
-function util.autocmds(config)
+util.autocmds = function(config)
   vim.cmd([[augroup onedark]])
   vim.cmd([[  autocmd!]])
-  vim.cmd([[  autocmd ColorScheme * lua require("onedark.util").onColorScheme()]])
+  vim.cmd([[  autocmd ColorScheme * lua require("onedark.util").on_colorscheme()]])
   if config.dev then
     vim.cmd([[  autocmd BufWritePost */lua/onedark/** nested colorscheme onedark]])
   end
@@ -164,20 +164,20 @@ end
 --
 ---@param str string template string
 ---@param table table key value pairs to replace in the string
-function util.template(str, table)
+util.template = function(str, table)
   return (str:gsub('($%b{})', function(w)
     return table[w:sub(3, -2)] or w
   end))
 end
 
-function util.syntax(syntax)
+util.syntax = function(syntax)
   for group, colors in pairs(syntax) do
     util.highlight(group, colors)
   end
 end
 
 ---@param colors onedark.ColorScheme
-function util.terminal(colors)
+util.terminal = function(colors)
   -- dark
   vim.g.terminal_color_0 = colors.black
   vim.g.terminal_color_8 = colors.bg2
@@ -207,14 +207,14 @@ function util.terminal(colors)
 
   if vim.o.background == 'light' then
     for i = 0, 15, 1 do
-      vim.g['terminal_color_' .. i] = util.getColor(vim.g['terminal_color_' .. i])
+      vim.g['terminal_color_' .. i] = util.get_color(vim.g['terminal_color_' .. i])
     end
   end
 end
 
-function util.light_colors(colors)
+util.light_colors = function(colors)
   if type(colors) == 'string' then
-    return util.getColor(colors)
+    return util.get_color(colors)
   end
   local ret = {}
   for key, value in pairs(colors) do
@@ -226,7 +226,7 @@ end
 ---Override custom highlights in `group`
 ---@param group table
 ---@param overrides table
-function util.apply_overrides(group, overrides)
+util.apply_overrides = function(group, overrides)
   for k, v in pairs(overrides) do
     if group[k] ~= nil and type(v) == 'table' then
       group[k] = v
@@ -235,7 +235,7 @@ function util.apply_overrides(group, overrides)
 end
 
 ---@param theme onedark.Theme
-function util.load(theme)
+util.load = function(theme)
   vim.cmd('hi clear')
   if vim.fn.exists('syntax_on') then
     vim.cmd('syntax reset')
@@ -254,7 +254,7 @@ end
 
 ---@param colors onedark.ColorScheme
 ---@param config onedark.Config
-function util.color_overrides(colors, config)
+util.color_overrides = function(colors, config)
   if type(config.colors) == 'table' then
     for key, value in pairs(config.colors) do
       if not colors[key] then
@@ -283,13 +283,13 @@ function util.color_overrides(colors, config)
   end
 end
 
-function util.light(brightness)
+util.light = function(brightness)
   for hl_name, hl in pairs(vim.api.nvim__get_hl_defs(0)) do
     local def = {}
     for key, def_key in pairs({ foreground = 'fg', background = 'bg', special = 'sp' }) do
       if type(hl[key]) == 'number' then
         local hex = string.format('#%06x', hl[key])
-        local color = util.invertColor(hex)
+        local color = util.invert_color(hex)
         if brightness then
           color = util.brighten(hex, brightness)
         end
@@ -308,14 +308,14 @@ function util.light(brightness)
   end
 end
 
-function util.random()
+util.random = function()
   local colors = {}
   for hl_name, hl in pairs(vim.api.nvim__get_hl_defs(0)) do
     local def = {}
     for key, def_key in pairs({ foreground = 'fg', background = 'bg', special = 'sp' }) do
       if type(hl[key]) == 'number' then
         local hex = string.format('#%06x', hl[key])
-        local color = colors[hex] and colors[hex] or util.randomColor(hex)
+        local color = colors[hex] and colors[hex] or util.random_color(hex)
         colors[hex] = color
         table.insert(def, 'gui' .. def_key .. '=' .. color)
       end

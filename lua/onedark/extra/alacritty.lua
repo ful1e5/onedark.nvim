@@ -1,12 +1,8 @@
 local util = require('onedark.util')
-local config_module = require('onedark.config')
-
-local M = {}
 
 ---Generate onedark theme for Alacritty terminal.
 ---@param config onedark.Config
-function M.alacritty(config)
-  config = config or config_module.config
+return function(config)
   local colors = require('onedark.colors').setup(config)
 
   local alacritty_colors = {}
@@ -61,5 +57,3 @@ colors:
 
   return alacritty
 end
-
-return M

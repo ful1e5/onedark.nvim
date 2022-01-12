@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor override function to util.lua module #91
 - formatter changed `LuaFormatter` -> `Stylua`
 - refactor: modules export
+- refactor: 'util' and 'extra' themes
 
 ## [v0.0.3]- 11 Dec 2021
 
