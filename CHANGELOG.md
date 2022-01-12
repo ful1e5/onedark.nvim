@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - allow customizing highlight group #91
 - Removed unnecessary defer function & highlights
 - highlight added for `GitSignsCurrentLineBlame`
+- feat: `githooks` init
 
 ### Changed
 
