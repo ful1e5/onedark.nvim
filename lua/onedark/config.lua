@@ -1,4 +1,5 @@
 local config = {}
+
 -- shim vim for kitty and other generators
 vim = vim or { g = {}, o = {} }
 
@@ -25,7 +26,7 @@ local function opt(key, default)
   end
 end
 
----@class onedark.Config
+---@class od.ConfigSchema
 config.config = {
   colors = opt('colors', {}),
   comment_style = opt('comment_style', 'italic'),
@@ -48,7 +49,7 @@ config.config = {
   variable_style = opt('variable_style', 'NONE'),
 }
 
---- @param user_config onedark.Config
+--- @param user_config od.ConfigSchema
 config.apply_configuration = function(user_config)
   for key, value in pairs(user_config) do
     if value ~= nil then

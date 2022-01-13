@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - feat: `githooks` init
 - feat: `types` module init
 - cleanup: removed 'transform_colors' option from terminal themes generation
+- feat: 'ConfigSchema' type init
 
 ### Changed
 
@@ -33,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: modules export
 - refactor: 'util' and 'extra' themes
 - refactor: use `TerminalConf` type in terminal theme generation
+- refactor: 'nvim-dev-icons' palette
 
 ## [v0.0.3]- 11 Dec 2021
 

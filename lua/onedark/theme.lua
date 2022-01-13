@@ -3,7 +3,7 @@ local colors = require('onedark.colors')
 
 local theme = {}
 
----@param cfg onedark.Config
+---@param cfg od.ConfigSchema
 ---@return onedark.Theme
 theme.setup = function(cfg)
   ---@class onedark.Theme

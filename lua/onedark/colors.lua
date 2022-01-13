@@ -2,7 +2,7 @@ local util = require('onedark.util')
 
 local colors = {}
 
----@param cfg onedark.Config
+---@param cfg od.ConfigSchema
 ---@return onedark.ColorScheme
 colors.setup = function(cfg)
   -- Color Palette
