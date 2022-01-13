@@ -3,10 +3,9 @@ local util = require('onedark.util')
 local colors = {}
 
 ---@param cfg od.ConfigSchema
----@return onedark.ColorScheme
+---@return od.ColorPalette
 colors.setup = function(cfg)
-  -- Color Palette
-  ---@class onedark.ColorScheme
+  ---@type od.ColorPalette
   local c = {
     none = 'NONE',
     bg = '#282c34',
@@ -29,9 +28,9 @@ colors.setup = function(cfg)
     green = '#98c379',
     red = '#e86671',
     red1 = '#f65866',
+    cursor = '#528bff',
     git = { change = '#e0af68', add = '#109868', delete = '#9A353D', conflict = '#bb7a61' },
 
-    cursor = '#528bff',
     syntax = {
       string = '#98c379',
       variable = '#e06c75',

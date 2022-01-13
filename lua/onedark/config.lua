@@ -57,7 +57,7 @@ config.apply_configuration = function(user_config)
         config.config[key] = value
         vim.g[g_key(key)] = value
       else
-        error('Option ' .. key .. ' does not exist') -- luacheck: ignore
+        error('Option ' .. key .. ' does not exist')
       end
     end
   end

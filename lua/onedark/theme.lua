@@ -12,7 +12,7 @@ theme.setup = function(cfg)
   hi.colors = colors.setup(cfg)
   local c = hi.colors
 
-  hi.base = { -- luacheck: ignore
+  hi.base = {
     Comment = { fg = c.syntax.comment, style = cfg.comment_style }, -- any comment
     ColorColumn = { bg = c.bg_visual }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.fg_gutter }, -- placeholder characters substituted for concealed text (see 'conceallevel')

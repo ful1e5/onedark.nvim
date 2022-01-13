@@ -176,7 +176,7 @@ util.syntax = function(syntax)
   end
 end
 
----@param colors onedark.ColorScheme
+---@param colors od.ColorPalette
 util.terminal = function(colors)
   -- dark
   vim.g.terminal_color_0 = colors.black
@@ -252,7 +252,7 @@ util.load = function(theme)
   util.syntax(theme.plugins)
 end
 
----@param colors onedark.ColorScheme
+---@param colors od.ColorPalette
 ---@param config od.ConfigSchema
 util.color_overrides = function(colors, config)
   if type(config.colors) == 'table' then

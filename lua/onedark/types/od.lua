@@ -18,10 +18,8 @@ od.TerminalConf = {}
 od.TerminalConf.kitty = 'conf'
 od.TerminalConf.alacritty = 'yml'
 
---- TODO: od.Colors
-
 ---@class od.ConfigSchema
----@field public colors table
+---@field public colors od.ColorPalette
 ---@field public comment_style od.HighlightStyle
 ---@field public dark_float boolean
 ---@field public dark_sidebar boolean
@@ -33,7 +31,7 @@ od.TerminalConf.alacritty = 'yml'
 ---@field public keyword_style od.HighlightStyle
 ---@field public lualine_bold boolean
 ---@field public msg_area_style od.HighlightStyle
----@field public overrides function(c: table): table
+---@field public overrides function(c: od.ColorPalette): table
 ---@field public sidebars table<number, string>
 ---@field public transparent boolean
 ---@field public transparent_sidebar boolean
