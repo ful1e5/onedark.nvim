@@ -43,7 +43,6 @@ config.config = {
     return {}
   end),
   sidebars = opt('sidebars', {}),
-  transform_colors = false,
   transparent = opt('transparent', false),
   transparent_sidebar = opt('transparent_sidebar', false),
   variable_style = opt('variable_style', 'NONE'),

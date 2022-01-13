@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - highlight added for `GitSignsCurrentLineBlame`
 - feat: `githooks` init
 - feat: `types` module init
+- cleanup: removed 'transform_colors' option from terminal themes generation
 
 ### Changed
 

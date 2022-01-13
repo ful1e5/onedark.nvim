@@ -10,7 +10,6 @@ local function write(str, fileName)
 end
 
 for terminal, ext in pairs(types.od.TerminalConf) do
-  local config = { transform_colors = true }
   local plugin = require('onedark.extra.' .. terminal)
-  write(plugin(config), terminal .. '_onedark' .. '.' .. ext)
+  write(plugin(), terminal .. '_onedark' .. '.' .. ext)
 end
