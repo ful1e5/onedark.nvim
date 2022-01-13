@@ -1,4 +1,4 @@
-.DEFAULT_GOAL = check
+.DEFAULT_GOAL = lint
 
 src = lua/onedark
 
@@ -10,8 +10,6 @@ fmt:
 
 lint: $(src)
 	luacheck $(src)
-
-check: fmt lint
 
 # reload kitty theme
 # My Dotfiles: https://github.com/ful1e5/dotfiles

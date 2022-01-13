@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed unnecessary defer function & highlights
 - highlight added for `GitSignsCurrentLineBlame`
 - feat: `githooks` init
+- feat: `types` module init
 
 ### Changed
 
@@ -30,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - formatter changed `LuaFormatter` -> `Stylua`
 - refactor: modules export
 - refactor: 'util' and 'extra' themes
+- refactor: use `TerminalConf` type in terminal theme generation
 
 ## [v0.0.3]- 11 Dec 2021
 

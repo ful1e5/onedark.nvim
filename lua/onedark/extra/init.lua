@@ -1,5 +1,7 @@
 package.path = './lua/?/init.lua;./lua/?.lua'
 
+local types = require('onedark.types')
+
 local function write(str, fileName)
   print('[write] extra/' .. fileName)
   local file = io.open('extras/' .. fileName, 'w')
@@ -7,9 +9,8 @@ local function write(str, fileName)
   file:close()
 end
 
-local extras = { kitty = 'conf', alacritty = 'yml' }
-for extra, ext in pairs(extras) do
+for terminal, ext in pairs(types.od.TerminalConf) do
   local config = { transform_colors = true }
-  local plugin = require('onedark.extra.' .. extra)
-  write(plugin(config), extra .. '_onedark' .. '.' .. ext)
+  local plugin = require('onedark.extra.' .. terminal)
+  write(plugin(config), terminal .. '_onedark' .. '.' .. ext)
 end
