@@ -2,8 +2,8 @@
 
 src = lua/onedark
 
-extra: $(src)/extra
-	@lua $(src)/extra/init.lua
+terminal: $(src)/terminal
+	lua $(src)/terminal/init.lua
 
 fmt:
 	stylua --config-path stylua.toml --glob 'lua/**/*.lua' -- lua
@@ -14,11 +14,11 @@ lint: $(src)
 # reload kitty theme
 # My Dotfiles: https://github.com/ful1e5/dotfiles
 theme = ~/.dotfiles/kitty/.config/kitty/themes/onedark.conf
-exts = ./extras/
+terminal = ./terminal/
 
 kitty_pre:
 	@rm -rf $(theme)
 	@touch $(theme)
 
 kitty: kitty_pre
-	@cat $(exts)/kitty_onedark.conf > $(theme)
+	@cat $(terminal)/kitty_onedark.conf > $(theme)
