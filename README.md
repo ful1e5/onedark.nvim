@@ -18,36 +18,12 @@
 
 ## Features
 
-- supports the latest Neovim 0.5 features like TreeSitter and LSP
-- minimal inactive StatusLine
-- vim terminal colors
-- darker background for sidebar-like windows
-- color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include) and [Alacritty](https://github.com/alacritty/alacritty)
-- **lualine** theme
-
-### Plugin Support
-
-- [Builtin LSP diagnostics](https://neovim.io/doc/user/lsp.html)
-- [barbar.nvim](https://github.com/romgrk/barbar.nvim)
-- [circles.nvim](https://github.com/projekt0n/circles.nvim)
-- [coc.nvim](https://github.com/neoclide/coc.nvim)
-- [dashboard-nvim)](https://github.com/glepnir/dashboard-nvim)
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim)
-- [hop.nvim](https://github.com/phaazon/hop.nvim)
-- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [lsp-trouble.nvim](https://github.com/folke/lsp-trouble.nvim)
-- [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
-- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
-- [neogit](https://github.com/TimUntersberger/neogit)
-- [nvim-bufferline.lua](https://github.com/akinsho/nvim-bufferline.lua)
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [nvim-notify](https://github.com/rcarriga/nvim-notify)
-- [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
-- [vim-which-key](https://github.com/liuchengxu/vim-which-key)
+- Supports the latest Neovim 0.5 features like TreeSitter and LSP
+- Minimal inactive StatusLine
+- Vim terminal colors
+- Darker background for sidebar-like windows
+- Color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include) and [Alacritty](https://github.com/alacritty/alacritty)
+- Beautiful **lualine** theme
 
 ## Requirements
 
@@ -82,25 +58,6 @@ colorscheme onedark
 -- Lua
 require('onedark').setup()
 ```
-
-### lualine.nvim
-
-To enable the `onedark` theme for `Lualine`, simply specify it in your lualine settings:
-
-```lua
-require('lualine').setup {
-  options = {
-    theme = 'onedark-nvim',
-    -- ... your lualine config
-  }
-}
-```
-
-![normal](https://imgur.com/utoeRWg.png)
-![insert](https://imgur.com/cimWSSb.png)
-![visual](https://imgur.com/4ntUbvB.png)
-![command](https://imgur.com/bmreFgJ.png)
-![terminal](https://imgur.com/Fw0Btae.png)
 
 ## Configuration
 
@@ -160,6 +117,34 @@ require("onedark").setup({
 })
 ```
 
+### Lualine Support
+
+To enable the `onedark` theme for `Lualine`, simply specify it in your lualine settings:
+
+```lua
+require('lualine').setup {
+  options = {
+    theme = 'onedark-nvim',
+    -- ... your lualine config
+  }
+}
+```
+
+![normal](https://imgur.com/utoeRWg.png)
+![insert](https://imgur.com/cimWSSb.png)
+![visual](https://imgur.com/4ntUbvB.png)
+![command](https://imgur.com/bmreFgJ.png)
+![terminal](https://imgur.com/Fw0Btae.png)
+
+## Terminal Themes
+
+> To generate the configs `make terminal` or `:luafile lua/onedark/terminal/init.lua`
+
+Extra color configs for **kitty**, and **Alacritty** can be found in [terminal](terminal/) directory. To use them, refer to their respective documentation.
+
+- kitty - [./terminal/kitty](https://github.com/ful1e5/onedark.nvim/tree/main/terminal/kitty)
+- Alacritty - [./terminal/alacritty](https://github.com/ful1e5/onedark.nvim/tree/main/terminal/alacritty)
+
 ### Making `undercurls` work properly in **Tmux**
 
 To have undercurls show up and in color, add the following to your **Tmux** config file:
@@ -171,11 +156,29 @@ set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
 set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 ```
 
-## Extras
+## Plugin Support
 
-> To generate the configs `make extra`
-
-Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](extras/). To use them, refer to their respective documentation.
+- [Builtin LSP diagnostics](https://neovim.io/doc/user/lsp.html)
+- [TimUntersberger/neogit](https://github.com/TimUntersberger/neogit)
+- [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+- [akinsho/nvim-bufferline.lua](https://github.com/akinsho/nvim-bufferline.lua)
+- [folke/lsp-trouble.nvim](https://github.com/folke/lsp-trouble.nvim)
+- [glepnir/dashboard-nvim](https://github.com/glepnir/dashboard-nvim)
+- [glepnir/lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
+- [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
+- [lambdalisue/glyph-palette.vim](https://github.com/lambdalisue/glyph-palette.vim)
+- [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)
+- [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)
+- [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+- [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [phaazon/hop.nvim](https://github.com/phaazon/hop.nvim)
+- [projekt0n/circles.nvim](https://github.com/projekt0n/circles.nvim)
+- [rcarriga/nvim-notify](https://github.com/rcarriga/nvim-notify)
+- [romgrk/barbar.nvim](https://github.com/romgrk/barbar.nvim)
 
 ## Inspirations
 

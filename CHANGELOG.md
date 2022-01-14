@@ -36,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: use `TerminalConf` type in terminal theme generation
 - refactor: 'nvim-dev-icons' palette
 - refactor: module renamed `extra` -> `terminal`
+- docs: re-arrange heading section & plugins list
 
 ## [v0.0.3]- 11 Dec 2021
 
