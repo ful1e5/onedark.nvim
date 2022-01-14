@@ -4,14 +4,15 @@ local colors = require('onedark.colors')
 local theme = {}
 
 ---@param cfg od.ConfigSchema
----@return onedark.Theme
+---@return od.Highlights
 theme.setup = function(cfg)
-  ---@class onedark.Theme
+  ---@class od.Highlights
   local hi = {}
   hi.config = cfg
   hi.colors = colors.setup(cfg)
   local c = hi.colors
 
+  ---@class od.Highlights.Base
   hi.base = {
     Comment = { fg = c.syntax.comment, style = cfg.comment_style }, -- any comment
     ColorColumn = { bg = c.bg_visual }, -- used for the columns set with 'colorcolumn'
@@ -186,6 +187,7 @@ theme.setup = function(cfg)
     -- LspDiagnosticsSignHint              = { }, -- Used for "Hint" signs in sign column
   }
 
+  ---@class od.Highlights.Plugins
   hi.plugins = {
     -- These groups are for the neovim tree-sitter highlights.
     -- As of writing, tree-sitter support is a WIP, group names may change.
@@ -510,7 +512,7 @@ theme.setup = function(cfg)
     CmpItemKindInterfaceDefault = { link = 'CmpItemKindVariableDefault' },
     CmpItemKindTextDefault = { link = 'CmpItemKindVariableDefault' },
 
-    CmpItemKindKeywordDefault = { fg = c.syntax.keyword },
+    CmpItemKindKeywordDefault = { fg = c.syntax.operator },
     CmpItemKindFieldDefault = { link = 'CmpItemKindKeywordDefault' },
     CmpItemKindUnitDefault = { link = 'CmpItemKindKeywordDefault' },
     CmpItemKindValueDefault = { link = 'CmpItemKindKeywordDefault' },

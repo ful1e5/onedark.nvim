@@ -234,7 +234,7 @@ util.apply_overrides = function(group, overrides)
   end
 end
 
----@param theme onedark.Theme
+---@param theme od.Highlights
 util.load = function(theme)
   vim.cmd('hi clear')
   if vim.fn.exists('syntax_on') then
