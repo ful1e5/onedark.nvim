@@ -31,7 +31,7 @@ od.TerminalConf.alacritty = 'yml'
 ---@field public keyword_style od.HighlightStyle
 ---@field public lualine_bold boolean
 ---@field public msg_area_style od.HighlightStyle
----@field public overrides function(c: od.ColorPalette): table
+---@field public overrides function(c: od.ColorPalette): od.Highlights
 ---@field public sidebars table<number, string>
 ---@field public transparent boolean
 ---@field public transparent_sidebar boolean

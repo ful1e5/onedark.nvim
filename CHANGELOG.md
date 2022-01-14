@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - cleanup: removed 'transform_colors' option from terminal themes generation
 - feat: 'ConfigSchema' type init
 - feat: `od.Highlights.*` type added
+- refactor: `config` module
 
 ### Changed
 
