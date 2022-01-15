@@ -6,6 +6,8 @@ local theme = {}
 ---@param cfg od.ConfigSchema
 ---@return od.Highlights
 theme.setup = function(cfg)
+  cfg = cfg or require('onedark.config').schema
+
   ---@class od.Highlights
   local hi = {}
   hi.config = cfg

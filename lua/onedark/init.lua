@@ -1,6 +1,6 @@
-local util = require('onedark.util')
+local config = require('onedark.config')
 local theme = require('onedark.theme')
-local config_module = require('onedark.config')
+local util = require('onedark.util')
 
 local init = {}
 
@@ -8,11 +8,11 @@ local init = {}
 init.setup = function(user_config)
   -- Applying user configuration
   if user_config then
-    config_module.apply_configuration(user_config)
+    config.apply_configuration(user_config)
   end
 
   -- Load colorscheme
-  util.load(theme.setup(config_module.config))
+  util.load(theme.setup(config.schema))
 end
 
 return init

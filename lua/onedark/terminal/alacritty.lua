@@ -1,10 +1,8 @@
-local config = require('onedark.config').config
+local colors = require('onedark.colors').setup()
 local util = require('onedark.util')
 
 ---Generate onedark theme for Alacritty terminal.
 return function()
-  local colors = require('onedark.colors').setup(config)
-
   local alacritty_colors = {}
   for k, v in pairs(colors) do
     if type(v) == 'string' then

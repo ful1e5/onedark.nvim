@@ -1,10 +1,8 @@
-local config = require('onedark.config').config
+local colors = require('onedark.colors').setup()
 local util = require('onedark.util')
 
 ---Generate onedark theme for kitty terminal.
 return function()
-  local colors = require('onedark.colors').setup(config)
-
   local kitty = util.template(
     [[
 # onedark colors for Kitty

@@ -1,5 +1,5 @@
-local config = require('onedark.config').config
-local colors = require('onedark.colors').setup(config)
+local cfg = require('onedark.config').schema
+local colors = require('onedark.colors').setup(cfg)
 local util = require('onedark.util')
 
 local onedark = {
@@ -48,7 +48,7 @@ if vim.o.background == 'light' then
   end
 end
 
-if config.lualine_bold then
+if cfg.lualine_bold then
   for _, mode in pairs(onedark) do
     mode.a.gui = 'bold'
   end

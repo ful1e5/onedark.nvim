@@ -7,7 +7,7 @@ local config = {}
 
 ---Accessing global config using vim.g.onedark_* will help in autocompletion.
 
-config.config = {
+config.schema = {
   colors = vim_config.get(vim.g.onedark_colors, default_config.colors),
   comment_style = vim_config.get(vim.g.onedark_comment_style, default_config.comment_style),
   dark_float = vim_config.get(vim.g.onedark_dark_float, default_config.dark_float),
@@ -32,9 +32,9 @@ config.config = {
 config.apply_configuration = function(user_config)
   for key, value in pairs(user_config) do
     if value ~= nil then
-      if config.config[key] ~= nil then
+      if config.schema[key] ~= nil then
         -- override value
-        config.config[key] = value
+        config.schema[key] = value
         vim_config.set(key, value)
       else
         error('config ' .. key .. ' does not exist') -- luacheck: ignore

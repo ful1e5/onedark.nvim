@@ -140,15 +140,15 @@ util.on_colorscheme = function()
   end
 end
 
----@param config od.ConfigSchema
-util.autocmds = function(config)
+---@param cfg od.ConfigSchema
+util.autocmds = function(cfg)
   vim.cmd([[augroup onedark]])
   vim.cmd([[  autocmd!]])
   vim.cmd([[  autocmd ColorScheme * lua require("onedark.util").on_colorscheme()]])
-  if config.dev then
+  if cfg.dev then
     vim.cmd([[  autocmd BufWritePost */lua/onedark/** nested colorscheme onedark]])
   end
-  for _, sidebar in ipairs(config.sidebars) do
+  for _, sidebar in ipairs(cfg.sidebars) do
     if sidebar == 'terminal' then
       vim.cmd([[  autocmd TermOpen * setlocal winhighlight=Normal:NormalSB,SignColumn:SignColumnSB]])
     else

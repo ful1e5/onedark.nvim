@@ -5,6 +5,8 @@ local colors = {}
 ---@param cfg od.ConfigSchema
 ---@return od.ColorPalette
 colors.setup = function(cfg)
+  cfg = cfg or require('onedark.config').schema
+
   ---@type od.ColorPalette
   local c = {
     none = 'NONE',
