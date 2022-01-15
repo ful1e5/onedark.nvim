@@ -128,7 +128,7 @@ colors.setup = function(cfg)
   c.info = c.blue
   c.hint = c.cyan
 
-  util.color_overrides(c, cfg)
+  c = util.color_overrides(c, cfg.colors)
   return c
 end
 

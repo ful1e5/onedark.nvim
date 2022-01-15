@@ -18,6 +18,20 @@ od.TerminalConf = {}
 od.TerminalConf.kitty = 'conf'
 od.TerminalConf.alacritty = 'yml'
 
+---@class od.Highlight
+---Foreground Color
+---@field public fg od.HexColor|nil
+---Background Color
+---@field public bg od.HexColor|nil
+---Style Color
+---@field public sp od.HexColor|nil
+---Highlight Style
+---@field public style od.HighlightStyle|nil
+
+---@class od.LinkHighlight
+---Existing Highlight
+---@field public link string
+
 ---@class od.ConfigSchema
 ---@field public colors od.ColorPalette
 ---@field public comment_style od.HighlightStyle
