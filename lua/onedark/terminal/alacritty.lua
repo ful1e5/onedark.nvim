@@ -27,10 +27,10 @@ colors:
   # Normal colors
   normal:
     black:   '${black}'
-    red:     '${red}'
-    green:   '${green}'
-    yellow:  '${yellow}'
-    blue:    '${blue}'
+    red:     '${red1}'
+    green:   '${green0}'
+    yellow:  '${yellow1}'
+    blue:    '${blue0}'
     magenta: '${purple}'
     cyan:    '${cyan}'
     white:   '${fg_dark}'
@@ -38,17 +38,17 @@ colors:
   # Bright colors
   bright:
     black:   '${bg2}'
-    red:     '${red}'
-    green:   '${green}'
-    yellow:  '${yellow}'
-    blue:    '${blue}'
+    red:     '${red1}'
+    green:   '${green0}'
+    yellow:  '${yellow1}'
+    blue:    '${blue0}'
     magenta: '${purple}'
     cyan:    '${cyan}'
     white:   '${fg}'
 
   indexed_colors:
-    - { index: 16, color: '${orange}' }
-    - { index: 17, color: '${red1}' }
+    - { index: 16, color: '${orange1}' }
+    - { index: 17, color: '${red2}' }
 ]],
     alacritty_colors
   )

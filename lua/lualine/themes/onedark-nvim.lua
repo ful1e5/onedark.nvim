@@ -9,24 +9,24 @@ local onedark = {
     c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
   },
   insert = {
-    a = { bg = colors.green, fg = colors.black },
-    b = { bg = colors.fg_gutter, fg = colors.green },
+    a = { bg = colors.green0, fg = colors.black },
+    b = { bg = colors.fg_gutter, fg = colors.green0 },
   },
   command = {
-    a = { bg = colors.yellow, fg = colors.black },
-    b = { bg = colors.fg_gutter, fg = colors.yellow },
+    a = { bg = colors.yellow1, fg = colors.black },
+    b = { bg = colors.fg_gutter, fg = colors.yellow1 },
   },
   visual = {
     a = { bg = colors.purple, fg = colors.black },
     b = { bg = colors.fg_gutter, fg = colors.purple },
   },
   replace = {
-    a = { bg = colors.red, fg = colors.black },
-    b = { bg = colors.fg_gutter, fg = colors.red },
-  },
-  terminal = {
     a = { bg = colors.red1, fg = colors.black },
     b = { bg = colors.fg_gutter, fg = colors.red1 },
+  },
+  terminal = {
+    a = { bg = colors.red2, fg = colors.black },
+    b = { bg = colors.fg_gutter, fg = colors.red2 },
   },
   inactive = {
     a = { bg = colors.bg_statusline, fg = colors.cyan },

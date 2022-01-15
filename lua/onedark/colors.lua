@@ -20,51 +20,23 @@ colors.setup = function(cfg)
     fg_dark = '#798294',
     fg_gutter = '#5c6370',
     dark5 = '#abb2bf',
-    blue = '#61afef',
+    blue0 = '#61afef',
     cyan = '#56b6c2',
     purple = '#c678dd',
-    orange = '#d19a66',
-    yellow = '#e5c07b',
-    yellow2 = '#e2c08d',
-    bg_yellow = '#ebd09c',
-    green = '#98c379',
-    red = '#e86671',
-    red1 = '#f65866',
+    orange0 = '#e59b4e',
+    orange1 = '#d19a66',
+    yellow0 = '#ebd09c',
+    yellow1 = '#e5c07b',
+    green0 = '#98c379',
+    red0 = '#e06c75',
+    red1 = '#e86671',
+    red2 = '#f65866',
     cursor = '#528bff',
     git = { change = '#e0af68', add = '#109868', delete = '#9A353D', conflict = '#bb7a61' },
 
-    syntax = {
-      string = '#98c379',
-      variable = '#e06c75',
-      operator = '#56b6c2',
-      property = '#56b6c2',
-      variable_builtin = '#e5c07b',
-      comment = '#5c6370',
-      tag_attribute = '#e59b4e',
-      js = { func = '#e5c07b', variable = '#e5c07b', property = '#61afef' },
-      json = { label = '#e06c75' },
-      less = { include = '#c678dd', class = '#d19a66' },
-      make = { ident = '#e59b4e' },
-      php = { punct_bracket = '#e06c75', keyword = '#56b6c2', constructor = '#e5c07b' },
-      python = { param = '#e59b4e', builtin_func = '#56b6c2' },
-      ruby = { symbol = '#56b6c2', variable = '#61afef', param = '#e5c07b' },
-      scss = { property = '#e59b4e', string = '#98c379', type = '#e06c75' },
-      bash = { builtin_func = '#56b6c2' },
-      sql = { fold = '#e59b4e', keyword = '#c678dd' },
-      ts = {
-        constructor = '#61afef',
-        keyword = '#c678dd',
-        method = '#c678dd',
-        property = '#e06c75',
-        variable = '#e5c07b',
-      },
-      xml = { attrib = '#e06c75', tag_name = '#e06c75' },
-      yaml = { field = '#e06c75' },
-    },
-
     dev_icons = {
       blue = '#519aba',
-      green = '#8dc149',
+      green0 = '#8dc149',
       yellow = '#cbcb41',
       orange = '#e37933',
       red = '#cc3e44',
@@ -97,7 +69,7 @@ colors.setup = function(cfg)
 
   c.git.ignore = c.fg_gutter
   c.black = util.darken(c.bg, 0.8, '#000000')
-  c.border_highlight = c.blue
+  c.border_highlight = c.blue0
 
   -- Popups and statusline always get a dark background
   c.bg_popup = c.bg2
@@ -119,13 +91,13 @@ colors.setup = function(cfg)
   c.fg_cursor_linenumber = c.dark5
 
   -- Search
-  c.bg_search = c.bg_yellow
+  c.bg_search = c.yellow0
   c.fg_search = c.bg2
 
   -- Diagnostic
-  c.error = c.red
-  c.warning = c.yellow
-  c.info = c.blue
+  c.error = c.red1
+  c.warning = c.yellow1
+  c.info = c.blue0
   c.hint = c.cyan
 
   c = util.color_overrides(c, cfg.colors)

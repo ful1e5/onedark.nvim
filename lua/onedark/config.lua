@@ -1,6 +1,7 @@
 local vim_config = require('onedark.config.vim_config')
 local default_config = require('onedark.config.default')
 
+vim = vim or { g = {} }
 ---@class od.Config
 ---@field schema od.ConfigSchema
 local config = {}
