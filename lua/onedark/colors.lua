@@ -21,6 +21,7 @@ colors.setup = function(cfg)
     fg_gutter = '#5c6370',
     dark5 = '#abb2bf',
     blue0 = '#61afef',
+    blue1 = '#528bff',
     cyan = '#56b6c2',
     purple = '#c678dd',
     orange0 = '#e59b4e',
@@ -31,8 +32,6 @@ colors.setup = function(cfg)
     red0 = '#e06c75',
     red1 = '#e86671',
     red2 = '#f65866',
-    cursor = '#528bff',
-    git = { change = '#e0af68', add = '#109868', delete = '#9A353D', conflict = '#bb7a61' },
 
     dev_icons = {
       blue = '#519aba',
@@ -54,6 +53,14 @@ colors.setup = function(cfg)
   -- NOTE: These colors are also configurable
   --
 
+  c.git = {
+    change = '#e0af68',
+    add = '#109868',
+    delete = '#9a353d',
+    conflict = '#bb7a61',
+    ignore = c.fg_gutter,
+  }
+
   c.diff = {
     add = util.darken(c.git.add, 0.15),
     delete = util.darken(c.git.delete, 0.15),
@@ -67,7 +74,6 @@ colors.setup = function(cfg)
     delete = util.brighten(c.git.delete, 0.2),
   }
 
-  c.git.ignore = c.fg_gutter
   c.black = util.darken(c.bg, 0.8, '#000000')
   c.border_highlight = c.blue0
 

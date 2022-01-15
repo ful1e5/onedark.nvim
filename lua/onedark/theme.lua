@@ -19,7 +19,7 @@ theme.setup = function(cfg)
     Comment = { fg = c.fg_dark, style = cfg.comment_style }, -- any comment
     ColorColumn = { bg = c.bg_visual }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.fg_gutter }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Cursor = { fg = c.cursor, bg = c.fg }, -- character under the cursor
+    Cursor = { fg = c.blue1, bg = c.fg }, -- character under the cursor
     lCursor = { fg = c.bg, bg = c.fg }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     CursorIM = { fg = c.bg, bg = c.fg }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { bg = c.bg_highlight }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
@@ -505,7 +505,7 @@ theme.setup = function(cfg)
 
     -- Cmp Item Kind
     CmpItemKindColorDefault = { fg = c.red2 },
-    CmpItemKindPropertyDefault = { fg = c.cyan},
+    CmpItemKindPropertyDefault = { fg = c.cyan },
     CmpItemKindSnippetDefault = { fg = c.green0 },
 
     CmpItemKindVariableDefault = { fg = c.red0 },
