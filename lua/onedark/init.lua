@@ -4,7 +4,7 @@ local util = require('onedark.util')
 
 local init = {}
 
---- @param user_config od.ConfigSchema
+---@param user_config od.ConfigSchema
 init.setup = function(user_config)
   -- Applying user configuration
   if user_config then

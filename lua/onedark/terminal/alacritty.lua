@@ -16,8 +16,8 @@ return function()
 colors:
   # Default colors
   primary:
-    background: '${bg}'
-    foreground: '${fg}'
+    background: '${bg0}'
+    foreground: '${fg0}'
 
   # Selection colors
   selection:
@@ -26,25 +26,25 @@ colors:
 
   # Normal colors
   normal:
-    black:   '${black}'
+    black:   '${black0}'
     red:     '${red1}'
     green:   '${green0}'
     yellow:  '${yellow1}'
     blue:    '${blue0}'
-    magenta: '${purple}'
-    cyan:    '${cyan}'
+    magenta: '${purple0}'
+    cyan:    '${cyan0}'
     white:   '${fg_dark}'
 
   # Bright colors
   bright:
-    black:   '${bg2}'
+    black:   '${bg1}'
     red:     '${red1}'
     green:   '${green0}'
     yellow:  '${yellow1}'
     blue:    '${blue0}'
-    magenta: '${purple}'
-    cyan:    '${cyan}'
-    white:   '${fg}'
+    magenta: '${purple0}'
+    cyan:    '${cyan0}'
+    white:   '${fg0}'
 
   indexed_colors:
     - { index: 16, color: '${orange1}' }

@@ -184,8 +184,8 @@ end
 ---@param colors od.ColorPalette
 util.terminal = function(colors)
   -- dark
-  vim.g.terminal_color_0 = colors.black
-  vim.g.terminal_color_8 = colors.bg2
+  vim.g.terminal_color_0 = colors.black0
+  vim.g.terminal_color_8 = colors.bg1
   -- light
   vim.g.terminal_color_7 = colors.fg_dark
   vim.g.terminal_color_15 = colors.fg
@@ -200,8 +200,8 @@ util.terminal = function(colors)
   vim.g.terminal_color_12 = colors.blue0
   vim.g.terminal_color_5 = colors.purple
   vim.g.terminal_color_13 = colors.purple
-  vim.g.terminal_color_6 = colors.cyan
-  vim.g.terminal_color_14 = colors.cyan
+  vim.g.terminal_color_6 = colors.cyan0
+  vim.g.terminal_color_14 = colors.cyan0
 
   if vim.o.background == 'light' then
     for i = 0, 15, 1 do

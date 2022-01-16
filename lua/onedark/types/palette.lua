@@ -1,12 +1,5 @@
 ---@class od.HexColor string
 
----@class od.GitPalette
----@field public add od.HexColor
----@field public change od.HexColor
----@field public conflict od.HexColor
----@field public delete od.HexColor
----@field public ignore od.HexColor
-
 ---@class od.DevIconsPalette
 ---@field public blue od.HexColor
 ---@field public gray od.HexColor
@@ -16,6 +9,13 @@
 ---@field public purple od.HexColor
 ---@field public red od.HexColor
 ---@field public yellow od.HexColor
+
+---@class od.GitPalette
+---@field public add od.HexColor
+---@field public change od.HexColor
+---@field public conflict od.HexColor
+---@field public delete od.HexColor
+---@field public ignore od.HexColor
 
 ---@class od.DiffPalette
 ---@field public add od.HexColor
@@ -29,53 +29,45 @@
 ---@field public delete od.HexColor
 
 ---@class od.ColorPalette
----@field public bg od.HexColor
----@field public bg2 od.HexColor
+---@field public none od.HexColor
+---@field public bg0 od.HexColor
+---@field public bg1 od.HexColor
 ---@field public bg_highlight od.HexColor
----@field public bg_popup od.HexColor
----@field public bg_statusline od.HexColor
 ---@field public bg_visual od.HexColor
----@field public black od.HexColor
+---@field public black0 od.HexColor
 ---@field public blue0 od.HexColor
----@field public border od.HexColor
----@field public border_highlight od.HexColor
 ---@field public blue1 od.HexColor
----@field public cyan od.HexColor
----@field public dark5 od.HexColor
----@field public dev_icons od.DevIconsPalette
----@field public diff od.DiffPalette
----@field public fg od.HexColor
+---@field public cyan0 od.HexColor
+---@field public fg0 od.HexColor
 ---@field public fg_dark od.HexColor
 ---@field public fg_gutter od.HexColor
 ---@field public fg_light od.HexColor
----@field public git od.GitPalette
----@field public git_signs od.GitSignPalette
 ---@field public green0 od.HexColor
----@field public none "'NONE'"
 ---@field public orange0 od.HexColor
 ---@field public orange1 od.HexColor
----@field public purple od.HexColor
+---@field public purple0 od.HexColor
 ---@field public red0 od.HexColor
 ---@field public red1 od.HexColor
 ---@field public red2 od.HexColor
 ---@field public yellow0 od.HexColor
 ---@field public yellow1 od.HexColor
+---@field public dev_icons od.DevIconsPalette
+---@field public c.git od.GitPalette
+---@field public c.diff od.DiffPalette
+---@field public c.git_signs od.GitSignPalette
 -- Sidebar and Floats
----@field public bg_float od.HexColor
 ---@field public bg_sidebar od.HexColor
----@field public fg_sidebar od.HexColor
+---@field public bg_float od.HexColor
 -- EndOfBuffer
----@field public eob od.HexColor
 ---@field public sidebar_eob od.HexColor
+---@field public eob od.HexColor
 -- LineNumber
 ---@field public bg_linenumber od.HexColor
----@field public fg_cursor_linenumber od.HexColor
----@field public fg_linenumber od.HexColor
 -- Search
 ---@field public bg_search od.HexColor
 ---@field public fg_search od.HexColor
 -- Diagnostic
 ---@field public error od.HexColor
----@field public hint od.HexColor
----@field public info od.HexColor
 ---@field public warning od.HexColor
+---@field public info od.HexColor
+---@field public hint od.HexColor
