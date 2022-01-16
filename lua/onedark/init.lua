@@ -15,4 +15,10 @@ init.setup = function(user_config)
   util.load(theme.setup(config.schema))
 end
 
+---@param cfg od.ConfigSchema|nil
+---@return od.ColorPalette
+init.get_colors = function(cfg)
+  return require('onedark.colors').setup(cfg)
+end
+
 return init

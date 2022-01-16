@@ -2,7 +2,7 @@ local cfg = require('onedark.config').schema
 local util = require('onedark.util')
 
 ---@type od.ColorPalette
-local c = require('onedark.colors').setup(cfg)
+local c = require('onedark').get_colors(cfg)
 
 local onedark = {
   normal = {
