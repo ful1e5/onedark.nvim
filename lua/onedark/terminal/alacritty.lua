@@ -37,7 +37,7 @@ colors:
 
   # Bright colors
   bright:
-    black:   '${bg1}'
+    black:   '${fg_dark}'
     red:     '${red1}'
     green:   '${green0}'
     yellow:  '${yellow1}'

@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: `util` module
 - breaking change: color palette redefine
 - feat: `require("onedark").get_colors` added
-- fix: autocompletion color in nvim in-built `terminal` #950
+- fix: autocompletion color in nvim in-built `terminal` #95
 
 ### Changed
 
@@ -44,6 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: 'nvim-dev-icons' palette
 - refactor: module renamed `extra` -> `terminal`
 - docs: re-arrange heading section & plugins list
+- fix: alacritty `black` color in bright section
 
 ## [v0.0.3]- 11 Dec 2021
 
