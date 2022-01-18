@@ -198,8 +198,8 @@ util.terminal = function(colors)
   vim.g.terminal_color_11 = colors.yellow1
   vim.g.terminal_color_4 = colors.blue0
   vim.g.terminal_color_12 = colors.blue0
-  vim.g.terminal_color_5 = colors.purple
-  vim.g.terminal_color_13 = colors.purple
+  vim.g.terminal_color_5 = colors.purple0
+  vim.g.terminal_color_13 = colors.purple0
   vim.g.terminal_color_6 = colors.cyan0
   vim.g.terminal_color_14 = colors.cyan0
 
@@ -284,6 +284,7 @@ function util.color_overrides(colors, oride_colors)
   end
   return colors
 end
+
 -- Simple string interpolation.
 --
 -- Example template: "${name} is ${value}"
@@ -295,4 +296,5 @@ util.template = function(str, table)
     return table[w:sub(3, -2)] or w
   end))
 end
+
 return util

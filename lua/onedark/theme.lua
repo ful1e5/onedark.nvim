@@ -40,7 +40,7 @@ theme.setup = function(cfg)
     SignColumnSB = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
     Substitute = { bg = c.red1, fg = c.black0 }, -- |:substitute| replacement text highlighting
     LineNr = {
-      fg = cfg.transparent and c.fg_cursor_linenumber or c.fg_gutter,
+      fg = cfg.transparent and c.fg0 or c.fg_gutter,
       bg = cfg.transparent and c.none or c.bg_linenumber,
     }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = c.fg0, bg = cfg.transparent and c.none or c.bg_linenumber }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
