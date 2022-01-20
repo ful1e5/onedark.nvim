@@ -1,1 +1,1 @@
-(self) @variable.builtin
+@variable.builtin
