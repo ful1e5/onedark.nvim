@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+-
+
+### Changed
+
+-
+
+## [v0.0.4]- 21 Jan 2022
+
+### Added
+
 - plugin support [hop.nvim](https://github.com/phaazon/hop.nvim)
 - lualine `terminal` highlight added
 - plugin support [coc.nvim](https://github.com/neoclide/coc.nvim)
@@ -140,7 +150,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release 🎊
 
-[unreleased]: https://github.com/ful1e5/onedark.nvim/compare/v0.0.3...main
+[unreleased]: https://github.com/ful1e5/onedark.nvim/compare/v0.0.4...main
+[v0.0.4]: https://github.com/ful1e5/onedark.nvim/compare/v0.0.4...v0.0.3
 [v0.0.3]: https://github.com/ful1e5/onedark.nvim/compare/v0.0.3...v0.0.2
 [v0.0.2]: https://github.com/ful1e5/onedark.nvim/compare/v0.0.2...v0.0.1
 [v0.0.1]: https://github.com/ful1e5/onedark.nvim/tree/v0.0.1
