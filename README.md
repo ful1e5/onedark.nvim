@@ -189,20 +189,18 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 
 ## Screenshot
 
-- Terminal: [Kitty](https://sw.kovidgoyal.net/kitty)
-- Font: [Ubuntu Mono](https://design.ubuntu.com/font/)
-- Icons: [projekt0n/circles.nvim](https://github.com/projekt0n/circles.nvim)
-- StatusLine: **Default**. [dotfiles/nvim/.config/nvim/lua/options.lua#L19-L30](https://github.com/ful1e5/dotfiles/blob/a2777f85b104622dd82f4adfc6ad032e3ff074bf/nvim/.config/nvim/lua/options.lua#L19-L30)
-- Dotfiles: [ful1e5/dotfiles](https://github.com/ful1e5/dotfiles)
+- Font: [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+- Terminal: [kitty](https://sw.kovidgoyal.net/kitty)
+- dotfiles: [ful1e5/dotfiles](https://github.com/ful1e5/dotfiles/tree/main/nvim/.config/nvim)
 
 <p align="center">
-  <img src="https://imgur.com/yap8q3B.png" alt="onedark.nvim" />
+  <img src="https://imgur.com/1ksV9DW.png" alt="onedark" />
 </p>
 
 ### Default
 
 <p align="center">
-  <img src="https://imgur.com/nnRERfV.png" alt="Default fonts" />
+  <img src="https://imgur.com/0R7dvzB.png" alt="Default" />
 </p>
 
 ### Normal
@@ -227,7 +225,7 @@ require("onedark").setup({
 ```
 
 <p align="center">
-  <img src="https://imgur.com/AIyHhqe.png" alt="Normal fonts" />
+  <img src="https://imgur.com/ujZ5tkS.png" alt="Normal" />
 </p>
 
 ### Italic
@@ -252,7 +250,7 @@ require("onedark").setup({
 ```
 
 <p align="center">
-  <img src="https://imgur.com/BhpArix.png" alt="Italic fonts" />
+  <img src="https://imgur.com/YQYPpn1.png" alt="Italic" />
 </p>
 
 ### Minimal
@@ -275,32 +273,30 @@ require("onedark").setup({
 ```
 
 <p align="center">
-  <img src="https://imgur.com/6IXYKaG.png" alt="Minimal" />
+  <img src="https://imgur.com/UuEbkyZ.png" alt="Minimal" />
 </p>
 
 ### Highlight Line-Number
 
 ```vim
 " VimScript
-let g:onedark_dark_sidebar = 0
 let g:onedark_highlight_linenumber = 1
 ```
 
 ```lua
 -- Lua
 require("onedark").setup({
-  dark_sidebar = false,
   highlight_linenumber = true
   -- ... your onedark config
 })
 ```
 
 <p align="center">
-  <img src="https://imgur.com/StVkP8t.png" alt="Highlight Line-Number" />
+  <img src="https://imgur.com/ZAiFAAM.png" alt="Highlight Line-Number" />
 </p>
 
 ### Telescope
 
 <p align="center">
-  <img src="https://imgur.com/xOXa7sh.png" alt="Telescope plugin" />
+  <img src="https://imgur.com/xLKjj0I.png" alt="Telescope plugin" />
 </p>
