@@ -561,7 +561,7 @@ theme.setup = function(cfg)
 
   if cfg.hide_inactive_statusline then
     -- StatusLine
-    local inactive = { style = 'underline', bg = c.bg0, fg0 = c.bg0, sp = c.bg_visual }
+    local inactive = { style = 'underline', bg = c.bg0, fg = c.bg0, sp = c.bg_visual }
     hi.base.StatusLineNC = inactive
 
     if vim.o.statusline ~= nil and string.find(vim.o.statusline, 'lualine') then
