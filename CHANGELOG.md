@@ -45,6 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: module renamed `extra` -> `terminal`
 - docs: re-arrange heading section & plugins list
 - fix: alacritty `black` color in bright section
+- nvim-dev-icons colors fixed #98 projekt0n/circles.nvim#6
 
 ## [v0.0.3]- 11 Dec 2021
 

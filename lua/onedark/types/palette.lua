@@ -1,15 +1,5 @@
 ---@class od.HexColor string
 
----@class od.DevIconsPalette
----@field public blue od.HexColor
----@field public gray od.HexColor
----@field public green od.HexColor
----@field public orange od.HexColor
----@field public pink od.HexColor
----@field public purple od.HexColor
----@field public red od.HexColor
----@field public yellow od.HexColor
-
 ---@class od.GitPalette
 ---@field public add od.HexColor
 ---@field public change od.HexColor
@@ -51,7 +41,6 @@
 ---@field public red2 od.HexColor
 ---@field public yellow0 od.HexColor
 ---@field public yellow1 od.HexColor
----@field public dev_icons od.DevIconsPalette
 ---@field public c.git od.GitPalette
 ---@field public c.diff od.DiffPalette
 ---@field public c.git_signs od.GitSignPalette
