@@ -557,6 +557,9 @@ theme.setup = function(cfg)
 
     CocHighlightText = { link = 'Visual' },
     CocUnderline = { style = 'undercurl' },
+
+    -- Indent blankline
+    IndentBlanklineChar = {fg = c.bg_visual, style = 'nocombine'},
   }
 
   if cfg.hide_inactive_statusline then
