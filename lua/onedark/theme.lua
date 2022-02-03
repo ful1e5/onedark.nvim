@@ -43,7 +43,7 @@ theme.setup = function(cfg)
       fg = cfg.transparent and c.fg0 or c.fg_gutter,
       bg = cfg.transparent and c.none or c.bg_linenumber,
     }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = c.fg0, bg = cfg.transparent and c.none or c.bg_linenumber }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    CursorLineNr = { fg = c.fg0, bg = cfg.transparent and c.none or c.bg_highlight }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = c.orange1, style = 'bold' }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = c.fg_dark, style = 'bold' }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = { fg = c.fg_dark, style = cfg.msg_area_style }, -- Area for messages and cmdline
@@ -559,7 +559,7 @@ theme.setup = function(cfg)
     CocUnderline = { style = 'undercurl' },
 
     -- Indent blankline
-    IndentBlanklineChar = {fg = c.bg_visual, style = 'nocombine'},
+    IndentBlanklineChar = { fg = c.bg_visual, style = 'nocombine' },
   }
 
   if cfg.hide_inactive_statusline then
