@@ -560,6 +560,17 @@ theme.setup = function(cfg)
 
     -- Indent blankline
     IndentBlanklineChar = { fg = c.bg_visual, style = 'nocombine' },
+
+    -- Lightspeed
+    LightspeedLabel = { fg = c.orange0, style = 'bold' },
+    LightspeedLabelOverlapped = { fg = c.red0, style = 'bold' },
+    LightspeedLabelDistant = { fg = c.purple0 },
+    LightspeedLabelDistantOverlapped = { fg = c.purple0, style = 'underline' },
+    LightspeedShortcut = { fg = c.green0, style = 'bold,underline' },
+    LightspeedMaskedChar = { fg = c.red0, 'bold' },
+    LightspeedUnlabeledMatch = { fg = c.blue0, style = 'bold' },
+    LightspeedOneCharMatch = { link = 'LightspeedShortcut' },
+    LightspeedPendingOpArea = { fg = c.yellow0 },
   }
 
   if cfg.hide_inactive_statusline then
