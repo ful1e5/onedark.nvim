@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--
+- plugin support [ggandor/lightspeed.nvim](https://github.com/ggandor/lightspeed.nvim) #103
 
 ### Changed
 

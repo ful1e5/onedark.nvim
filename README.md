@@ -163,6 +163,7 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 - [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - [akinsho/nvim-bufferline.lua](https://github.com/akinsho/nvim-bufferline.lua)
 - [folke/lsp-trouble.nvim](https://github.com/folke/lsp-trouble.nvim)
+- [ggandor/lightspeed.nvim](https://github.com/ggandor/lightspeed.nvim)
 - [glepnir/dashboard-nvim](https://github.com/glepnir/dashboard-nvim)
 - [glepnir/lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
 - [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
