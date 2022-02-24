@@ -57,7 +57,7 @@ theme.setup = function(cfg)
     NormalNC = { fg = c.fg0, bg = cfg.transparent and c.none or c.bg0 }, -- normal text in non-current windows
     NormalSB = { fg = c.fg_dark, bg = c.bg_sidebar }, -- normal text in non-current windows
     NormalFloat = { fg = c.fg0, bg = c.bg_float }, -- Normal text in floating windows.
-    FloatBorder = { fg = c.blue0 },
+    FloatBorder = { fg = c.blue0, bg = c.bg_float  },
     Pmenu = { fg = c.fg0, bg = c.bg1 }, -- Popup menu: normal item.
     PmenuSel = { fg = c.bg1, bg = util.darken(c.green0, 0.8) }, -- Popup menu: selected item.at
     PmenuSbar = { bg = util.lighten(c.bg1, 0.9) }, -- Popup menu: scrollbar.
@@ -167,6 +167,7 @@ theme.setup = function(cfg)
     LspDiagnosticsUnderlineWarning = { sp = c.warning, style = Styles.Undercurl }, -- Used to underline "Warning" diagnostics
     LspDiagnosticsUnderlineInformation = { sp = c.info, style = Styles.Undercurl }, -- Used to underline "Information" diagnostics
     LspDiagnosticsUnderlineHint = { sp = c.hint, style = Styles.Undercurl }, -- Used to underline "Hint" diagnostics
+    LspSignatureActiveParameter = { fg = c.blue0 }, -- Used to highlight the active parameter in a signature
 
     DiagnosticError = { link = 'LspDiagnosticsDefaultError' }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
     DiagnosticWarn = { link = 'LspDiagnosticsDefaultWarning' }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
@@ -369,7 +370,8 @@ theme.setup = function(cfg)
     GitSignsCurrentLineBlame = { fg = util.darken(c.fg_dark, 0.6) }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
-    TelescopeBorder = { fg = util.darken(c.fg0, 0.5) },
+    TelescopeBorder = { fg = util.darken(c.fg0, 0.5), bg = c.bg_float },
+    TelescopeNormal = { bg = cfg.transparent and c.none or c.bg_float },
     TelescopeMatching = { fg = c.fg_light, style = Styles.Bold },
     TelescopePromptPrefix = { fg = c.fg0, style = Styles.Bold },
     TelescopePromptCounter = { fg = c.blue0 },
