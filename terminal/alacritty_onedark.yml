@@ -13,9 +13,9 @@ colors:
   # Normal colors
   normal:
     black:   '0x20232A'
-    red:     '0xe86671'
+    red:     '0xe06c75'
     green:   '0x98c379'
-    yellow:  '0xe5c07b'
+    yellow:  '0xebd09c'
     blue:    '0x61afef'
     magenta: '0xc678dd'
     cyan:    '0x56b6c2'
@@ -27,7 +27,7 @@ colors:
     red:     '0xe86671'
     green:   '0x98c379'
     yellow:  '0xe5c07b'
-    blue:    '0x61afef'
+    blue:    '0x528bff'
     magenta: '0xc678dd'
     cyan:    '0x56b6c2'
     white:   '0xabb2bf'

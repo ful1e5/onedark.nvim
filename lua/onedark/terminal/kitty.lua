@@ -26,20 +26,20 @@ inactive_border_color ${bg_visual}
 
 # normal
 color0 ${black0}
-color1 ${red1}
+color1 ${red0}
 color2 ${green0}
-color3 ${yellow1}
+color3 ${yellow0}
 color4 ${blue0}
 color5 ${purple0}
 color6 ${cyan0}
 color7 ${fg_dark}
 
 # bright
-color8 ${fg_gutter}
+color8 ${fg_dark}
 color9 ${red1}
 color10 ${green0}
 color11 ${yellow1}
-color12 ${blue0}
+color12 ${blue1}
 color13 ${purple0}
 color14 ${cyan0}
 color15 ${fg0}

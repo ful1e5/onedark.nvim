@@ -27,9 +27,9 @@ colors:
   # Normal colors
   normal:
     black:   '${black0}'
-    red:     '${red1}'
+    red:     '${red0}'
     green:   '${green0}'
-    yellow:  '${yellow1}'
+    yellow:  '${yellow0}'
     blue:    '${blue0}'
     magenta: '${purple0}'
     cyan:    '${cyan0}'
@@ -41,7 +41,7 @@ colors:
     red:     '${red1}'
     green:   '${green0}'
     yellow:  '${yellow1}'
-    blue:    '${blue0}'
+    blue:    '${blue1}'
     magenta: '${purple0}'
     cyan:    '${cyan0}'
     white:   '${fg0}'
