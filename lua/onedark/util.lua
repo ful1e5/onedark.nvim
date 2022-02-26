@@ -223,6 +223,18 @@ util.light_colors = function(colors)
   return ret
 end
 
+---Override custom highlights in `group`
+---@param group table
+---@param overrides table
+---@param force boolean
+util.apply_overrides = function(group, overrides, force)
+  for k, v in pairs(overrides) do
+    if type(v) == 'table' and group[k] ~= nil or force then
+      group[k] = v
+    end
+  end
+end
+
 ---@param hi od.Highlights
 util.load = function(hi)
   vim.cmd('hi clear')
@@ -233,23 +245,16 @@ util.load = function(hi)
   vim.o.termguicolors = true
   vim.g.colors_name = 'onedark'
 
+  -- override colors
+  local overrides = hi.config.overrides(hi.colors)
+  util.apply_overrides(hi.base, overrides, hi.config.dev)
+  util.apply_overrides(hi.plugins, overrides, hi.config.dev)
+
   -- load base theme
   util.syntax(hi.base)
   util.autocmds(hi.config)
   util.terminal(hi.colors)
   util.syntax(hi.plugins)
-end
-
----Override custom highlights in `group`
----@param group table
----@param overrides table
----@param dev boolean
-util.apply_overrides = function(group, overrides, dev)
-  for k, v in pairs(overrides) do
-    if type(v) == 'table' and group[k] ~= nil or dev then
-      group[k] = v
-    end
-  end
 end
 
 ---@param colors od.ColorPalette
