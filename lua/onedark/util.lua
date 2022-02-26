@@ -243,9 +243,10 @@ end
 ---Override custom highlights in `group`
 ---@param group table
 ---@param overrides table
-util.apply_overrides = function(group, overrides)
+---@param dev boolean
+util.apply_overrides = function(group, overrides, dev)
   for k, v in pairs(overrides) do
-    if group[k] ~= nil and type(v) == 'table' then
+    if type(v) == 'table' and group[k] ~= nil or dev then
       group[k] = v
     end
   end

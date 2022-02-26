@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - plugin support [ggandor/lightspeed.nvim](https://github.com/ggandor/lightspeed.nvim) #103
 - feat: use typing (types.od.HighlightStyle) inside `theme.lua`
+- feat: add non-exists highlight from `overrides` option in dev mode (fixed #99)
 
 ### Changed
 
