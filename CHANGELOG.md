@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fixed #101
 - fixed #104
 - refactor: implement override func in `util.load`
+- docs: fixed config's default value in README.md
 
 ## [v0.0.4]- 21 Jan 2022
 
