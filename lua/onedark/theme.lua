@@ -78,7 +78,7 @@ theme.setup = function(cfg)
     TabLineSel = { fg = c.black0, bg = c.blue0 }, -- tab pages line, active tab page label
     Title = { fg = c.blue0, style = Styles.Bold }, -- titles for output from ":set all", ":autocmd" etc.
     Visual = { bg = c.bg_visual }, -- Visual mode selection
-    VisualNOS = { bg = c.bg_visual }, -- Visual mode selection when vim is "Not Owning the Selection".
+    VisualNOS = { link = 'Visual' }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg = { fg = c.warning }, -- warning messages
     Whitespace = { fg = c.fg_gutter }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu = { bg = c.bg_visual }, -- current match in 'wildmenu' completion
@@ -376,6 +376,7 @@ theme.setup = function(cfg)
     TelescopePromptPrefix = { fg = c.fg0, style = Styles.Bold },
     TelescopePromptCounter = { fg = c.blue0 },
     TelescopeMultiSelection = { fg = c.fg_dark },
+    TelescopeSelection = { bg = c.bg_visual },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_light, bg = c.bg_sidebar },
@@ -560,7 +561,7 @@ theme.setup = function(cfg)
     CocInfoHighlight = { link = 'LspDiagnosticsUnderlineInformation' },
     CocHintHighlight = { link = 'LspDiagnosticsUnderlineHint' },
 
-    CocHighlightText = { link = 'Visual' },
+    CocHighlightText = { bg = c.bg_visual },
     CocUnderline = { style = Styles.Undercurl },
 
     -- Indent blankline
