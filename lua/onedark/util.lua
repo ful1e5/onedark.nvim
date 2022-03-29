@@ -151,8 +151,8 @@ end
 --- Delete the autocmds when the theme changes to something else
 util.on_colorscheme = function()
   if vim.g.colors_name ~= 'onedark' then
-    vim.cmd('slient! autocmd! onedark')
-    vim.cmd('slient! augroup! onedark')
+    vim.cmd('silent! autocmd! onedark')
+    vim.cmd('silent! augroup! onedark')
   end
 end
 

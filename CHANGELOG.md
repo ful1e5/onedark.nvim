@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: implement override func in `util.load`
 - docs: fixed config's default value in README.md
 - fixed projekt0n/github-nvim-theme#172
+- fixed #106
 
 ## [v0.0.4]- 21 Jan 2022
 
