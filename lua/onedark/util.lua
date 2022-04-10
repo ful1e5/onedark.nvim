@@ -148,32 +148,6 @@ util.highlight = function(hi_name, hi)
   end
 end
 
---- Delete the autocmds when the theme changes to something else
-util.on_colorscheme = function()
-  if vim.g.colors_name ~= 'onedark' then
-    vim.cmd('silent! autocmd! onedark')
-    vim.cmd('silent! augroup! onedark')
-  end
-end
-
----@param cfg od.ConfigSchema
-util.autocmds = function(cfg)
-  vim.cmd('augroup onedark')
-  vim.cmd('autocmd!')
-  vim.cmd('autocmd ColorScheme * lua require("onedark.util").on_colorscheme()')
-  if cfg.dev then
-    vim.cmd('autocmd BufWritePost */lua/onedark/** nested colorscheme onedark')
-  end
-  for _, sidebar in ipairs(cfg.sidebars) do
-    if sidebar == 'terminal' then
-      vim.cmd('autocmd TermOpen * setlocal winhighlight=Normal:NormalSB,SignColumn:SignColumnSB')
-    else
-      vim.cmd(string.format('autocmd FileType %s setlocal winhighlight=Normal:NormalSB,SignColumn:SignColumnSB', sidebar))
-    end
-  end
-  vim.cmd('augroup end')
-end
-
 ---@param base od.Highlights.Base
 util.syntax = function(base)
   for hi_name, hi in pairs(base) do
@@ -252,7 +226,14 @@ util.load = function(hi)
 
   -- load base theme
   util.syntax(hi.base)
-  util.autocmds(hi.config)
+
+  local autocmds = require('onedark.autocmds')
+  if vim.fn.has('nvim-0.7') == 1 then
+    autocmds.native_cmds(hi.config)
+  else
+    autocmds.viml_cmds(hi.config)
+  end
+
   util.terminal(hi.colors)
   util.syntax(hi.plugins)
 end
