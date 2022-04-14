@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - docs: fixed config's default value in README.md
 - fixed projekt0n/github-nvim-theme#172
 - fixed #106
+- fix: use pcall to clear autocmd silently projekt0n/github-nvim-theme#178 ( @xiyaowong )
 
 ## [v0.0.4]- 21 Jan 2022
 

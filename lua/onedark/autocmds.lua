@@ -27,7 +27,7 @@ autocmds.viml_cmds = function(config)
   vim.cmd('augroup end')
 end
 
----@param config onedark.ConfigSchema
+---@param config od.ConfigSchema
 autocmds.native_cmds = function(config)
   local group = vim.api.nvim_create_augroup('onedark', { clear = false })
 
@@ -37,7 +37,7 @@ autocmds.native_cmds = function(config)
     group = group,
     callback = function()
       if vim.g.colors_name ~= 'onedark' then
-        vim.api.nvim_del_augroup_by_id(group)
+        pcall(vim.api.nvim_del_augroup_by_id(group))
       end
     end,
   })
