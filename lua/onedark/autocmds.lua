@@ -37,7 +37,7 @@ autocmds.native_cmds = function(config)
     group = group,
     callback = function()
       if vim.g.colors_name ~= 'onedark' then
-        pcall(vim.api.nvim_del_augroup_by_id(group))
+        pcall(vim.api.nvim_del_augroup_by_id, group)
       end
     end,
   })
@@ -84,10 +84,7 @@ end
 ---@param config od.ConfigSchema
 autocmds.set = function(config)
   if vim.fn.has('nvim-0.7') == 1 then
-    local exc, _ = pcall(function()
-      autocmds.native_cmds(config)
-    end)
-    if not exc then
+    if not pcall(autocmds.native_cmds, config) then
       autocmds.viml_cmds(config)
     end
   else
