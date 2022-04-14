@@ -84,7 +84,10 @@ end
 ---@param config od.ConfigSchema
 autocmds.set = function(config)
   if vim.fn.has('nvim-0.7') == 1 then
-    if not pcall(autocmds.native_cmds(config)) then
+    local exc, _ = pcall(function()
+      autocmds.native_cmds(config)
+    end)
+    if not exc then
       autocmds.viml_cmds(config)
     end
   else
