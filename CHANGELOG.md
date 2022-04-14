@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fixed projekt0n/github-nvim-theme#172
 - fixed #106
 - fix: use pcall to clear autocmd silently projekt0n/github-nvim-theme#178 ( @xiyaowong )
+- fixed #108
 
 ## [v0.0.4]- 21 Jan 2022
 

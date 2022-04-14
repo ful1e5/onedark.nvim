@@ -224,16 +224,11 @@ util.load = function(hi)
   util.apply_overrides(hi.base, overrides, hi.config.dev)
   util.apply_overrides(hi.plugins, overrides, hi.config.dev)
 
+  local autocmds = require('onedark.autocmds')
+
   -- load base theme
   util.syntax(hi.base)
-
-  local autocmds = require('onedark.autocmds')
-  if vim.fn.has('nvim-0.7') == 1 then
-    autocmds.native_cmds(hi.config)
-  else
-    autocmds.viml_cmds(hi.config)
-  end
-
+  autocmds.set(hi.config)
   util.terminal(hi.colors)
   util.syntax(hi.plugins)
 end
