@@ -316,6 +316,23 @@ theme.setup = function(cfg)
     typescriptTSProperty = { fg = c.red0 },
     typescriptTSVariable = { fg = c.yellow1 },
 
+    -- purescript
+    purescriptModule = { fg = c.blue0 },
+    purescriptModuleKeyword = { fg = c.purple0},
+    purescriptWhere = { fg = c.purple0},
+    purescriptImport = { fg = c.blue0 },
+    purescriptImportAs = { fg = c.blue0 },
+    purescriptConstructor = { fg = c.red0 },
+    purescriptTypeVar = { fg = c.orange0 },
+    purescriptType = { fg = c.yellow1},
+    purescriptStructure = { fg = c.purple0},
+    purescriptOperator = { fg = c.cyan0},
+    purescriptOperatorType = { fg = c.cyan0},
+    purescriptAsKeyword = { fg = c.purple0},
+    purescriptImportKeyword = { fg = c.purple0},
+    purescriptImportParams = { fg = c.cyan0 },
+    purescriptDelimiter = { fg = c.cyan0 },
+
     -- xml
     xmlAttrib = { fg = c.red0 },
     xmlTag = { fg = c.fg0 },
