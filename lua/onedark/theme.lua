@@ -97,6 +97,7 @@ theme.setup = function(cfg)
 
     Identifier = { fg = c.red1, style = cfg.variable_style }, -- (preferred) any variable name
     Function = { fg = c.blue0, style = cfg.function_style }, -- function name (also: methods for classes)
+    Method = { link = 'Function' }, -- method name
     Statement = { fg = c.purple0 }, -- (preferred) any statement
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
     -- Repeat        = { }, --   for, do, while, etc.
