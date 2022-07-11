@@ -1,3 +1,11 @@
+# Deprecated!
+
+As of Jul 11th 2022, onedark.nvim is fully deprecated. No new changes are expected to land. In fact, none have
+landed for some time.
+
+Check the [this](https://github.com/navarasu/onedark.nvim) another awesome port of atom's onedark theme or migrate to
+[parent repo](https://github.com/monsonjeremy/onedark.nvim).
+
 <p align="center">
   <img src="https://i.imgur.com/lNdBu1v.png" alt="onedark.nvim" />
   <br />
@@ -70,7 +78,7 @@ require('onedark').setup()
 | dev                      | `false`    | Developer Mode.                                                                                                                                                                   |
 | function_style           | `NONE`     | Highlight style for functions (check `:help highlight-args` for options)                                                                                                          |
 | hide_end_of_buffer       | `true`     | Enabling this option, will hide filler lines (~) after the end of the buffer.                                                                                                     |
-| hide_inactive_statusline | `true`    | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine**.                                   |
+| hide_inactive_statusline | `true`     | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine**.                                   |
 | highlight_linenumber     | `false`    | Enabling this option, will enable dark color to `LineNr`, `SignColumn` and `CursorLineNr` highlights.(also support [gitsigns](https://github.com/lewis6991/gitsigns.nvim) plugin) |
 | keyword_style            | `italic`   | Highlight style for keywords (check `:help highlight-args` for options)                                                                                                           |
 | lualine_bold             | `false`    | When `true`, section headers in the lualine theme will be bold.                                                                                                                   |
